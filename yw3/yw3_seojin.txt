@@ -9,3 +9,6 @@
 
 오전 1:04 2015-02-03
 SPRING모르겠다. Git은 Source Tree로 하니깐 적응 되는 듯. SPRING에 대해 학습을 더 해야할 듯. 생각해보니 의외로 view가 오래 걸릴 듯
+
+오전 1:11 2015-02-03
+branch test
