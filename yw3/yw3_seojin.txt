@@ -12,3 +12,6 @@ SPRING모르겠다. Git은 Source Tree로 하니깐 적응 되는 듯. SPRING에 대해 학습을 더
 
 오전 1:11 2015-02-03
 branch test
+
+오전 1:14 2015-02-03
+branch test2
