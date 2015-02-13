@@ -104,7 +104,13 @@
 			img[i] = new Image;
 			img[i].src = imgDir + imgsrc[i];
 		}
-		document.write ("<div onclick='bShow=true' id='calendar' style='z-index:+999;position:absolute;visibility:hidden;'><table cellspacing='0' width="+((showWeekNumber==1)?250:150)+" style='font-family:arial;font-size:13px;border:solid 1px #395d9c;' bgcolor='#396da5'><tr style='border-width:1;border-style:solid;border-color:#395d9c;' bgcolor='#F3EFEC'><td><table width='"+((showWeekNumber==1)?248:240)+"'><tr><td style='padding:2px;font-family:arial; font-size:13px;'><font color='#000000'><B><span id='caption'></span></B></font></td><td align=right><a href='javascript:hideCalendar()'><IMG SRC='"+imgDir+"close.gif' WIDTH='15' HEIGHT='13' BORDER='0' ALT='Close the Calendar'></a></td></tr></table></td></tr><tr><td style='padding:5px' bgcolor=#ffffff><span id='content'></span></td></tr>");
+		document.write ("<div onclick='bShow=true' id='calendar' style='z-index:+999;position:absolute;visibility:hidden;'>" +
+				"<table cellspacing='0' width="+((showWeekNumber==1)?250:150)+" style='font-family:arial;font-size:13px;border:solid 1px #395d9c;' bgcolor='#396da5'>" +
+						"<tr style='border-width:1;border-style:solid;border-color:#395d9c;' bgcolor='#F3EFEC'>" +
+						"	<td><table width='"+((showWeekNumber==1)?248:240)+"'>" +
+								"<tr><td style='padding:2px;font-family:arial; font-size:13px;'>" +
+								"<font color='#000000'><B><span id='caption'></span></B></font></td><td align=right>" +
+								"<a href='javascript:hideCalendar()'><IMG SRC='"+imgDir+"close.gif' WIDTH='15' HEIGHT='13' BORDER='0' ALT='Close the Calendar'></a></td></tr></table></td></tr><tr><td style='padding:5px' bgcolor=#ffffff><span id='content'></span></td></tr>");
 			
 		if (showToday==1){
 			document.write ("<tr bgcolor=#F3EFEC><td style='padding:5px' align=center><span id='lblToday'></span></td></tr>");
@@ -338,7 +344,7 @@
 
 			sHTML += "<tr><td align='center' onmouseover='this.style.backgroundColor=\"#cee7ff\"' onmouseout='clearInterval(intervalID2);this.style.backgroundColor=\"\"' style='cursor:pointer' onmousedown='clearInterval(intervalID2);intervalID2=setInterval(\"incYear()\",30)'	onmouseup='clearInterval(intervalID2)'>+</td></tr>";
 
-			document.getElementById("selectYear").innerHTML	= "<table width=44 style='font-family:arial; font-size:11px; border-width:1; border-style:solid; border-color:#a0a0a0;'	bgcolor='white' onmouseover='clearTimeout(timeoutID2)' onmouseout='clearTimeout(timeoutID2);timeoutID2=setTimeout(\"popDownYear()\",100)' cellspacing=0>"	+ sHTML	+ "</table>";
+			document.getElementById("selectYear").innerHTML	= "<table width=44 style='font-family:arial; font-size:11px; border-width:1; border-style:solid; border-color:#a0a0a0;'	bgcolor='red' onmouseover='clearTimeout(timeoutID2)' onmouseout='clearTimeout(timeoutID2);timeoutID2=setTimeout(\"popDownYear()\",100)' cellspacing=0>"	+ sHTML	+ "</table>";
 
 			yearConstructed	= true;
 		}
