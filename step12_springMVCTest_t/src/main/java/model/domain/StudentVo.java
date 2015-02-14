@@ -3,66 +3,52 @@ package model.domain;
 import java.io.Serializable;
 
 public class StudentVo implements Serializable{
-	private String no;
+	private String id;
+	private String pw;
 	private String name;
-	private int age;
-	private String address;
-	private String phone;
+	private String confirm;
 	
 	public StudentVo() {}
-	public StudentVo(String no, String name, int age, String address, String phone) {
+	public StudentVo(String id, String pw, String name, String confirm) {
 		super();
-		this.no = no;
+		this.id = id;
+		this.pw = pw;
 		this.name = name;
-		this.age = age;
-		this.address = address;
-		this.phone = phone;
+		this.confirm = confirm;
 	}
 	
-	public String getNo() {
-		return no;
+	public String getId() {
+		return id;
 	}
-	public void setNo(String no) {
-		this.no = no;
+	public void setId(String id) {
+		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public String getPw() {
+		return pw;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setPw(String pw) {
+		this.pw = pw;
 	}
-	public int getAge() {
-		return age;
+	public String getConfirm() {
+		return confirm;
 	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setConfirm(String confirm) {
+		this.confirm = confirm;
 	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("StudentVo [no=");
-		builder.append(no);
+		builder.append("StudentVo [id=");
+		builder.append(id);
+		builder.append(", pw=");
+		builder.append(pw);
 		builder.append(", name=");
 		builder.append(name);
-		builder.append(", age=");
-		builder.append(age);
-		builder.append(", address=");
-		builder.append(address);
-		builder.append(", phone=");
-		builder.append(phone);
+		builder.append(", confirm=");
+		builder.append(confirm);
 		builder.append("]");
 		return builder.toString();
 	}
+	
 }

@@ -18,6 +18,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class StudentController {
 	
+	@RequestMapping(value="A.do")
+	public String getProcess(){
+		return "welcome";
+	}
+/*	
 	@Resource(name="stService")
     private StudentService stService;
 	
@@ -33,10 +38,10 @@ public class StudentController {
 	}
 	
 	
-	/* 스프링 웹 설정 파일 참조 : springAjaxMyBatis-servlet.xml  
+	 스프링 웹 설정 파일 참조 : springAjaxMyBatis-servlet.xml  
 		<bean id="jsonView" class="net.sf.json.spring.web.servlet.view.JsonView" >
 			<property name="contentType" value="text/html;charset=UTF-8" />
-		</bean> */
+		</bean> 
 	@RequestMapping("/select.do")
 	public ModelAndView select(){
 		List<StudentVo> list =  stService.studentSelect();
@@ -70,5 +75,5 @@ public class StudentController {
 		resHeader.add("Content-Type", "text/html;charset=UTF-8");
 		ResponseEntity resultMsg = new ResponseEntity<String>(checkMsg, resHeader, HttpStatus.OK);
 		return resultMsg;
-	}
+	}*/
 }

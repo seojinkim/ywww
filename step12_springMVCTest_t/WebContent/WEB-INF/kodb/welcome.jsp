@@ -7,6 +7,36 @@
 <title>welcome.jsp</title>
 </head>
 <body>
-안녕하세요
+<h2>회원 가입</h2>
+
+	<form name="insert.do" method="post" id="inForm">
+		<table cellspacing="0">
+			<tr bgcolor="#FOFOF7">
+				<th>아이디</th>
+				<th>비밀번호</th>
+				<th>이름</th>
+				<th>이메일 인증(Y/N)</th>
+			</tr>
+			<tr>
+				<td style="text-align: left">
+					<input type="text" size="15" name="id" id="id"> <span>아이디중복결과여부</span>
+				</td>
+				<td>
+					<input type="text" size="8" name="pw" id="pw">
+				</td>
+				<td>
+					<input type="text" size="8" name="name" id="name">
+				</td>
+				<td>
+					<input type="text" size="12" name="confirm" id="confirm">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5" align="center">
+					<input type="button"	value="가입하기" id="btn">
+				</td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>
