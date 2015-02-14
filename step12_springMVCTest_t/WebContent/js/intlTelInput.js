@@ -497,7 +497,7 @@ Plugin.prototype = {
                 }
             }
         }
-        return dialCode;
+        return inputVal;
     },
     // add a country <li> to the countryList <ul> container
     _appendListItems: function(countries, className) {
@@ -512,7 +512,6 @@ Plugin.prototype = {
             tmp += "<div class='flag " + c.iso2 + "'></div>";
             // and the country name and dial code
             tmp += "<span class='country-name'>" + c.name + "</span>";
-            tmp += "<span class='dial-code'>+" + c.dialCode + "</span>";
             // close the list item
             tmp += "</li>";
         });
