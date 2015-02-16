@@ -210,11 +210,16 @@
 										</div>
 									</ul>
 										
- 			                        <h4>Location Search</h4>
-                            		<!-- <input name ="country_number" id="mobile-number" type="tel" placeholder="e.g. +1 702 123 4567"> -->
+ 			                        <!-- 
+                            		<input name ="country_number" id="mobile-number" type="tel" placeholder="e.g. +1 702 123 4567">
 									<input name ="country_number" id="mobile-number" type="tel" placeholder="">
 									<button type="button">Submit</button>
-                            		<br><br>
+                            		<br><br> -->
+                            		
+                            		<h4>Location Search</h4>
+                            		<input id="searchTextField" type="text" size="50" placeholder="Anything you want!">
+                            		
+                            		
 									
                             </div>
                         </div>                     
@@ -318,6 +323,7 @@
     <script type = "text/javascript" src="js/calendar.js"></script>
     <script src="js/jquery-1.11.0.js"></script>
 	<script src="js/intlTelInput.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true_or_false"></script>
 	<script>
 		$("#mobile-number").intlTelInput();
 	</script>
