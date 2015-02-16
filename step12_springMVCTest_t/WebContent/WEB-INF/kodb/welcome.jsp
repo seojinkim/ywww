@@ -20,8 +20,8 @@
     <input type="password" class="text-field" placeholder="비밀번호" />
     <input type="text" class="text-field" placeholder="이름">
     
-    <!-- db에는 Y/N로 들어가는데...나중에 수정필요 -->
-    <input type="button" value="이메일로 인증하기" class="button" />
+    <!-- dbìë Y/Në¡ ë¤ì´ê°ëë°...ëì¤ì ìì íì -->
+    <input type="button" value="인증번호 발송" class="button" />
     <input type="button" value="Register Account" class="button" />
 
 </form>
