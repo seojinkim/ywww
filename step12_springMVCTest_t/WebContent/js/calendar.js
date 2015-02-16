@@ -116,7 +116,8 @@
 			document.write ("<tr bgcolor=#F3EFEC><td style='padding:5px' align=center><span id='lblToday'></span></td></tr>");
 		}
 	
-		document.write ("</table></div><div id='selectYear' style='z-index:+999;position:absolute;visibility:hidden;padding-left:55px;'></div><div id='selectMonth' style='z-index:+999;position:absolute;visibility:hidden;padding-left:75px;'></div>");
+		//여기 수정해뜸
+		document.write ("</table></div><div id='selectYear' style='z-index:+999;position:absolute;visibility:hidden;padding-left:55px;background-color:white;'></div><div id='selectMonth' style='z-index:+999;position:absolute;visibility:hidden;padding-left:75px;background-color:white;'></div>");
 	}
 
 	var	monthName =	new	Array("1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월");
@@ -269,6 +270,7 @@
 				sHTML += "<tr><td id='m" + i + "' onmouseover='this.style.backgroundColor=\"#cee7ff\"' onmouseout='this.style.backgroundColor=\"\"' style='cursor:pointer' onclick='monthConstructed=false;monthSelected=" + i + ";constructCalendar();popDownMonth();event.cancelBubble=true'>&nbsp;" + sName + "&nbsp;</td></tr>";
 			}
 
+			//이부분 bgcolor='white' 안먹음
 			document.getElementById("selectMonth").innerHTML = "<table width=70	style='font-family:arial; font-size:11px; border-width:1; border-style:solid; border-color:#a0a0a0;' bgcolor='white' cellspacing=0 onmouseover='clearTimeout(timeoutID1)'	onmouseout='clearTimeout(timeoutID1);timeoutID1=setTimeout(\"popDownMonth()\",100);event.cancelBubble=true'>" +	sHTML +	"</table>";
 
 			monthConstructed=true;
@@ -344,7 +346,8 @@
 
 			sHTML += "<tr><td align='center' onmouseover='this.style.backgroundColor=\"#cee7ff\"' onmouseout='clearInterval(intervalID2);this.style.backgroundColor=\"\"' style='cursor:pointer' onmousedown='clearInterval(intervalID2);intervalID2=setInterval(\"incYear()\",30)'	onmouseup='clearInterval(intervalID2)'>+</td></tr>";
 
-			document.getElementById("selectYear").innerHTML	= "<table width=44 style='font-family:arial; font-size:11px; border-width:1; border-style:solid; border-color:#a0a0a0;'	bgcolor='red' onmouseover='clearTimeout(timeoutID2)' onmouseout='clearTimeout(timeoutID2);timeoutID2=setTimeout(\"popDownYear()\",100)' cellspacing=0>"	+ sHTML	+ "</table>";
+			//이부분도 bgcolor 안먹음
+			document.getElementById("selectYear").innerHTML	= "<table width=44 style='font-family:arial; font-size:11px; border-width:1; border-style:solid; border-color:#a0a0a0;'	bgcolor='white' onmouseover='clearTimeout(timeoutID2)' onmouseout='clearTimeout(timeoutID2);timeoutID2=setTimeout(\"popDownYear()\",100)' cellspacing=0>"	+ sHTML	+ "</table>";
 
 			yearConstructed	= true;
 		}
