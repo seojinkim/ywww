@@ -117,6 +117,7 @@
 		}
 	
 		//여기 수정해뜸
+		////////////
 		document.write ("</table></div><div id='selectYear' style='z-index:+999;position:absolute;visibility:hidden;padding-left:55px;background-color:white;'></div><div id='selectMonth' style='z-index:+999;position:absolute;visibility:hidden;padding-left:75px;background-color:white;'></div>");
 	}
 
