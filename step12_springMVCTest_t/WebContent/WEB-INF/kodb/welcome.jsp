@@ -1,42 +1,31 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>welcome.jsp</title>
-</head>
-<body>
-<h2>»∏ø¯ ∞°¿‘</h2>
+<meta charset="UTF-8">
+<title>Log In</title>
 
-	<form name="insert.do" method="post" id="inForm">
-		<table cellspacing="0">
-			<tr bgcolor="#FOFOF7">
-				<th>æ∆¿Ãµ</th>
-				<th>∫Òπ–π¯»£</th>
-				<th>¿Ã∏ß</th>
-				<th>¿Ã∏ﬁ¿œ ¿Œ¡ı(Y/N)</th>
-			</tr>
-			<tr>
-				<td style="text-align: left">
-					<input type="text" size="15" name="id" id="id"> <span>æ∆¿Ãµ¡ﬂ∫π∞·∞˙ø©∫Œ</span>
-				</td>
-				<td>
-					<input type="text" size="8" name="pw" id="pw">
-				</td>
-				<td>
-					<input type="text" size="8" name="name" id="name">
-				</td>
-				<td>
-					<input type="text" size="12" name="confirm" id="confirm">
-				</td>
-			</tr>
-			<tr>
-				<td colspan="5" align="center">
-					<input type="button"	value="∞°¿‘«œ±‚" id="btn">
-				</td>
-			</tr>
-		</table>
-	</form>
+<link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+
+<nav><a href="index.html">Log In</a> | <a href="#" class="focus">Register</a></nav>
+
+<form class="register">
+
+	<h2>Register</h2>
+
+	<input type="text" class="text-field" placeholder="ÏïÑÏù¥Îîî(Ïù¥Î©îÏùºÏ£ºÏÜå)" />
+    <input type="password" class="text-field" placeholder="ÎπÑÎ∞ÄÎ≤àÌò∏" />
+    <input type="text" class="text-field" placeholder="Ïù¥Î¶Ñ">
+    
+    <!-- dbÏóêÎäî Y/NÎ°ú Îì§Ïñ¥Í∞ÄÎäîÎç∞...ÎÇòÏ§ëÏóê ÏàòÏ†ïÌïÑÏöî -->
+    <input type="button" value="Ïù¥Î©îÏùºÎ°ú Ïù∏Ï¶ùÌïòÍ∏∞" class="button" />
+    <input type="button" value="Register Account" class="button" />
+
+</form>
+
 </body>
 </html>
