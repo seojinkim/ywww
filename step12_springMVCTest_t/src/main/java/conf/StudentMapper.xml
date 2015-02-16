@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="student">
+
+	<resultMap type="stVo" id="stResultMap">
+		<result column="st_no" property="no" />
+		<result column="st_name" property="name" />
+		<result column="st_age" property="age" />
+		<result column="st_addr" property="address" />
+		<result column="st_phone" property="phone" />
+	</resultMap>
+
+	<select id="stIdCheck" parameterType="String" resultMap="stResultMap">
+		select * from student where st_no= #{studentNo}
+	</select>
+
+	<insert id="stInsert" parameterType="stVo">
+		insert into student(st_no,st_name,st_age,st_addr, st_phone)
+		values(#{no} , #{name} , #{age}, #{address}, #{phone})
+	</insert>
+
+	<select id="stSelect" resultMap="stResultMap">
+		select * from student
+	</select>
+
+	<delete id="studentDelete" parameterType="String">
+		delete student where st_no = #{no}
+	</delete>
+
+	<update id="studentUpdate" parameterType="stVo">
+		update student
+		set st_name=#{name} , st_age=#{age} , st_addr=#{address} ,
+		st_phone=#{phone}
+		where st_no = #{no}
+	</update>
+
+</mapper>
