@@ -257,6 +257,16 @@ input.search-form:hover {
   width: 180px;
 }
 
+/* 여기부터 */
+input.search-keyword{
+  background: transparent;
+  border: 0.2;
+  width: 300px;
+  height: 30px;
+  /* color: #FFF; */
+}
+/*여기까지*/
+
 .navbar-brand {
   padding: 0;
   margin:0;
@@ -2202,10 +2212,21 @@ ul.pagination > li:hover > a {
 }
 
 .search_box {
+  /* background-image: url("../images/search_icon.png"); */
+  background-position: 314px 15px;
+  background-repeat: no-repeat;
+  border-color: #DEDEDE;
+  height: 48px;
+  outline: medium none;
+  box-shadow: none;
+}
+
+.search_button {
   background-image: url("../images/search_icon.png");
   background-position: 314px 15px;
   background-repeat: no-repeat;
   border-color: #DEDEDE;
+  cursor: pointer;
   height: 48px;
   outline: medium none;
   box-shadow: none;
