@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Spring - Ajax - Json library</title>
+</head>
+<style>
+	.a {
+		border: solid red 5px
+	}
+	
+	span {
+		width: 150px;
+		color: red
+	}
+	
+	input {
+		border: solid gray 1px
+	}
+	
+	table {
+		width: 100%
+	}
+	
+	th,td {
+		border: 1px gray solid;
+		text-align: center;
+		padding: 3px
+	}
+	
+	h2,h3 {
+		text-align: center
+	}
+</style>
+
+<script src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+	$(document)	.ready(function() {
+			/* 1.아이디 중복체크 login
+				2. 호출 시점 : 학번 text field에 keyboard 좌판을 통한 데이터 입력 직후 자동 실행  */
+			$("#no").keyup(function() {
+				$.ajax({
+					url : "idCheck.do", //서버에 요청할 정보
+					type : "post", //method방식
+					dataType : "text", //응답되는 데이터 타입
+					data : "no=" + $("#no").val(), //서버에 전송할 데이터
+					success : function(data) { //응답 성공
+						alert(data);
+						$("span").html(data);
+					},
+					error : function(err) { //응답 실패했을때
+						alert(err + " : 학생등록 실패")
+					}
+				})//end of ajax
+			});//end of id값 중복체크 로직
+
+			/* 2. 가입하기 버튼을 클릭했을때 student table에 저장되는 로직	*/
+			$("#btn").click(function() {
+				$.ajax({
+					url : "insert.do",
+					type : "post",
+					dataType : "text",
+					data : $("#inForm").serialize(),
+					success : function(data) {
+						if (data == "ok") {
+							alert("가입 성공");
+							$("input[type=text]").val(""); //text박스 모두 지우기
+							getData(); //모든레코드 검색하는 함수 호출
+						} else {
+							alert("가입 실패");
+						}
+					},
+					error : function(data) {
+						alert(data + ' : 가입로직 실행시 에러 발생');
+					}
+				}); //end of ajax
+			})//end of 가입로직
+
+		/* 3. 가입된 모든 학생 정보 검색 후 화면에 출력하는 로직 */
+		function getData() {
+			$.ajax({
+					url : "select.do",
+					type : "post",
+					dataType : "json", //결과데이터타입
+					success : function(data) {
+						var table = "";
+						//기존에 있는 테이블 첫행만 빼고 지우기
+						//http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_sel_gt
+						$("#listTable tr:gt(0)").remove();
+
+						$(data.list).each(
+								function(index, item) {
+									table += "<tr><td>" + item.no + "</td><td>"
+											+ item.name + "</td><td>" + item.age + "</td>";
+									table += "<td>" + item.phone + "</td><td>" + item.address + "</td><td>";
+									table += "<input type='button' value='삭제' id='del' name='"+item.no+"'></td></tr>"
+								});
+						//테이블에 추가
+						$("#listTable tr:eq(0)").after(table);
+					},
+					error : function(err) {//실패했을때
+						alert(err + " : 모든 학생 정보보기 실패");
+					}
+				})//end of ajax
+			}//end of getData()
+
+				/* 4. 삭제하기(on함수는 동적으로 생성된 요소에 이벤트적용)
+				1. 문법 : $(document).on("이벤트종류", 이벤트대상, 함수); 
+				2. 로직 : 모든 학생 정보 보기 list에서 각 학생별 "삭제" 버튼 클릭시 해당 학생정보만 삭제하는 로직 
+				3. 구현 : 삭제 후 갱신된 학생 정보 리스트 화면에 재실행 */
+				$(document).on("click", "#del", function() {
+					$.ajax({
+						url : "delete.do",
+						type : "post",
+						dataType : "text",
+						data : "studentNo=" + $(this).attr("name"), //서버에 전송할 데이터
+						success : function(data) {
+							if (data == "ok") {
+								alert("삭제 성공");
+								getData();
+							} else {
+								alert("삭제 실패")
+							}
+						},
+						error : function(err) {//실패했을때
+							alert(err + " : 학생정보 삭제 실패")
+						}
+					})
+				});
+
+				//레코드 가져오기는 함수 호출
+				getData();
+			});//end of ready()
+</script>
+
+
+<body>
+	<br>
+	<br>
+	<br>
+
+	<h3>Spring MVC와 Ajax & JSON library를 활용한 예제</h3>
+	<br>
+	<hr>
+	<br>
+
+	<h2>학생 등록</h2>
+
+	<form name="insert.do" method="post" id="inForm">
+		<table cellspacing="0">
+			<tr bgcolor="#FOFOF7">
+				<th>학번</th>
+				<th>이름</th>
+				<th>나이</th>
+				<th>전화번호</th>
+				<th>주소</th>
+			</tr>
+			<tr>
+				<td style="text-align: left">
+					<input type="text" size="8" name="no" id="no"> <span>학번중복결과여부</span>
+				</td>
+				<td>
+					<input type="text" size="8" name="name" id="name">
+				</td>
+				<td>
+					<input type="text" size="4" name="age" id="age">
+				</td>
+				<td>
+					<input type="text" size="12" name="phone" id="phone">
+				</td>
+				<td>
+					<input type="text" size="30" name="address" id="address">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5" align="center">
+					<input type="button"	value="가입하기" id="btn">
+				</td>
+			</tr>
+		</table>
+	</form>
+	<br>
+	<hr color="red">
+	<br>
+
+	<h2>모든 학생 정보 보기</h2>
+	[JSON 형식을 활용한 개발 기법 활용]
+	<br>
+	<table cellspacing="0">
+		<tr>
+			<td style="text-align: right">
+				<input type="button" value="모든 학생 정보 보기">
+			</td>
+		</tr>
+	</table>
+
+	<table id="listTable" cellspacing="0">
+		<tr bgcolor="#FOFOF7">
+			<th>학번</th>
+			<th>이름</th>
+			<th>나이</th>
+			<th>전화번호</th>
+			<th>주소</th>
+			<th>삭제</th>
+		</tr>
+	</table>
+</body>
+</html>
