@@ -14,15 +14,14 @@
 
 <form class="register">
 
-   <h2>LOGIN</h2>
+   <h2>회원가입</h2>
 
-   <input type="text" class="text-field" placeholder="아이디(이메일주소)" />
+    <input type="text" class="text-field" placeholder="아이디(이메일주소)" />
     <input type="password" class="text-field" placeholder="비밀번호" />
+    <input type="text" class="text-field" placeholder="이름" />
     <br><br><br>
-    
-    <input type="button" value="LOGIN" class="button" />
-    <input type="button" value="회원가입" class="button" /><br>
-    <a href = "B.do" onclick="window.location.href=this.href; return false;">Sign Up</a>
+ 
+    <input type="button" value="회원가입" class="button" />
 
 </form>
 

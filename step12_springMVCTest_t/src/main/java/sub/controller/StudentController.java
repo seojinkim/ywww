@@ -22,6 +22,11 @@ public class StudentController {
 	public String getProcess(){
 		return "welcome";
 	}
+	
+	@RequestMapping(value="B.do")
+	public String getProcesss(){
+		return "signUp";
+	}
 /*	
 	@Resource(name="stService")
     private StudentService stService;

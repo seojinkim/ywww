@@ -12,7 +12,7 @@ body {
 }
 
 h2 {
-   color: #a6a6a6;
+   color: #4E248A;
 }
 
 /* NAVIGATION */
@@ -43,7 +43,7 @@ nav a.focus {
 
 form {
    width: 280px;
-   height: 260px;
+   height: 1000px;
    margin: 200px auto;
    background: white;
    border-radius: 3px;
@@ -53,7 +53,7 @@ form {
 }
 
 form.register{                                                            /* Register form height */
-   height: 420px;
+   height: 380px;
 }
 
 form .text-field {                                                         /* Input fields; Username, Password etc. */
