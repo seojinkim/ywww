@@ -11,7 +11,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
     
    <!-- 클래스들의 전체경로에 이름(별칭) 만들기 -->
    <typeAliases>
-     <typeAlias type="model.domain.StudentVo" alias="stVo"/>
+     <typeAlias type="model.domain.UsersVo" alias="uVo"/>
    </typeAliases>
    
 	<environments default="development">
@@ -29,7 +29,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	</environments>
 	
 	<mappers>
-		<mapper resource="conf/StudentMapper.xml"/>
+		<mapper resource="conf/UsersMapper.xml"/>
 	</mappers>
 </configuration>
 

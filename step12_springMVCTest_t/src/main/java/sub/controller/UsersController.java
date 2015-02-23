@@ -4,8 +4,8 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import model.domain.StudentVo;
-import model.service.StudentService;
+import model.domain.UsersVo;
+import model.service.UsersService;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class StudentController {
+public class UsersController {
 	
 	@RequestMapping(value="A.do")
 	public String getProcess(){

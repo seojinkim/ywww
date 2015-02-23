@@ -2,23 +2,23 @@ package model.dao;
 
 import java.util.List;
 
-import model.domain.StudentVo;
+import model.domain.UsersVo;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import util.DBUtil;
 
-@Repository("stDao")
-public class StudentDaoImpl implements StudentDao {
+@Repository("uDao")
+public class UsersDaoImpl implements UsersDao {
 	@Override
-	public int studentInsert(StudentVo vo) {
+	public int usersInsert(UsersVo vo) {
 		SqlSession session = null;
 		boolean flag = false;
 		int result = 0;
 		try {
 			session = DBUtil.getSqlSession();
-			result = session.insert("student.stInsert", vo);
+			result = session.insert("users.utInsert", vo);
 			flag = result > 0 ? true : false;
 		} finally {
 			DBUtil.closeSqlSession(flag, session);
@@ -27,12 +27,12 @@ public class StudentDaoImpl implements StudentDao {
 	}
 
 	@Override
-	public List<StudentVo> studentSelect() {
+	public List<UsersVo> usersSelect() {
 		SqlSession session = null;
-		List<StudentVo> list = null;
+		List<UsersVo> list = null;
 		try {
 			session = DBUtil.getSqlSession();
-			list = session.selectList("student.stSelect");
+			list = session.selectList("users.uSelect");
 		} finally {
 			DBUtil.closeSqlSession(session);
 		}
@@ -40,13 +40,13 @@ public class StudentDaoImpl implements StudentDao {
 	}
 
 	@Override
-	public int studentUpdate(StudentVo vo) {
+	public int usersUpdate(UsersVo vo) {
 		SqlSession session = null;
 		boolean flag = false;
 		int result = 0;
 		try {
 			session = DBUtil.getSqlSession();
-			result = session.update("student.studentUpdate", vo);
+			result = session.update("users.uUpdate", vo);
 			flag = result > 0 ? true : false;
 
 		} finally {
@@ -56,13 +56,13 @@ public class StudentDaoImpl implements StudentDao {
 	}
 
 	@Override
-	public int studentDelete(String stuentNo) {
+	public int usersDelete(String id) {
 		SqlSession session = null;
 		boolean flag = false;
 		int result = 0;
 		try {
 			session = DBUtil.getSqlSession();
-			result = session.delete("student.studentDelete", stuentNo);
+			result = session.delete("users.uDelete", id);
 			flag = result > 0 ? true : false;
 		} finally {
 			DBUtil.closeSqlSession(flag, session);
@@ -71,16 +71,16 @@ public class StudentDaoImpl implements StudentDao {
 	}
 
 	@Override
-	public StudentVo studentIdCheck(String studentNo) {
+	public UsersVo usersIdCheck(String id) {
 		SqlSession session = null;
-		StudentVo sVo = null;
+		UsersVo uVo = null;
 		try {
 			session = DBUtil.getSqlSession();
-			sVo = session.selectOne("student.stIdCheck", studentNo);
+			uVo = session.selectOne("users.uIdCheck", id);
 		} finally {
 			DBUtil.closeSqlSession(session);
 		}
-		return sVo;
+		return uVo;
 	}
 
 }
