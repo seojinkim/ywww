@@ -1,10 +1,11 @@
 drop table users;
 
 create table users(
-	id varchar(15) primary key,
-	pw varchar(15),
-	name varchar(10),
-	confirm char(1) constraint user_confirm_ck check(confirm in('Y', 'N'))
+	id varchar(15) primary key not null,
+	pw varchar(15) not null,
+	name varchar(10) not null
 );
+
+insert into users values('test@google.com','test','관리자');
 
 commit;
