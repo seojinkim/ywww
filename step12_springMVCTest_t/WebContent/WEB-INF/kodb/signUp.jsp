@@ -21,7 +21,7 @@
     <input type="text" class="text-field" placeholder="이름" />
     <br><br><br>
  
-    <input type="button" value="회원가입" class="button" />
+    <input type="button" value="회원가입" class="button"/>
 
 </form>
 
