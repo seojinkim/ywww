@@ -46,7 +46,16 @@ public class UsersController {
 		return mv;
 	}
 	
-
+	/*@RequestMapping("/selectWish.do")
+	public ModelAndView selectWish(){
+		System.out.println("------controller-------");
+		List<UsersVo> list =  uService.uSelectWish();
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("list", list);			
+		mv.setViewName("jsonView");	//id=jsonView 객체를 찾아서 JsonView실행
+		return mv;
+	}*/
+	
 	@RequestMapping("/delete.do")
 	@ResponseBody
 	public String delete(String studentNo) {
@@ -59,10 +68,10 @@ public class UsersController {
 	
 	@RequestMapping("idCheck.do")
 	@ResponseBody
-	public ResponseEntity<String> usersNoCheck(String id){
+	public ResponseEntity<String> usersIdCheck(String id){
 		String checkMsg = "사용가능";
 		
-		UsersVo vo = uService.usersNoCheck(id);
+		UsersVo vo = uService.usersIdCheck(id);
 		if(vo != null){
 			checkMsg = "중복";
 		}
@@ -96,5 +105,10 @@ public class UsersController {
 	@RequestMapping(value="B.do")
 	public String getProcesss(){
 		return "login";
+	}
+	
+	@RequestMapping(value="C.do")
+	public String getProcessC(){
+		return "welcome4";
 	}
 }
