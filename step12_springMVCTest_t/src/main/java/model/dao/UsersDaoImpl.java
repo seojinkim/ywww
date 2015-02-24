@@ -18,7 +18,7 @@ public class UsersDaoImpl implements UsersDao {
 		int result = 0;
 		try {
 			session = DBUtil.getSqlSession();
-			result = session.insert("users.utInsert", vo);
+			result = session.insert("users.uInsert", vo);
 			flag = result > 0 ? true : false;
 		} finally {
 			DBUtil.closeSqlSession(flag, session);
