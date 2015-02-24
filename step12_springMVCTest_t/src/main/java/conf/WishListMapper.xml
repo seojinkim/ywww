@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="wishlist">
+
+	<resultMap type="wVo" id="wResultMap">
+		<result column="id" property="id" />
+		<result column="festivalNum" property="festivalNum" />
+	</resultMap>
+
+	<delete id="deleteWish" parameterType="String">
+		delete from wishlist where id = #{id} 
+	</delete>
+	
+	<insert id="insertWish" parameterType="wVo">
+		insert into wishlist values(#{id}, #{festivalNum})
+	</insert>
+	
+	<select id="selectAll" resultMap="wResultMap">
+		select * from wishlist
+	</select>
+	
+</mapper>

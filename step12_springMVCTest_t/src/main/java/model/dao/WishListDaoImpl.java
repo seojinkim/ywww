@@ -23,4 +23,19 @@ public class WishListDaoImpl implements WishListDao{
 		}
 		return list;
 	}
+	
+	@Override
+	public int deleteWishList(String id) {
+		SqlSession session = null;
+		boolean flag = false;
+		int result = 0;
+		try {
+			session = DBUtil.getSqlSession();
+			result = session.delete("wishlist.deleteWish", id);
+			flag = result > 0 ? true : false;
+		} finally {
+			DBUtil.closeSqlSession(flag, session);
+		}
+		return result;
+	}
 }

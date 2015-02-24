@@ -6,4 +6,5 @@ import model.domain.WishListVo;
 
 public interface WishListDao {
 	List<WishListVo> selectWishList();
+	int deleteWishList(String id);
 }

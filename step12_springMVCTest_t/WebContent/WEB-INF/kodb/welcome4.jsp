@@ -44,12 +44,12 @@
 <script src="js/jquery-1.11.0.js"></script>
 <script type="text/javascript">
 	$(document)	.ready(function() {
-		/* 3. 가입된 모든 학생 정보 검색 후 화면에 출력하는 로직 */
+		/* 3. ê°ìë ëª¨ë  íì ì ë³´ ê²ì í íë©´ì ì¶ë ¥íë ë¡ì§ */
 		function getData() {
 			$.ajax({
 					url : "selectWish.do",
 					type : "post",
-					dataType : "json", //결과데이터타입
+					dataType : "json", //ê²°ê³¼ë°ì´í°íì
 					success : function(data) {
 						var table = "";
 						$("#listTable tr:gt(0)").remove();
@@ -58,27 +58,27 @@
 								function(index, item) {
 									table += "<tr><td>" + item.id + "</td><td>"
 											+ item.festivalNum + "</td><td>";
-									table += "<input type='button' value='삭제' id='del' name='"+item.id+"'></td></tr>"
+									table += "<input type='button' value='delete' id='del' name='"+item.id+"'></td></tr>"
 								});
-						//테이블에 추가
+						//íì´ë¸ì ì¶ê°
 						$("#listTable tr:eq(0)").after(table);
 					},
-					error : function(err) {//실패했을 때
+					error : function(err) {//ì¤í¨íì ë
 						alert(err + " : fail");
 					}
 				}) //end of ajax
 			}//end of getData()
 
-				/* 4. 삭제하기(on함수는 동적으로 생성된 요소에 이벤트적용)
-				1. 문법 : $(document).on("이벤트종류", 이벤트대상, 함수); 
-				2. 로직 : 모든 학생 정보 보기 list에서 각 학생별 "삭제" 버튼 클릭시 해당 학생정보만 삭제하는 로직 
-				3. 구현 : 삭제 후 갱신된 학생 정보 리스트 화면에 재실행 */
+				/* 4. ì­ì íê¸°(oní¨ìë ëì ì¼ë¡ ìì±ë ììì ì´ë²¤í¸ì ì©)
+				1. ë¬¸ë² : $(document).on("ì´ë²¤í¸ì¢ë¥", ì´ë²¤í¸ëì, í¨ì); 
+				2. ë¡ì§ : ëª¨ë  íì ì ë³´ ë³´ê¸° listìì ê° íìë³ "ì­ì " ë²í¼ í´ë¦­ì í´ë¹ íìì ë³´ë§ ì­ì íë ë¡ì§ 
+				3. êµ¬í : ì­ì  í ê°±ì ë íì ì ë³´ ë¦¬ì¤í¸ íë©´ì ì¬ì¤í */
 				$(document).on("click", "#del", function() {
 					$.ajax({
-						url : "delete.do",
+						url : "deleteWish.do",
 						type : "post",
 						dataType : "text",
-						data : "studentNo=" + $(this).attr("name"), //서버에 전송할 데이터
+						data : "id=" + $(this).attr("name"), //ìë²ì ì ì¡í  ë°ì´í°
 						success : function(data) {
 							if (data == "ok") {
 								alert("삭제 성공");
@@ -87,13 +87,13 @@
 								alert("삭제 실패")
 							}
 						},
-						error : function(err) {//실패했을때
-							alert(err + " : 학생정보 삭제 실패")
+						error : function(err) {//ì¤í¨íìë
+							alert(err + " : wishList 삭제 실패")
 						}
 					})
 				});
 
-				//레코드 가져오기는 함수 호출
+				//ë ì½ë ê°ì ¸ì¤ê¸°ë í¨ì í¸ì¶
 				getData();
 			});//end of ready()
 </script>
@@ -103,6 +103,7 @@
 		<tr bgcolor="#FOFOF7">
 			<th>id</th>
 			<th>festivalNum</th>
+			<input type="button" value="모든 wishList 보기" id="btn">
 		</tr>
 	</table>
 	

@@ -94,15 +94,6 @@ public class UsersController {
 
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 /*	public void usersLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "404.html";	
 		UsersVo vo = new UsersVo(request.getParameter("id"),request.getParameter("pw"));
@@ -118,8 +109,6 @@ public class UsersController {
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}*/
-	
-	
 	
 	@RequestMapping(value="A.do")
 	public String getProcess(){

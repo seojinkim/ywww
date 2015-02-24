@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="wishlist">
 
-	<resultMap type="wVo" id="uResultMap">
+	<resultMap type="wVo" id="wResultMap">
 		<result column="id" property="id" />
 		<result column="festivalNum" property="festivalNum" />
 	</resultMap>
@@ -18,7 +18,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insert into wishlist values(#{id}, #{festivalNum})
 	</insert>
 	
-	<select id="selectAll" parameterType="String" resultMap="uResultMap">
+	<select id="selectAll" resultMap="wResultMap">
 		select * from wishlist
 	</select>
 	

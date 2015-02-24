@@ -9,6 +9,7 @@ import model.service.WishListService;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -24,5 +25,15 @@ public class WishListController {
 		mv.addObject("list", list);			
 		mv.setViewName("jsonView");	//id=jsonView 객체를 찾아서 JsonView실행
 		return mv;
+	}
+	
+	@RequestMapping("/deleteWish.do")
+	@ResponseBody
+	public String deleteWish(String id) {
+		String result = "no";
+		if(wService.DeleteWish(id) > 0 ) {
+			result = "ok";
+		}
+		return result ;
 	}
 }
