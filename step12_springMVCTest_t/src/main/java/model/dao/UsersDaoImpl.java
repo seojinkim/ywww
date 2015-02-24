@@ -32,7 +32,7 @@ public class UsersDaoImpl implements UsersDao {
 		List<UsersVo> list = null;
 		try {
 			session = DBUtil.getSqlSession();
-			list = session.selectList("users.uSelect");
+			list = session.selectList("users.selectAll");
 		} finally {
 			DBUtil.closeSqlSession(session);
 		}
