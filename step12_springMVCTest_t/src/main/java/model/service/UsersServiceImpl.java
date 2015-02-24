@@ -37,7 +37,7 @@ public class UsersServiceImpl implements UsersService {
 	}
 
 	@Override
-	public UsersVo usersNoCheck(String id) {
+	public UsersVo usersIdCheck(String id) {
 		return uDao.usersIdCheck(id);
 	}
 	

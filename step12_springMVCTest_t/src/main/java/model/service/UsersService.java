@@ -9,6 +9,6 @@ public interface UsersService {
 	List<UsersVo> uSelect();
 	int uUpdate(UsersVo vo);
 	int uDelete(String id);
-	UsersVo usersNoCheck(String id);
+	UsersVo usersIdCheck(String id);
 	UsersVo usersLogin(UsersVo vo);
 }
