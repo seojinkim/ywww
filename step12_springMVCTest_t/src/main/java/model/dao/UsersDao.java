@@ -10,4 +10,5 @@ public interface UsersDao {
 	int usersUpdate(UsersVo vo);
 	int usersDelete(String usersNo);
 	UsersVo usersIdCheck(String usersNo);	
+	UsersVo usersLogin(UsersVo vo);
 }

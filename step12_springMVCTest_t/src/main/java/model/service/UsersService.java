@@ -10,4 +10,5 @@ public interface UsersService {
 	int uUpdate(UsersVo vo);
 	int uDelete(String id);
 	UsersVo usersNoCheck(String id);
+	UsersVo usersLogin(UsersVo vo);
 }

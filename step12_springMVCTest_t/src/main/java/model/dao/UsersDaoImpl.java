@@ -83,4 +83,16 @@ public class UsersDaoImpl implements UsersDao {
 		return uVo;
 	}
 
+	@Override
+	public UsersVo usersLogin(UsersVo vo){
+		SqlSession session = null;
+		UsersVo uVo = null;
+		try {
+			session = DBUtil.getSqlSession();
+			uVo = session.selectOne("users.uLogin", vo);
+		} finally {
+			DBUtil.closeSqlSession(session);
+		}
+		return uVo;
+	}
 }

@@ -96,6 +96,28 @@ form .button {                                                            /* Sub
    font-size: 13px;
 }
 
+form .button2 {                                                            /* Submit button2 */
+   border-radius: 3px;
+   border: 1px solid #336895;
+   box-shadow: inset 0 1px 0 #8dc2f0;
+   width: 70px;
+   height: 20px;
+   margin-top: 5px;
+   
+   background: linear-gradient(bottom, #4889C2 0%, #5BA7E9 100%);
+   background: -o-linear-gradient(bottom, #4889C2 0%, #5BA7E9 100%);
+   background: -moz-linear-gradient(bottom, #4889C2 0%, #5BA7E9 100%);
+   background: -webkit-linear-gradient(bottom, #4889C2 0%, #5BA7E9 100%);
+   background: -ms-linear-gradient(bottom, #4889C2 0%, #5BA7E9 100%);
+   
+   cursor: pointer;
+   color: white;
+   font-weight: bold;
+   text-shadow: 0 -1px 0 #336895;
+   
+   font-size: 12px;
+}
+
 form .button:hover {
    background: linear-gradient(bottom, #5c96c9 0%, #6bafea 100%);
    background: -o-linear-gradient(bottom, #5c96c9 0%, #6bafea 100%);
