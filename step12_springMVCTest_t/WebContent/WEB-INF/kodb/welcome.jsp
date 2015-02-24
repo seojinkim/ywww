@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/style.css" />
 
 </head>
-
+  
 <body>
 
 <nav><a href="index.html">Log In</a> | <a href="#" class="focus">Register</a></nav>

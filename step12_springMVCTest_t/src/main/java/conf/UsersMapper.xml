@@ -6,19 +6,20 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="users">
 
 	<resultMap type="uVo" id="uResultMap">
-		<result column="u_id" property="id" />
-		<result column="u_pw" property="pw" />
-		<result column="u_name" property="name" />
+		<result column="id" property="id" />
+		<result column="pw" property="pw" />
+		<result column="name" property="name" />
+		<result column="phone" property="phone" />
 
 	</resultMap>
 
 	<select id="uIdCheck" parameterType="String" resultMap="uResultMap">
-		select * from users where u_no= #{u_id}
+		select * from users where id= #{id}
 	</select>
 
 	<insert id="uInsert" parameterType="uVo">
-		insert into users(u_id, u_pw, u_name)
-		values(#{id} , #{pw} , #{name})
+		insert into users(id, pw, name, phone)
+		values(#{id} , #{pw} , #{name}, #{phone})
 	</insert>
 
 	<select id="uSelect" resultMap="uResultMap">
@@ -26,13 +27,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 
 	<delete id="uDelete" parameterType="String">
-		delete users where u_id = #{id}
+		delete users where id = #{id}
 	</delete>
 
 	<update id="uUpdate" parameterType="uVo">
 		update users
-		set u_id=#{id} , u_pw=#{pw} , u_name=#{name}
-		where u_id = #{id}
+		set id=#{id} , pw=#{pw} , name=#{name}, phone=#{phone}
+		where id = #{id}
 	</update>
 
 </mapper>

@@ -18,24 +18,14 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class UsersController {
 	
-	@RequestMapping(value="A.do")
-	public String getProcess(){
-		return "welcome";
-	}
-	
-	@RequestMapping(value="B.do")
-	public String getProcesss(){
-		return "signUp";
-	}
-/*	
-	@Resource(name="stService")
-    private StudentService stService;
+	@Resource(name="uService")
+    private UsersService uService;
 	
 	@RequestMapping("/insert.do")
 	@ResponseBody
-	public String insert(StudentVo studentVo) {
-		String resultMsg = "no";
-		int result = stService.studentInsert(studentVo);
+	public String insert(UsersVo UsersVo) {
+		String resultMsg = "id";
+		int result = uService.uInsert(UsersVo);
 		if(result > 0 )  {
 			resultMsg = "ok";
 		}
@@ -43,13 +33,13 @@ public class UsersController {
 	}
 	
 	
-	 스프링 웹 설정 파일 참조 : springAjaxMyBatis-servlet.xml  
+	/* 스프링 웹 설정 파일 참조 : springAjaxMyBatis-servlet.xml  
 		<bean id="jsonView" class="net.sf.json.spring.web.servlet.view.JsonView" >
 			<property name="contentType" value="text/html;charset=UTF-8" />
-		</bean> 
+		</bean> */
 	@RequestMapping("/select.do")
 	public ModelAndView select(){
-		List<StudentVo> list =  stService.studentSelect();
+		List<UsersVo> list =  uService.uSelect();
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("list", list);			
 		mv.setViewName("jsonView");	//id=jsonView 객체를 찾아서 JsonView실행
@@ -61,7 +51,7 @@ public class UsersController {
 	@ResponseBody
 	public String delete(String studentNo) {
 		String result = "no";
-		if(stService.studentDelete(studentNo) > 0 ) {
+		if(uService.uDelete(studentNo) > 0 ) {
 			result = "ok";
 		}
 		return result ;
@@ -69,10 +59,10 @@ public class UsersController {
 	
 	@RequestMapping("idCheck.do")
 	@ResponseBody
-	public ResponseEntity<String> studentNoCheck(String no){
+	public ResponseEntity<String> usersNoCheck(String id){
 		String checkMsg = "사용가능";
 		
-		StudentVo vo = stService.studentNoCheck(no);
+		UsersVo vo = uService.usersNoCheck(id);
 		if(vo != null){
 			checkMsg = "중복";
 		}
@@ -80,5 +70,15 @@ public class UsersController {
 		resHeader.add("Content-Type", "text/html;charset=UTF-8");
 		ResponseEntity resultMsg = new ResponseEntity<String>(checkMsg, resHeader, HttpStatus.OK);
 		return resultMsg;
-	}*/
+	}
+	
+	@RequestMapping(value="A.do")
+	public String getProcess(){
+		return "welcome";
+	}
+	
+	@RequestMapping(value="B.do")
+	public String getProcesss(){
+		return "signUp";
+	}
 }
