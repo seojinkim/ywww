@@ -16,6 +16,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="uIdCheck" parameterType="String" resultMap="uResultMap">
 		select * from users where id= #{id}
 	</select>
+	
+	<select id="uLogin" parameterType="uVo" resultMap="uResultMap">
+		select * from users where id=#{id} and pw=#{pw}
+	</select>
 
 	<insert id="uInsert" parameterType="uVo">
 		insert into users(id, pw, name, phone)
@@ -24,10 +28,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<select id="uSelect" resultMap="uResultMap">
 		select * from users
-	</select>
-
-	<select id="uLogin" resultMap="uResultMap">
-		select * from users where id=#{id} and pw=#{pw}
 	</select>
 
 	<delete id="uDelete" parameterType="String">

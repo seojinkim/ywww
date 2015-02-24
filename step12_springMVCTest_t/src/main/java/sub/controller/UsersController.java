@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UsersController {
+	 
 	
 	@Resource(name="uService")
     private UsersService uService;
@@ -72,21 +73,44 @@ public class UsersController {
 		return resultMsg;
 	}
 	
-	@RequestMapping("login.do")
+	@RequestMapping("/login.do")
 	@ResponseBody
-	public ResponseEntity<String> usersLogin(UsersVo vo2){
-		String checkMsg = "사용가능";
+	public ModelAndView usersLogin(UsersVo vo1){
 		
-		UsersVo vo = uService.usersLogin(vo2);
-		if(vo != null){
-			checkMsg = "중복";
-		}
-		
-		HttpHeaders resHeader = new HttpHeaders();
-		resHeader.add("Content-Type", "text/html;charset=UTF-8");
-		ResponseEntity resultMsg = new ResponseEntity<String>(checkMsg, resHeader, HttpStatus.OK);
-		return resultMsg;
+		UsersVo vo = uService.usersLogin(vo1);
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("vo", vo);			
+		mv.setViewName("jsonView");	//id=jsonView 객체를 찾아서 JsonView실행
+		return mv;
+
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*	public void usersLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String url = "404.html";	
+		UsersVo vo = new UsersVo(request.getParameter("id"),request.getParameter("pw"));
+		System.out.println(vo);
+		try {			
+			request.getSession().setAttribute("vo", uService.usersLogin(vo));
+			System.out.println("굿");
+			request.getSession().setAttribute("loginStatus", "ok");
+			url = "index.html";
+		} catch (Exception e) {	
+			e.printStackTrace();
+			request.getSession().setAttribute("error", "에러");
+		}
+		request.getRequestDispatcher(url).forward(request, response);
+	}*/
+	
+	
 	
 	@RequestMapping(value="A.do")
 	public String getProcess(){
