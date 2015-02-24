@@ -81,6 +81,7 @@ public class UsersController {
 		if(vo != null){
 			checkMsg = "중복";
 		}
+		
 		HttpHeaders resHeader = new HttpHeaders();
 		resHeader.add("Content-Type", "text/html;charset=UTF-8");
 		ResponseEntity resultMsg = new ResponseEntity<String>(checkMsg, resHeader, HttpStatus.OK);
