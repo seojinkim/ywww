@@ -256,7 +256,7 @@ input.search-form:hover {
   width: 180px;
 }
 
-/* 여기부터 */
+/* �ш린遺�꽣 */
 input.search-keyword{
   background: transparent;
   border: 0.2;
@@ -264,7 +264,7 @@ input.search-keyword{
   height: 30px;
   /* color: #FFF; */
 }
-/*여기까지*/
+/*�ш린源뚯�*/
 
 .navbar-brand {
   padding: 0;
@@ -2546,7 +2546,9 @@ shortcodes page css
 }
 
 
-
+.jooafont {
+	font-family: '맑은 고딕';
+}
 
 
 
