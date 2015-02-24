@@ -26,6 +26,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from users
 	</select>
 
+	<select id="uLogin" resultMap="uResultMap">
+		select * from users where id=#{id} and pw=#{pw}
+	</select>
+
 	<delete id="uDelete" parameterType="String">
 		delete users where id = #{id}
 	</delete>
@@ -35,5 +39,5 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		set id=#{id} , pw=#{pw} , name=#{name}, phone=#{phone}
 		where id = #{id}
 	</update>
-
+	
 </mapper>

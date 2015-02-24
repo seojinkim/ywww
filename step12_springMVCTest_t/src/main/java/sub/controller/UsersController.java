@@ -72,6 +72,22 @@ public class UsersController {
 		return resultMsg;
 	}
 	
+	@RequestMapping("login.do")
+	@ResponseBody
+	public ResponseEntity<String> usersLogin(UsersVo vo2){
+		String checkMsg = "사용가능";
+		
+		UsersVo vo = uService.usersLogin(vo2);
+		if(vo != null){
+			checkMsg = "중복";
+		}
+		
+		HttpHeaders resHeader = new HttpHeaders();
+		resHeader.add("Content-Type", "text/html;charset=UTF-8");
+		ResponseEntity resultMsg = new ResponseEntity<String>(checkMsg, resHeader, HttpStatus.OK);
+		return resultMsg;
+	}
+	
 	@RequestMapping(value="A.do")
 	public String getProcess(){
 		return "welcome";
@@ -79,6 +95,6 @@ public class UsersController {
 	
 	@RequestMapping(value="B.do")
 	public String getProcesss(){
-		return "signUp";
+		return "login";
 	}
 }
