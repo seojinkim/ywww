@@ -40,5 +40,10 @@ public class UsersServiceImpl implements UsersService {
 	public UsersVo usersNoCheck(String id) {
 		return uDao.usersIdCheck(id);
 	}
+	
+	@Override
+	public UsersVo usersLogin(UsersVo vo){
+		return uDao.usersLogin(vo);
+	}
 
 }
