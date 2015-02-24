@@ -13,4 +13,13 @@
     <servlet-name>kodb</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+<!--     <servlet>
+    <servlet-name>UsersController</servlet-name>
+    <servlet-class>sub.controller.UsersController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsersController</servlet-name>
+    <url-pattern>/UsersController</url-pattern>
+  </servlet-mapping> -->
+  
 </web-app>

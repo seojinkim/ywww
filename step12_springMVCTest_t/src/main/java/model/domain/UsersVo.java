@@ -9,6 +9,13 @@ public class UsersVo implements Serializable{
 	private String phone;
 	
 	public UsersVo() {}
+	
+	public UsersVo(String id, String pw) {
+		super();
+		this.id = id;
+		this.pw = pw;
+	}
+	
 	public UsersVo(String id, String pw, String name, String phone) {
 		super();
 		this.id = id;
