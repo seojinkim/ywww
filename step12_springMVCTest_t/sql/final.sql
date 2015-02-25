@@ -5,6 +5,7 @@ drop table city_country cascade constraints;
 drop table theme cascade constraints;
 drop table festival_theme cascade constraints;
 drop table favorite cascade constraints;
+drop table comment cascade constraints;
 
 
 
@@ -53,6 +54,12 @@ create table favorite(
 	themeNum varchar2(20) not null
 );
 
+create table comments(
+	email varchar2(20) primary key not null,
+	name varchar2(20) not null,
+	message varchar2(100) not null
+);
+
 
 insert into users values('test@google.com', '0000', '관리자', '010-7105-9326');
 insert into users values('test1@google.com', '1111', '관리자', '010-7105-9326');
@@ -72,6 +79,7 @@ insert into theme values('7', 'family');
 insert into theme values('8', 'unusual');
 insert into theme values('9', 'food & drink');
 
+insert into comments values('나는이멜', '나는이름', '나는메시지');
 
 insert into festival values('02001','2015 도쿄 오토살롱','일본지바 현','프랑크푸르트, 디트로이트, 파리 오토살롱과 함께 세계 4대 모터쇼에 속한다.','2015-01-09','2015-01-11','https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3242.2274154759743!2d140.03671634999998!3d35.646768249999994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022821e2aaddae1%3A0x3ce2ffc5298f27f!2z7J2867O4IOOAkjI2MS0wMDIzIENoaWJhLWtlbiwgQ2hpYmEtc2hpLCBNaWhhbWEta3UsIE5ha2FzZSwgMiBDaG9tZSDluZXlvLXjg6Hjg4Pjgrs!5e0!3m2!1sko!2skr!4v1423633149187','?261-0023 Chiba-ken, Chiba-shi, Mihama-ku, Nakase, 2 Chome','도쿄오토살롱은 아시아 최대 자동차 부품 및 튜닝 박람회로 완성차와 튜닝카는 물론 각종 차량 부품과 튜닝 용품이 전시된다. 글로벌 타이어 메이커 및 완성차 업체, 부품업체 등 총 1100여개의 업체가 참가해 다양한 신제품과 기술력을 선보인다. 일본의 튜닝산업 시장 규모는 지난해 기준 14조원에 달할 정도로 활성화돼 있으며, 다양한 튜닝 및 커스텀 용품을 볼 수 있는 도쿄오토살롱에는 매년 약 25만~30만명의 관람객이 찾으며 큰 관심을 모으고 있다.?','http://www.tokyoautosalon.jp/2015/');
 

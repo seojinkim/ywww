@@ -56,7 +56,7 @@
       #pac-input {
         background-color: #fff;
         padding: 0 11px 0 13px;
-        width: 360px;
+        width: 320px;
         font-family: Roboto;
         font-size: 15px;
         font-weight: 300;
@@ -236,7 +236,7 @@
                                     <button type="submit" class="btn2 btn-primary2 btn-lg" required="required" id="btn">Wish</button>
                                     
                                     <script src="js/jquery-1.11.0.js"></script>
-                           <script type="text/javascript">
+                           			<script type="text/javascript">
                                        $(document)   .ready(function() {
                                             $("#btn").click(function() {
                                     $.ajax({
@@ -306,30 +306,30 @@
                                 <h4>Comment를 남기세요</h4>
                                 <p>Make sure you enter the(*)required information where indicate.HTML code is not allowed</p>
                             </div> 
-      
-                            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
+      -${sessionScope.userLoginInfo.name}-
+                            <form id="main-contact-form" class="contact-form" name="contact-form" method="get" action="<%=request.getContextPath()%>/insertComments.do">
                                 <div class="row">
                                     <div class="col-sm-5">
                                         <div class="form-group">
                                             <label>Name *</label>
-                                            <input type="text" class="form-control" required="required">
+                                            <input type="text" id="name" name="name" readonly class="form-control" required="required" value="${sessionScope.userLoginInfo.name}">
                                         </div>
                                         <div class="form-group">
                                             <label>Email *</label>
-                                            <input type="email" class="form-control" required="required">
+                                            <input type="email" id="email" name="email" readonly class="form-control" required="required" value="${sessionScope.userLoginInfo.id}">
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label>URL</label>
                                             <input type="url" class="form-control">
-                                        </div>                    
+                                        </div>   -->                  
                                     </div>
                                     <div class="col-sm-7">                        
                                         <div class="form-group">
                                             <label>Message *</label>
-                                            <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
+                                            <textarea name="message" id="message" required="required" class="form-control" rows="4"></textarea>
                                         </div>                        
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
+                                            <button type="submit" class="btn btn-primary btn-lg" required="required" >Submit Message</button>
                                         </div>
                                     </div>
                                 </div>
@@ -418,13 +418,16 @@
                      	<img src="images/audition.png"/>
                     </div>
                      	
-                   <div class="widget categories">
+                   <aside class="col-md-4">
+    				<div class="widget categories">
                         <div class="row">
                             <div class="col-sm-12">
                             	<h4>Keyword Search</h4>
-                            		<input type="text" class="controls" autocomplete="off" placeholder="Enter a keyword">
-                            		<img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 41px; height: 27px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -533px -184px no-repeat;" border="0" class="gwt-Image">
-                            	<h4>Date</h4>	
+                            	<form action="selectFestivalByKeyword.do"  name="selectFestivalByKeyword.do" method="get">
+                                    <input type="text" id="keyword" name = "keyword" class="controls" autocomplete="off" placeholder="Enter a keyword">
+                                    <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
+                                </form>
+                            	<h4><br>Date</h4>	
                             	<form>
                             	<input type="text" id="txtDate" value="" onclick="fnPopUpCalendar(txtDate,txtDate,'yyyy/mm/dd')" class='text_box1'>
                             	<a> ~ </a>
@@ -434,12 +437,11 @@
 	                            
 	                            <div class="EventSearchBox_checkbox">
 									<span class="EventSearchBox_CheckboxLabels" style="width: 160px; height: 22px;">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 										<input type="checkbox" id="gwt-uid-10" tabindex="0">
-										<label for="gwt-uid-10">I'm flexible on the dates</label>
-									</span>
-									<span class="EventSearchBox_CheckboxLabels" style="width: 160px; height: 22px;">
-										<input type="checkbox" id="gwt-uid-9" tabindex="0">
-										<label for="gwt-uid-9">Search all dates</label>
+										<label for="gwt-uid-10" >I'm flexible on the dates</label>
 									</span>
 								</div>
 	
@@ -496,18 +498,22 @@
 										</div>
 									</ul>
 										
- 			                        <h4>Location Search</h4>
+ 			                        <!-- 
+                            		<input name ="country_number" id="mobile-number" type="tel" placeholder="e.g. +1 702 123 4567">
+									<input name ="country_number" id="mobile-number" type="tel" placeholder="">
+									<button type="button">Submit</button>
+                            		<br><br> -->
+                            		
+                            		<h4><br>Location Search</h4>
                             		<input id="pac-input" class="controls" type="text" placeholder="Enter a location">
-                            		<img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 41px; height: 27px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -533px -184px no-repeat;" border="0" class="gwt-Image">
+                            		<button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
                             		<div id="map-canvas"></div>
-                            		<br><br>
+                            		
+									
                             </div>
                         </div>                     
-                    </div>
-    				
-    				
-
-                </aside>     
+                    </div><!--/.recent comments-->
+    			</aside>      
 
             </div><!--/.row-->
 
@@ -609,8 +615,5 @@
     <script type = "text/javascript" src="js/calendar.js"></script>
     <script src="js/jquery-1.11.0.js"></script>
 	<script src="js/intlTelInput.js"></script>
-	<script>
-		$("#mobile-number").intlTelInput();
-	</script>
 </body>
 </html>
