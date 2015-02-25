@@ -8,5 +8,6 @@ public interface FestivalService {
 	List<FestivalVo> SelectFestival();
 	List<FestivalVo> SelectFestivalByKeyword(String keyword);
 	List<FestivalVo> SelectFestivalByLocation(String location);
+	List<FestivalVo> SelectFestivalByTheme(String themeName);
 	FestivalVo FestivalOne(int num);
 }

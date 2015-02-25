@@ -142,14 +142,32 @@
                     <div class="col-sm-6 col-xs-4">
                         <div class="top-number"><p><i class="fa fa-user"></i> Please Sign in / Welcome [NAME]</p></div>
                     </div>
-                    <div class="col-sm-6 col-xs-8">
+                     <div class="col-sm-6 col-xs-8">
                        <div class="social">
-                            <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            <ul class="social-share jooafont">
+                               <!-- Sign up, Log in 버튼 위치하는 곳 -->
+								<!-- <div class="top-number"> -->
+									<!-- <li><i class="fa"></i> <a href="C.do">My Wish</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+								<c:choose>
+									<c:when test="${not empty sessionScope.userLoginInfo}">
+										<li>
+											<i class="fa fa-user"></i> 
+											<font style="font: bold; font-size: large; color: white; ">${sessionScope.userLoginInfo.name}</font>
+											<font style="color: white;">님 반갑습니다.</font> 
+											<a href="C.do">My Wish</a>
+										</li>
+										<li>
+											<a href="logoutProcess.do">Logout</a>
+										</li>
+									</c:when>
+									<c:otherwise>
+										<li><a href="B.do">Login</a></li>
+									</c:otherwise>
+								</c:choose>
+								
+								<!-- </div> -->
+								<!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
+                                
                             </ul>
                             <div class="search">
                                 <form role="form">
@@ -233,7 +251,7 @@
                                     <br>
                                     <p>${vo.detail}</p><hr>
                                     
-                                    <form method="get" action="/insertWish.do">
+                                    <form method="get" action="insertWish.do?id=${sessionScope.userLoginInfo.name}&festivalNum=${vo.festivalNum}&festivalName=${vo.festivalName}">
                                     <button type="submit" class="btn2 btn-primary2 btn-lg" required="required" id="btn">Wish</button>
                                     </form>
                                     

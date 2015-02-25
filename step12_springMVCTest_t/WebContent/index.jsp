@@ -100,7 +100,7 @@
                         <li><a class="jooafont" href="about-us.jsp">About Us</a></li>
                         <li><a class="jooafont" href="portfolio.jsp">인포그래픽</a></li>
                         <li><a class="jooafont" href="selectFestival.do">여행 소개</a></li> 
-                        <li><a class="jooafont" href="contact-us.jsp">Contact</a></li>                        
+                        <li><a class="jooafont" href="contact-us.jsp">Contact</a></li>                         
                     </ul>
                 </div>
             </div><!--/.container-->

@@ -54,6 +54,17 @@ public class FestivalController {
 		return mv;
 	}
 	
+	@RequestMapping(value="selectFestivalByTheme", method = RequestMethod.GET)
+	public ModelAndView selectFestivalByTheme(String themeName, HttpSession session, HttpServletRequest request){
+		System.out.println("컨트롤러 "+themeName);
+		List<FestivalVo> list =  fService.SelectFestivalByTheme(themeName);
+		session.setAttribute("festivalList", list);
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("list", list);	
+		mv.setViewName("redirect:blog.jsp?pg=1");	//id=jsonView 객체를 찾아서 JsonView실행
+		return mv;
+	}
+	
 	@RequestMapping(value="FestivalOne", method = RequestMethod.GET)
 	public ModelAndView festivalOne(HttpSession session, HttpServletRequest request){
 		System.out.println("11");

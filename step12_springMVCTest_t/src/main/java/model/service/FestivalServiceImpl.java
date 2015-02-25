@@ -30,6 +30,11 @@ public class FestivalServiceImpl implements FestivalService{
 	}
 	
 	@Override
+	public List<FestivalVo> SelectFestivalByTheme(String themeName) {
+		return fDao.selectFestivalByTheme(themeName);
+	}
+	
+	@Override
 	public FestivalVo FestivalOne(int num) {
 		return fDao.festivalOne(num);
 	}

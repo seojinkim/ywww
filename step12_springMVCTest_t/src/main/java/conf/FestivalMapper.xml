@@ -40,4 +40,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		order by festivalNum asc
 	</select>
 
+	<select id="selectFestivalByTheme" parameterType="String" resultMap="fResultMap">
+	select distinct a.festivalNum, a.festivalName, a.city, a.summary, a.festivalStartDay, a.festivalEndDay, a.mapUrl, a.adress, a.detail, a.homepage, d.country  
+	from festival a, festival_theme b, theme c ,city_country d
+	where a.festivalNum = b.festivalNum and c.themeName = #{themeName} and c.themeNum = b.themeNum and a.city = d.city
+	order by festivalNum asc
+	</select>
+	
+	
 </mapper>
