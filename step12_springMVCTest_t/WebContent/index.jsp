@@ -731,7 +731,7 @@
                </div>
                
                <div class="item">
-                  <img src="images/airpot_1.jpg" alt="" />
+                  <img src="images/airport_1.jpg" alt="" />
                </div>
                </div>
             <!--/.carousel-inner-->
