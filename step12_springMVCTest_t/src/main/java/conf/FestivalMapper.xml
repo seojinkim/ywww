@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="wishlist">
+
+	<resultMap type="fVo" id="fResultMap">
+		<result column="festivalNum" property="festivalNum" />
+		<result column="festivalName" property="festivalName" />
+		<result column="city" property="city" />
+		<result column="summary" property="summary" />
+		<result column="festivalStartDay" property="festivalStartDay" />
+		<result column="festivalEndDay" property="festivalEndDay" />
+		<result column="mapUrl" property="mapUrl" />
+		<result column="adress" property="adress" />
+		<result column="detail" property="detail" />
+		<result column="homepage" property="homepage" />
+	</resultMap>
+
+</mapper>

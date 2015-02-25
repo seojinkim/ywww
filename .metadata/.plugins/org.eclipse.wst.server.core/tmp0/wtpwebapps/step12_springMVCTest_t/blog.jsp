@@ -1,18 +1,21 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<html lang="en">
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta http-equiv="Content-Language" content="ko">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="ko">
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>여행지 이름으로~ | YW3</title>
+    <title>여행 소개 | YW3</title>
     
     <!-- core CSS -->
-     <link rel="stylesheet" href="css/intlTelInput.css">
+    <link rel="stylesheet" href="css/intlTelInput.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -87,7 +90,7 @@
 	}
 	google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-    
+
 </head><!--/head-->
 
 <body>
@@ -134,21 +137,21 @@
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a class="jooafont" href="index.html">Home</a></li>
+                        <li><a class="jooafont" href="about-us.html">About Us</a></li>
                         <!-- <li><a href="services.html">Services</a></li> -->
-                        <li><a href="portfolio.html">여행 Tip</a></li>
-                        <!-- <li class="dropdown active">
+                        <li><a class="jooafont" href="portfolio.html">인포그래픽</a></li>
+                        <!-- <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li class="active"><a href="blog-item.html">Blog Single</a></li>
+                                <li><a href="blog-item.html">Blog Single</a></li>
                                 <li><a href="pricing.html">Pricing</a></li>
                                 <li><a href="404.html">404</a></li>
                                 <li><a href="shortcodes.html">Shortcodes</a></li>
                             </ul>
                         </li> -->
-                        <li class="active"><a href="blog.html">여행 소개</a></li> 
-                        <li><a href="contact-us.html">Contact</a></li>                        
+                        <li class="active"><a class="jooafont" href="blog.html">여행 소개</a></li> 
+                        <li><a class="jooafont" href="contact-us.html">Contact</a></li>                        
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -156,166 +159,47 @@
         
     </header><!--/header-->
 
-
     <section id="blog" class="container">
         <div class="center">
-            <h2>여행 소개</h2>
-            <p class="lead">상세 여행 소개 페이지</p>
+            <h2 class="jooafont">여행 소개</h2>
+            <p class="jooafont" class="lead">빤타스틱 페스티벌</p>
         </div>
 
         <div class="blog">
             <div class="row">
-                <div class="col-md-8">
+                 <div class="col-md-8">
                     <div class="blog-item">
-                        <img class="img-responsive img-blog" src="images/blog/blog1.png" width="100%" alt="" />
-                            <div class="row">  
-                                <div class="col-xs-12 col-sm-2 text-center">
-                                    <div class="entry-meta">
-                                        <span id="publish_date">07  NOV</span>
-                                        <span><i class="fa fa-user"></i> <a href="#"> John Doe</a></span>
-                                        <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
-                                        <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-10 blog-content">
-                                    <h2>켱복쿵 야간개장</h2>
-                                    <p>경복궁 갈바엔 창경궁을 가라</p>
-
-                                    <p>알겠냐?</p>
-                                    <button type="submit" class="btn2 btn-primary2 btn-lg" required="required" id="btn">Wish</button>
-                                    
-                                    <script>
-	                                    $(document)	.ready(function() {
-	                               		 	$("#btn").click(function() {
-												$.ajax({
-													url : "insert.do",
-													type : "post",
-													dataType : "text",
-													data : $("#inForm").serialize(),
-													success : function(data) {
-														if (data == "ok") {
-															alert("insert Success");
-															$("input[type=text]").val(""); //text박스 모두 지우기
-															getData(); //모든레코드 검색하는 함수 호출
-														} else {
-															alert("insert fail");
-														}
-													},
-													error : function(data) {
-														alert(data + ' : insert error');
-													}
-												}); //end of ajax
-											})//end of 가입로직
-										});//end of ready()
-                                    </script>
-                                    
-                                </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-10 blog-content">
+                                <a href="blog-item.html"><img class="img-responsive img-blog" src="images/blog/blog1.png" width="100%" alt="" /></a>
+                                <a href="blog-item.html"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
+                                <a href="blog-item.html"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
+                                <a href="blog-item.html"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
+                                <a href="blog-item.html"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
                             </div>
-                        </div><!--/.blog-item-->
-                        
-                        <h1 id="comments_title">3 Comments</h1>
-                        <div class="media comment_section">
-                            <div class="pull-left post_comments">
-                                <a href="#"><img src="images/blog/girl.png" class="img-circle" alt="" /></a>
-                            </div>
-                            <div class="media-body post_reply_comments">
-                                <h3>경복궁</h3>
-                                <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                                <p>글 내려라</p>
-                                <a href="#">Reply</a>
-                            </div>
-                        </div> 
-                        <div class="media comment_section">
-                            <div class="pull-left post_comments">
-                                <a href="#"><img src="images/blog/boy2.png" class="img-circle" alt="" /></a>
-                            </div>
-                            <div class="media-body post_reply_comments">
-                                <h3>창경궁</h3>
-                                <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                                <p>난 이 글 좋은데?</p>
-                                <a href="#">Reply</a>
-                            </div>
-                        </div> 
-                        <div class="media comment_section">
-                            <div class="pull-left post_comments">
-                                <a href="#"><img src="images/blog/boy3.png" class="img-circle" alt="" /></a>
-                            </div>
-                            <div class="media-body post_reply_comments">
-                                <h3>경복궁</h3>
-                                <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                                <p>싸우자</p>
-                                <a href="#">Reply</a>
-                            </div>
-                        </div> 
-
-
-                        <div id="contact-page clearfix">
-                            <div class="status alert alert-success" style="display: none"></div>
-                            <div class="message_heading">
-                                <h4>Comment를 남기세요</h4>
-                                <p>Make sure you enter the(*)required information where indicate.HTML code is not allowed</p>
-                            </div> 
-      
-                            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <div class="form-group">
-                                            <label>Name *</label>
-                                            <input type="text" class="form-control" required="required">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Email *</label>
-                                            <input type="email" class="form-control" required="required">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>URL</label>
-                                            <input type="url" class="form-control">
-                                        </div>                    
-                                    </div>
-                                    <div class="col-sm-7">                        
-                                        <div class="form-group">
-                                            <label>Message *</label>
-                                            <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
-                                        </div>                        
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>     
-                        </div><!--/#contact-page-->
-                    </div><!--/.col-md-8-->
+                        </div>    
+                    </div><!--/.blog-item-->
+                    <center>
+                    <ul class="pagination pagination-lg">
+                        <li><a href="blog.jsp?pageNum=currentPage+1%"><i class="fa fa-long-arrow-left"></i>Previous Page</a></li>
+                        <li class="active"><a class="jooafont" href="#">1</a></li>
+                        <li><a class="jooafont" href="#">2</a></li>
+                        <li><a class="jooafont" href="#">3</a></li>
+                        <li><a class="jooafont" href="#">4</a></li>
+                        <li><a class="jooafont" href="#">5</a></li>
+                        <li><a class="jooafont" href="#">Next Page<i class="fa fa-long-arrow-right"></i></a></li>
+                    </ul><!--/.pagination-->
+                    </center>
+                </div><!--/.col-md-8-->
 
                 <aside class="col-md-4">
-                	 <div class="widget blog_gallery">
-                        <h3>Photos</h3>
-                        <ul class="sidebar-gallery">
-                            <li><a href="#"><img src="images/blog/gallery1.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery2.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery3.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery4.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery5.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery6.png" alt="" /></a></li>
-                        </ul>
-                    </div><!--/.blog_gallery-->
-                
-                	<div class="widget blog_gallery">
-                        <h3>Map부분</h3>
-                           <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3162.335871884976!2d126.98357700000001!3d37.570707999999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ee98180615%3A0x8c36d262dc3a051e!2z7ZWc6rWt642w7J207YSw67Kg7J207Iqk7KeE7Z2l7JuQ!5e0!3m2!1sko!2skr!4v1423569599455"></iframe>
-                    </div>
-                        
-                    <div class="widget blog_gallery">
-                     	<h3>Ad부분</h3>
-                     	<img src="images/audition.png"/>
-                    </div>
-                     	
-                   <div class="widget categories">
+    				<div class="widget categories">
                         <div class="row">
                             <div class="col-sm-12">
-                            	<h4>Keyword Search</h4>
-                            		<input type="text" class="controls" autocomplete="off" placeholder="Enter a keyword">
-                            		<img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 41px; height: 27px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -533px -184px no-repeat;" border="0" class="gwt-Image">
-                            	<h4>Date</h4>	
+                            	<h4 class="jooafont">Keyword Search</h4>
+                                    <input type="text" class="controls" autocomplete="off" placeholder="Enter a keyword">
+                                    <input type="image" src="images/search_icon.png" alt="Submit" width="30" height="25">
+                            	<h4 class="jooafont">Date</h4>	
                             	<form>
                             	<input type="text" id="txtDate" value="" onclick="fnPopUpCalendar(txtDate,txtDate,'yyyy/mm/dd')" class='text_box1'>
                             	<a> ~ </a>
@@ -387,26 +271,25 @@
 										</div>
 									</ul>
 										
- 			                        <h4>Location Search</h4>
+ 			                        <!-- 
+                            		<input name ="country_number" id="mobile-number" type="tel" placeholder="e.g. +1 702 123 4567">
+									<input name ="country_number" id="mobile-number" type="tel" placeholder="">
+									<button type="button">Submit</button>
+                            		<br><br> -->
+                            		
+                            		<h4 class="jooafont">Location Search</h4>
                             		<input id="pac-input" class="controls" type="text" placeholder="Enter a location">
                             		<img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 41px; height: 27px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -533px -184px no-repeat;" border="0" class="gwt-Image">
                             		<div id="map-canvas"></div>
-                            		<br><br>
+                            		
 									
                             </div>
                         </div>                     
-                    </div>
-    				
-    				
-
-                </aside>     
-
+                    </div><!--/.recent comments-->
+    			</aside>  
             </div><!--/.row-->
-
-         </div><!--/.blog-->
-
+        </div>
     </section><!--/#blog-->
-
 
     <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -492,6 +375,7 @@
         </div>
     </footer><!--/#footer-->
 
+	
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
@@ -501,6 +385,7 @@
     <script type = "text/javascript" src="js/calendar.js"></script>
     <script src="js/jquery-1.11.0.js"></script>
 	<script src="js/intlTelInput.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true_or_false"></script>
 	<script>
 		$("#mobile-number").intlTelInput();
 	</script>

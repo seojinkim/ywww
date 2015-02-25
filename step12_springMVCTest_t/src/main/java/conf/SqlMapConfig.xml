@@ -13,6 +13,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
    <typeAliases>
      <typeAlias type="model.domain.UsersVo" alias="uVo"/>
      <typeAlias type="model.domain.WishListVo" alias="wVo"/>
+     <typeAlias type="model.domain.WishListVo" alias="fVo"/>
    </typeAliases>
    
 	<environments default="development">
@@ -32,6 +33,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<mappers>
 		<mapper resource="conf/UsersMapper.xml"/>
 		<mapper resource="conf/WishListMapper.xml"/>
+		<mapper resource="conf/FestivalMapper.xml"/>
 	</mappers>
 </configuration>
 
