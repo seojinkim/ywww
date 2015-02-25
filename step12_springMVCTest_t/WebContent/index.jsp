@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +47,15 @@
                                <!-- Sign up, Log in 버튼 위치하는 곳 -->
 								<!-- <div class="top-number"> -->
 									<li><i class="fa"></i> <a href="C.do">My Wish</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<li><i class="fa fa-user"></i> <a href="B.do">Login</a></li>
+								<c:choose>
+									<c:when test="${not empty sessionScope.userLoginInfo}">
+										<li><i class="fa fa-user"></i> <a href="logoutProcess.do">Logout</a></li>
+									</c:when>
+									<c:otherwise>
+										<li><i class="fa fa-user"></i> <a href="B.do">Login</a></li>
+									</c:otherwise>
+								</c:choose>
+								
 								<!-- </div> -->
 								<!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
                                 
