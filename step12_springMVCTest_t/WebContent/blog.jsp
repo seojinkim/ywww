@@ -1,7 +1,29 @@
 
+<%@page import="model.domain.FestivalVo"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+	final int ROWSIZE = 6;
+	final int BLOCK = 5;
+
+	int pg = 1;
+	
+	if(request.getParameter("pg")!=null) {
+		pg = Integer.parseInt(request.getParameter("pg"));
+	}
+	
+	int start = (pg*ROWSIZE) - (ROWSIZE-1);
+	int end = (pg*ROWSIZE);
+	
+	int allPage = 0;
+	
+	int startPage = ((pg-1)/BLOCK*BLOCK)+1;
+	int endPage = ((pg-1)/BLOCK*BLOCK)+BLOCK;
+
+%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -133,16 +155,36 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-user"></i> Please Sign in / Welcome [NAME]</p></div>
+                       <!-- 로그인한 고객일 경우 고객 정보 뜨는 곳 -->
+<!--                         <div class="top-number"><p><i class="fa fa-user"></i> 로그인</p>
+                        </div> -->
                     </div>
                     <div class="col-sm-6 col-xs-8">
                        <div class="social">
-                            <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            <ul class="social-share jooafont">
+                               <!-- Sign up, Log in 버튼 위치하는 곳 -->
+								<!-- <div class="top-number"> -->
+									<!-- <li><i class="fa"></i> <a href="C.do">My Wish</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+								<c:choose>
+									<c:when test="${not empty sessionScope.userLoginInfo}">
+										<li>
+											<i class="fa fa-user"></i> 
+											<font style="font: bold; font-size: large; color: white; ">${sessionScope.userLoginInfo.name}</font>
+											<font style="color: white;">님 반갑습니다.</font> 
+											<a href="C.do">My Wish</a>
+										</li>
+										<li>
+											<a href="logoutProcess.do">Logout</a>
+										</li>
+									</c:when>
+									<c:otherwise>
+										<li><a href="B.do">Login</a></li>
+									</c:otherwise>
+								</c:choose>
+								
+								<!-- </div> -->
+								<!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
+                                
                             </ul>
                             <div class="search">
                                 <form role="form">
@@ -165,31 +207,23 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.jsp"><img src="images/logo.png" alt="logo"></a>
+                    <!-- YW3 홈페이 로고 -->
+                    <a class="navbar-brand" href="index.jsp"><img src="images/logo3.png" alt="logo"></a>
                 </div>
-                
+            
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
+                       <!-- Home, About us, 여행 Tip, 여행 소개, Contact -->
                         <li><a class="jooafont" href="index.jsp">Home</a></li>
                         <li><a class="jooafont" href="about-us.html">About Us</a></li>
-                        <!-- <li><a href="services.html">Services</a></li> -->
                         <li><a class="jooafont" href="portfolio.html">인포그래픽</a></li>
-                        <!-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog-item.jsp">Blog Single</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="shortcodes.html">Shortcodes</a></li>
-                            </ul>
-                        </li> -->
-                        <li class="active"><a class="jooafont" href="blog.jsp">여행 소개</a></li> 
+                        <li class="active"><a class="jooafont" href="blog.jsp?pg=1">여행 소개</a></li> 
                         <li><a class="jooafont" href="contact-us.html">Contact</a></li>                        
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-        
+      
     </header><!--/header-->
 
     <section id="blog" class="container">
@@ -204,22 +238,45 @@
                     <div class="blog-item">
                         <div class="row">
                             <div class="col-xs-12 col-sm-10 blog-content">
-                            <c:forEach items="${sessionScope.festivalList}" var="list">
+                            <%
+                           		List<FestivalVo> list = (List<FestivalVo>)(session.getAttribute("festivalList"));
+                            	int pageNum = Integer.parseInt(request.getParameter("pg"));
+                            	FestivalVo tempFestival = null;
+                            	for(int i = (pageNum - 1) * 10; i < (pageNum * 10) - 1 ; i++)
+                            	{
+                            		tempFestival = list.get(i);
+                            %>
+                           
+	                            <p class="jooafont" class="lead">#<%= tempFestival.getFestivalName() %></p> 
+	                            <a href="FestivalOne.do?num=<%= tempFestival.getFestivalNum() %>"><img class="img-responsive img-blog" src="festivalP/<%= tempFestival.getFestivalNum() %>/<%= tempFestival.getFestivalNum() %>_1.jpg" width="100%" alt="" /></a>
+                            <% 
+                            	}
+                            %>
+                            <%-- <c:forEach items="${sessionScope.festivalList}" var="list" begin="<%=Integer.parseInt(request.getParameter("pg")) %>" end="<%=Integer.parseInt(request.getParameter("pg")) %>">
+                            	<%System.out.println(request.getParameter("pg").getClass()); %>
                             	<p class="jooafont" class="lead">#${list.festivalName}</p> 
                                 <a href="FestivalOne.do?num=${list.festivalNum}"><img class="img-responsive img-blog" src="festivalP/${list.festivalNum}/${list.festivalNum}_1.jpg" width="100%" alt="" /></a>
-                             </c:forEach> 
+                             </c:forEach>  --%>
                             </div>
                         </div>    
                     </div><!--/.blog-item-->
                     <center>
                     <ul class="pagination pagination-lg">
-                        <li><a href="blog.jsp?pageNum=currentPage+1%"><i class="fa fa-long-arrow-left"></i>Previous Page</a></li>
-                        <li class="active"><a class="jooafont" href="#">1</a></li>
-                        <li><a class="jooafont" href="#">2</a></li>
-                        <li><a class="jooafont" href="#">3</a></li>
-                        <li><a class="jooafont" href="#">4</a></li>
-                        <li><a class="jooafont" href="#">5</a></li>
-                        <li><a class="jooafont" href="#">Next Page<i class="fa fa-long-arrow-right"></i></a></li>
+                 	   <li><a href="blog.jsp?pg=<%=startPage-1%>"><i class="fa fa-long-arrow-left"></i>Previous Page</a></li>
+						<%
+							for(int i=startPage; i<= endPage; i++){
+								if(i==pg){
+						%>
+									<li class="active"><a class="jooafont" href="blog.jsp?pg=<%=i %>"><%=i %></a></li>
+						<%
+								}else{
+						%>
+									<li><a class="jooafont" href="blog.jsp?pg=<%=i %>"><%=i %></a></li>
+						<%
+								}
+							}
+						%>
+						<li><a class="jooafont" href="blog.jsp?pg=<%=endPage+1%>">Next Page<i class="fa fa-long-arrow-right"></i></a></li>
                     </ul><!--/.pagination-->
                     </center>
                 </div><!--/.col-md-8-->
