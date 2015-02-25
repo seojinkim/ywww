@@ -1,3 +1,11 @@
+<%-- <%@page import="model.domain.UsersVo"%>
+<%
+	UsersVo vo = (UsersVo)request.getAttribute("vo");
+	session.setAttribute("vo",vo);
+%> --%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <html lang="en">
@@ -59,64 +67,39 @@
 }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
-
-	<script src="js/jquery-1.11.0.js"></script>
-	<script type="text/javascript">
+	
+<!-- <script src="js/jquery-1.11.0.js"></script>
+<script type="text/javascript">
 	$(document)	.ready(function() {
-		/* 3. ê°ìë ëª¨ë  íì ì ë³´ ê²ì í íë©´ì ì¶ë ¥íë ë¡ì§ */
 		function getData() {
 			$.ajax({
-					url : "selectWish.do",
-					type : "post",
-					dataType : "json", //ê²°ê³¼ë°ì´í°íì
-					success : function(data) {
-						var table = "";
-						$("#listTable tr:gt(0)").remove();
+				url : "FestivalOne.do",
+				type : "get",
+				dataType : "json", //ê²°ê³¼ë°ì´í°íì
+				success : function(data) {
+					var table = "";
+					$("#listTable tr:gt(0)").remove();
 
-						$(data.list).each(
-								function(index, item) {
-									table += "<tr><td>" + item.id + "</td><td>"
-											+ item.festivalNum + "</td><td>"
-											+ item.festivalName + "</td><td>";
-									table += "<input type='button' value='Click Me' id='del' name='"+item.id+"'></td></tr>"
-								});
-						//íì´ë¸ì ì¶ê°
-						$("#listTable tr:eq(0)").after(table);
-					},
-					error : function(err) {//ì¤í¨íì ë
-						alert(err + " : fail");
-					}
-				}) //end of ajax
-			}//end of getData()
-
-				/* 4. ì­ì íê¸°(oní¨ìë ëì ì¼ë¡ ìì±ë ììì ì´ë²¤í¸ì ì©)
-				1. ë¬¸ë² : $(document).on("ì´ë²¤í¸ì¢ë¥", ì´ë²¤í¸ëì, í¨ì); 
-				2. ë¡ì§ : ëª¨ë  íì ì ë³´ ë³´ê¸° listìì ê° íìë³ "ì­ì " ë²í¼ í´ë¦­ì í´ë¹ íìì ë³´ë§ ì­ì íë ë¡ì§ 
-				3. êµ¬í : ì­ì  í ê°±ì ë íì ì ë³´ ë¦¬ì¤í¸ íë©´ì ì¬ì¤í */
-				$(document).on("click", "#del", function() {
-					$.ajax({
-						url : "deleteWish.do",
-						type : "post",
-						dataType : "text",
-						data : "id=" + $(this).attr("name"), //ìë²ì ì ì¡í  ë°ì´í°
-						success : function(data) {
-							if (data == "ok") {
-								alert("삭제 성공");
-								getData();
-							} else {
-								alert("삭제 실패")
-							}
-						},
-						error : function(err) {//ì¤í¨íìë
-							alert(err + " : wishList 삭제 실패")
-						}
-					})
-				});
-
-				//ë ì½ë ê°ì ¸ì¤ê¸°ë í¨ì í¸ì¶
+					$(data.list).each(
+							function(index, item) {
+								table += "<tr><td>" + item.id + "</td><td>"
+										+ item.festivalNum + "</td><td>"
+										+ item.festivalName + "</td><td>";
+								table += "<input type='button' value='Click Me' id='del' name='"+item.id+"'></td></tr>"
+							});
+					//íì´ë¸ì ì¶ê°
+					$("#listTable tr:eq(0)").after(table);
+				},
+				error : function(err) {//ì¤í¨íì ë
+					alert(err + " : fail");
+				}
+			}) //end of ajax
+		}//end of getData()
+				
 				getData();
 			});//end of ready()
-	</script>
+</script> -->
+
 
 
     <script>
@@ -221,12 +204,12 @@
             <h2>여행 소개</h2>
             <p class="lead">상세 여행 소개 페이지</p>
         </div>
-
+     <c:set var="vo" value = "${sessionScope.vo}"/>
         <div class="blog">
             <div class="row">
                 <div class="col-md-8">
                     <div class="blog-item">
-                        <img class="img-responsive img-blog" src="images/blog/blog1.png" width="100%" alt="" />
+                        <img class="img-responsive img-blog" src="festivalP/${vo.festivalNum}/${vo.festivalNum}_1.jpg" width="100%" alt="" />
                             <div class="row">  
                                 <div class="col-xs-12 col-sm-2 text-center">
                                     <div class="entry-meta">
@@ -237,35 +220,44 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-10 blog-content">
-                                    <h2>켱복쿵 야간개장</h2>
-                                    <p>경복궁 갈바엔 창경궁을 가라</p>
-
-                                    <p>알겠냐?</p>
+                           
+                                
+                                    <h2>${vo.festivalName}</h2>
+                                    <p>${vo.summary}</p>
+                                    <br><hr>
+                                    <p>지역 : ${vo.country}, ${vo.city}</p><hr>
+                                    <p>축제기간: ${vo.festivalStartDay}~${vo.festivalEndDay}</p><hr>
+                                    <p>주소 : ${vo.adress}</p><hr>
+                                    <p>홈페이지 : ${vo.homepage}</p><hr>
+                                    <br>
+                                    <p>${vo.detail}</p><hr>
+                                    
                                     <button type="submit" class="btn2 btn-primary2 btn-lg" required="required" id="btn">Wish</button>
                                     
-                                    <script>
-	                                    $(document)	.ready(function() {
-	                               		 	$("#btn").click(function() {
-												$.ajax({
-													url : "insert.do",
-													type : "post",
-													dataType : "text",
-													data : $("#inForm").serialize(),
-													success : function(data) {
-														if (data == "ok") {
-															alert("insert Success");
-															$("input[type=text]").val(""); //text박스 모두 지우기
-															getData(); //모든레코드 검색하는 함수 호출
-														} else {
-															alert("insert fail");
-														}
-													},
-													error : function(data) {
-														alert(data + ' : insert error');
-													}
-												}); //end of ajax
-											})//end of 가입로직
-										});//end of ready()
+                                    <script src="js/jquery-1.11.0.js"></script>
+                           <script type="text/javascript">
+                                       $(document)   .ready(function() {
+                                            $("#btn").click(function() {
+                                    $.ajax({
+                                       url : "insertWish.do",
+                                       type : "post",
+                                       dataType : "text",
+                                       data : $("#inForm").serialize(),
+                                       success : function(data) {
+                                          if (data == "ok") {
+                                             alert("insert Success");
+                                             $("input[type=text]").val(""); //text박스 모두 지우기
+                                             getData(); //모든레코드 검색하는 함수 호출
+                                          } else {
+                                             alert("insert fail");
+                                          }
+                                       },
+                                       error : function(data) {
+                                          alert(data + ' : insert error');
+                                       }
+                                    }); //end of ajax
+                                 })//end of 가입로직ddddddd
+                              });//end of ready()
                                     </script>
                                     
                                 </div>
@@ -349,22 +341,53 @@
                 	 <div class="widget blog_gallery">
                         <h3>Photos</h3>
                         <ul class="sidebar-gallery">
-                            <li><a href="#"><img src="images/blog/gallery1.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery2.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery3.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery4.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery5.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery6.png" alt="" /></a></li>
+                        
+<!--               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+						<div class="recent-work-wrap">
+							<img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_18.jpg" alt="">
+							<div class="overlay">
+								<div class="recent-work-inner">
+									<h3>
+										<a href="#">하와이 렌트카 정보</a>
+									</h3>
+									<p>Hawaii Rent car Information</p>
+									<a class="preview" href="images/portfolio/full/full_overseas_18.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+								</div>
+							</div>
+						</div>
+					</div>/.portfolio-item -->
+					
+					
+ 					<div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+						<div class="recent-work-wrap">
+							<img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_18.jpg" alt="">
+							<div class="overlay">
+								<div class="recent-work-inner">
+									<h3>
+										<a href="#">하와이 렌트카 정보</a>
+									</h3>
+									<p>Hawaii Rent car Information</p>
+									<a class="preview" href="images/portfolio/full/full_overseas_18.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+								</div>
+							</div>
+						</div>
+					</div>/.portfolio-item                            
+							<li><a href="#"><img src="festivalP/${vo.festivalNum}/${vo.festivalNum}_1.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="festivalP/${vo.festivalNum}/${vo.festivalNum}_2.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="festivalP/${vo.festivalNum}/${vo.festivalNum}_3.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="festivalP/${vo.festivalNum}/${vo.festivalNum}_4.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="festivalP/${vo.festivalNum}/${vo.festivalNum}_5.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="festivalP/${vo.festivalNum}/${vo.festivalNum}_6.jpg" alt="" /></a></li>
                         </ul>
                     </div><!--/.blog_gallery-->
                 
                 	<div class="widget blog_gallery">
-                        <h3>Map부분</h3>
-                           <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3162.335871884976!2d126.98357700000001!3d37.570707999999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ee98180615%3A0x8c36d262dc3a051e!2z7ZWc6rWt642w7J207YSw67Kg7J207Iqk7KeE7Z2l7JuQ!5e0!3m2!1sko!2skr!4v1423569599455"></iframe>
+                        <h3>MAP</h3>
+                           <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=${vo.mapUrl}></iframe>
                     </div>
                         
                     <div class="widget blog_gallery">
-                     	<h3>Ad부분</h3>
+                     	<h3>AD</h3>
                      	<img src="images/audition.png"/>
                     </div>
                      	
@@ -451,7 +474,6 @@
                             		<img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 41px; height: 27px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -533px -184px no-repeat;" border="0" class="gwt-Image">
                             		<div id="map-canvas"></div>
                             		<br><br>
-									
                             </div>
                         </div>                     
                     </div>

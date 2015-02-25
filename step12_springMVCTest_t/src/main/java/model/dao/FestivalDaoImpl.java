@@ -24,4 +24,19 @@ public class FestivalDaoImpl implements FestivalDao{
 		}
 		return list;
 	}
+	
+	
+	@Override
+	public FestivalVo festivalOne(int num) {
+		SqlSession session = null;
+		FestivalVo vo = null;
+		try {
+			session = DBUtil.getSqlSession();
+			System.out.println("여긴옴2?");
+			vo = session.selectOne("festival.selectOne",num);
+		} finally {
+			DBUtil.closeSqlSession(session);
+		}
+		return vo;
+	}
 }

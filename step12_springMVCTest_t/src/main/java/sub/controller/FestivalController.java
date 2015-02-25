@@ -31,4 +31,20 @@ public class FestivalController {
 		mv.setViewName("jsonView");	//id=jsonView 객체를 찾아서 JsonView실행
 		return mv;
 	}
+	
+	@RequestMapping(value="FestivalOne", method = RequestMethod.GET)
+	public ModelAndView festivalOne(HttpSession session, HttpServletRequest request){
+		System.out.println("11");
+		System.out.println(request.getParameter("num"));
+		int num = Integer.parseInt(request.getParameter("num"));
+		System.out.println("dd시작2");
+		FestivalVo vo =  fService.FestivalOne(num);
+		System.out.println("dd끝2");
+		session.setAttribute("vo", vo);
+		System.out.println("세션설정2");
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("vo", vo);	
+		mv.setViewName("redirect:blog-item.jsp");	//id=jsonView 객체를 찾아서 JsonView실행
+		return mv;
+	}
 }

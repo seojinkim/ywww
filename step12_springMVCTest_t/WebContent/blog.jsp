@@ -206,7 +206,7 @@
                             <div class="col-xs-12 col-sm-10 blog-content">
                             <c:forEach items="${sessionScope.festivalList}" var="list">
                             	<p class="jooafont" class="lead">#${list.festivalName}</p> 
-                                <a href="blog-item.jsp"><img class="img-responsive img-blog" src="festivalP/${list.festivalNum}/${list.festivalNum}_1.jpg" width="100%" alt="" /></a>
+                                <a href="FestivalOne.do?num=${list.festivalNum}"><img class="img-responsive img-blog" src="festivalP/${list.festivalNum}/${list.festivalNum}_1.jpg" width="100%" alt="" /></a>
                              </c:forEach> 
                             </div>
                         </div>    

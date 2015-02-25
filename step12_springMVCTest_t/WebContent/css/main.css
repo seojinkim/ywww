@@ -2306,7 +2306,10 @@ ul.sidebar-gallery {
   display: inline-block;
 }
 
-
+.sidebar-gallery li a img{
+  width: 107px;
+  height: 63px;  
+}
 /**********************
 **blog single page css*
 **********************/

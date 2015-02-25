@@ -18,4 +18,9 @@ public class FestivalServiceImpl implements FestivalService{
 	public List<FestivalVo> SelectFestival() {
 		return fDao.selectFestival();
 	}
+	
+	@Override
+	public FestivalVo FestivalOne(int num) {
+		return fDao.festivalOne(num);
+	}
 }
