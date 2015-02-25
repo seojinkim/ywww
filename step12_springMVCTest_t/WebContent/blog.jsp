@@ -196,10 +196,10 @@
     				<div class="widget categories">
                         <div class="row">
                             <div class="col-sm-12">
-                            	<h4 class="jooafont">Keyword Search</h4>
+                            	<h4>Keyword Search</h4>
                                     <input type="text" id="pac-input" class="controls" autocomplete="off" placeholder="Enter a keyword">
                                     <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
-                            	<h4 class="jooafont"><br>Date</h4>	
+                            	<h4><br>Date</h4>	
                             	<form>
                             	<input type="text" id="txtDate" value="" onclick="fnPopUpCalendar(txtDate,txtDate,'yyyy/mm/dd')" class='text_box1'>
                             	<a> ~ </a>
@@ -276,7 +276,7 @@
 									<button type="button">Submit</button>
                             		<br><br> -->
                             		
-                            		<h4 class="jooafont"><br>Location Search</h4>
+                            		<h4><br>Location Search</h4>
                             		<input id="pac-input" class="controls" type="text" placeholder="Enter a location">
                             		<button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
                             		<div id="map-canvas"></div>
