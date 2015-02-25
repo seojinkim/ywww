@@ -143,4 +143,13 @@ public class UsersController {
         }
         return mav;
     }
+    
+    // 로그아웃 처리
+    @RequestMapping(value="logoutProcess.do")
+    public ModelAndView logoutProcess(HttpSession session){
+    	ModelAndView mav = new ModelAndView();
+    	mav.setViewName("redirect:index.jsp");
+    	session.invalidate();
+    	return mav;
+    }
 }
