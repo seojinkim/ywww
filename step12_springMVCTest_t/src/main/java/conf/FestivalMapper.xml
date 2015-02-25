@@ -21,5 +21,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectAll" resultMap="fResultMap">
 		select * from festival order by festivalNum asc
 	</select>
+	
+	<select id="selectOne" parameterType="int" resultMap="fResultMap">
+		select * from festival where festivalNum = #{num} 
+	</select>
 
 </mapper>
