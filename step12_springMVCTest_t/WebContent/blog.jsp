@@ -116,7 +116,7 @@
 </head><!--/head-->
 
 
-	<script src="js/jquery-1.11.0.js"></script>
+	<!-- <script src="js/jquery-1.11.0.js"></script>
 <script type="text/javascript">
 	$(document)	.ready(function() {
 		function getData() {
@@ -145,7 +145,7 @@
 		}//end of getData()
 				getData();
 			});//end of ready()
-</script>
+</script> -->
 
 
 <body>
@@ -239,7 +239,9 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-10 blog-content">
                             <%
+                            
                            		List<FestivalVo> list = (List<FestivalVo>)(session.getAttribute("festivalList"));
+                        	
 	                            allPage = (int)Math.ceil(list.size()/(double)ROWSIZE);
 	                    		
 	                    		if(endPage > allPage) {

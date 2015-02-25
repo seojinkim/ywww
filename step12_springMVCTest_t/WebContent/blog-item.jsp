@@ -190,7 +190,7 @@
                             </ul>
                         </li> -->
                         <li class="active"><a href="blog.jsp">여행 소개</a></li> 
-                        <li><a href="contact-us.html">Contact</a></li>                        
+                        <li><a href="contact-us.jsp">Contact</a></li>                        
                     </ul>
                 </div>
             </div><!--/.container-->
