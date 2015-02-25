@@ -3,7 +3,7 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="wishlist">
+<mapper namespace="festival">
 
 	<resultMap type="fVo" id="fResultMap">
 		<result column="festivalNum" property="festivalNum" />
@@ -17,5 +17,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="detail" property="detail" />
 		<result column="homepage" property="homepage" />
 	</resultMap>
+	
+	<select id="selectAll" resultMap="fResultMap">
+		select * from festival order by festivalNum asc
+	</select>
 
 </mapper>

@@ -1,5 +1,9 @@
 package model.dao;
 
-public interface FestivalDao {
+import java.util.List;
 
+import model.domain.FestivalVo;
+
+public interface FestivalDao {
+	List<FestivalVo> selectFestival();
 }

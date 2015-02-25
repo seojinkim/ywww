@@ -43,16 +43,24 @@
                     </div>
                     <div class="col-sm-6 col-xs-8">
                        <div class="social">
-                            <ul class="social-share">
+                            <ul class="social-share jooafont">
                                <!-- Sign up, Log in 버튼 위치하는 곳 -->
 								<!-- <div class="top-number"> -->
-									<li><i class="fa"></i> <a href="C.do">My Wish</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<!-- <li><i class="fa"></i> <a href="C.do">My Wish</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 								<c:choose>
 									<c:when test="${not empty sessionScope.userLoginInfo}">
-										<li><i class="fa fa-user"></i> <a href="logoutProcess.do">Logout</a></li>
+										<li>
+											<i class="fa fa-user"></i> 
+											<font style="font: bold; font-size: large; color: white; ">${sessionScope.userLoginInfo.name}</font>
+											<font style="color: white;">님 반갑습니다.</font> 
+											<a href="C.do">My Wish</a>
+										</li>
+										<li>
+											<a href="logoutProcess.do">Logout</a>
+										</li>
 									</c:when>
 									<c:otherwise>
-										<li><i class="fa fa-user"></i> <a href="B.do">Login</a></li>
+										<li><a href="B.do">Login</a></li>
 									</c:otherwise>
 								</c:choose>
 								
@@ -90,19 +98,7 @@
                        <!-- Home, About us, 여행 Tip, 여행 소개, Contact -->
                         <li class="active"><a class="jooafont" href="index.jsp">Home</a></li>
                         <li><a class="jooafont" href="about-us.html">About Us</a></li>
-                        <!-- <li><a href="services.html">Not used</a></li> -->
                         <li><a class="jooafont" href="portfolio.html">인포그래픽</a></li>
-                        <!-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog-item.jsp">Blog Single</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="shortcodes.html">Shortcodes</a></li>
-                            </ul>
-                        </li> -->
-                        <li><a href="blog.jsp">여행 소개</a></li> 
-                        <li><a href="contact-us.html">Contact</a></li>                        
                         <li><a class="jooafont" href="blog.jsp">여행 소개</a></li> 
                         <li><a class="jooafont" href="contact-us.html">Contact</a></li>                        
                     </ul>
