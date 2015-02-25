@@ -9,6 +9,7 @@ import model.service.WishListService;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -30,6 +31,7 @@ public class WishListController {
 	@RequestMapping("/insertWish.do")
 	@ResponseBody
 	public String insert(WishListVo wishlistVo) {
+		System.out.println("안녕 난 controller");
 		String resultMsg = "no";
 		int result = wService.insertWish(wishlistVo);
 		if(result > 0 )  {
