@@ -17,6 +17,7 @@ public class WishListServiceImpl implements WishListService{
 	
 	@Override
 	public List<WishListVo> SelectWish() {
+		System.out.println("Service!");
 		return wDao.selectWishList();
 	}
 	

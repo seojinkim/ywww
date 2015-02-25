@@ -13,6 +13,7 @@ import util.DBUtil;
 public class WishListDaoImpl implements WishListDao{
 	@Override
 	public List<WishListVo> selectWishList() {
+		System.out.println("----DAO----");
 		SqlSession session = null;
 		List<WishListVo> list = null;
 		try {
