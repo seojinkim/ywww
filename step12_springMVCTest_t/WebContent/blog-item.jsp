@@ -224,33 +224,40 @@
                                 
                                     <h2>${vo.festivalName}</h2>
                                     <p>${vo.summary}</p>
-
-                                    <p>${vo.detail}</p>
+                                    <br><hr>
+                                    <p>지역 : ${vo.country}, ${vo.city}</p><hr>
+                                    <p>축제기간: ${vo.festivalStartDay}~${vo.festivalEndDay}</p><hr>
+                                    <p>주소 : ${vo.adress}</p><hr>
+                                    <p>홈페이지 : ${vo.homepage}</p><hr>
+                                    <br>
+                                    <p>${vo.detail}</p><hr>
+                                    
                                     <button type="submit" class="btn2 btn-primary2 btn-lg" required="required" id="btn">Wish</button>
                                     
-                                    <script>
-	                                    $(document)	.ready(function() {
-	                               		 	$("#btn").click(function() {
-												$.ajax({
-													url : "insert.do",
-													type : "post",
-													dataType : "text",
-													data : $("#inForm").serialize(),
-													success : function(data) {
-														if (data == "ok") {
-															alert("insert Success");
-															$("input[type=text]").val(""); //text박스 모두 지우기
-															getData(); //모든레코드 검색하는 함수 호출
-														} else {
-															alert("insert fail");
-														}
-													},
-													error : function(data) {
-														alert(data + ' : insert error');
-													}
-												}); //end of ajax
-											})//end of 가입로직
-										});//end of ready()
+                                    <script src="js/jquery-1.11.0.js"></script>
+                           <script type="text/javascript">
+                                       $(document)   .ready(function() {
+                                            $("#btn").click(function() {
+                                    $.ajax({
+                                       url : "insertWish.do",
+                                       type : "post",
+                                       dataType : "text",
+                                       data : $("#inForm").serialize(),
+                                       success : function(data) {
+                                          if (data == "ok") {
+                                             alert("insert Success");
+                                             $("input[type=text]").val(""); //text박스 모두 지우기
+                                             getData(); //모든레코드 검색하는 함수 호출
+                                          } else {
+                                             alert("insert fail");
+                                          }
+                                       },
+                                       error : function(data) {
+                                          alert(data + ' : insert error');
+                                       }
+                                    }); //end of ajax
+                                 })//end of 가입로직
+                              });//end of ready()
                                     </script>
                                     
                                 </div>
