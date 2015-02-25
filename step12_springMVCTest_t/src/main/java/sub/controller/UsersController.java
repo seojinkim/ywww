@@ -3,15 +3,19 @@ package sub.controller;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import model.domain.UsersVo;
 import model.service.UsersService;
 
+import org.apache.catalina.User;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -89,7 +93,7 @@ public class UsersController {
 		UsersVo vo = uService.usersLogin(vo1);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("vo", vo);			
-		mv.setViewName("jsonView");	//id=jsonView 객체를 찾아서 JsonView실행
+		mv.setViewName("index.jsp");	//id=jsonView 객체를 찾아서 JsonView실행
 		return mv;
 
 	}
@@ -102,7 +106,7 @@ public class UsersController {
 			request.getSession().setAttribute("vo", uService.usersLogin(vo));
 			System.out.println("굿");
 			request.getSession().setAttribute("loginStatus", "ok");
-			url = "index.html";
+			url = "index.jsp";
 		} catch (Exception e) {	
 			e.printStackTrace();
 			request.getSession().setAttribute("error", "에러");
@@ -124,4 +128,19 @@ public class UsersController {
 	public String getProcessC(){
 		return "welcome4";
 	}
+	
+	 // 로그인 처리
+    @RequestMapping(value="loginProcess.do", method = RequestMethod.POST)
+    public ModelAndView loginProcess(UsersVo user, HttpSession session, HttpServletRequest request) {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("redirect:index.jsp");
+ 
+        UsersVo loginUser = uService.usersLogin(user);
+ 
+        if (loginUser != null) {
+            session.setAttribute("userLoginInfo", loginUser);
+            System.out.println(loginUser);
+        }
+        return mav;
+    }
 }
