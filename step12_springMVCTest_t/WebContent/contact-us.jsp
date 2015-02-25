@@ -106,10 +106,10 @@
         </nav><!--/nav-->
     </header><!--/header-->
 
-    <section id="contact-info">
+     <section id="contact-info">
         <div class="center">                
-            <h2 class="jooafont">ë¬¸ìíê¸°</h2>
-            <p class="jooafont" class="lead">ì´ì©íìë©´ì ë¶í¸í ì¬í­ì´ë ê°ì ì ì´ ìë¤ë©´ ì¸ì ë ì§ ìë ¤ì£¼ì¸ì.</p>
+            <h2 class="jooafont">문의하기</h2>
+            <p class="jooafont" class="lead">이용하시면서 불편한 사항이나 개선점이 있다면 언제든지 알려주세요.</p>
         </div>
         <div class="gmap-area">
             <div class="container">
@@ -125,9 +125,9 @@
                             <!-- <li class="col-sm-6"> -->
                                 <address>
                                 <br><br><br>
-                                    <h5 class="jooafont">â¢ KODB</h5>
+                                    <h5 class="jooafont">• KODB</h5>
                                     <p class="jooafont">110-789 <br>
-                                    	ìì¸ì ì¢ë¡êµ¬ ì¢ë¡51 ì¢ë¡íì 19ì¸µ</p>
+                                       서울시 종로구 종로타워 19층</p>
                                     <p class="jooafont">Phone : 02-3798-5300 <br>
                                     Email Address : kodb@domain.com</p>
                                 </address>
@@ -169,44 +169,41 @@
     <section id="contact-page">
         <div class="container">
             <div class="center">        
-                <h2 class="jooafont">ë©ìì§ ë³´ë´ê¸°</h2>
-                <p class="jooafont" class="lead">ë©ìì§ë¥¼ ë¨ê²¨ì£¼ìë©´, ì´ë©ì¼ë¡ ëµë³ì ë°ìë³´ì¤ ì ììµëë¤.</p>
+                <h2 class="jooafont">메시지 보내기</h2>
+                <p class="jooafont" class="lead">메시지를 남겨주시면, 이메일로 답변을 받아보실 수 있습니다.</p>
             </div> 
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
                 <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
                     <div class="col-sm-5 col-sm-offset-1">
                         <div class="form-group">
-                            <label class="jooafont">ì´ ë¦ *</label>
-                            <!-- ìë ¥íì§ ìê³  íì ì´ë¦ì ë°ìì¤ë ê³³ -->
-                            <input type="text" name="name" placeholder="name" class="form-control" required="required">
+                            <label class="jooafont">이 름 *</label>
+                            <input type="text" readonly  class="form-control" required="required" value="${sessionScope.userLoginInfo.name}">
                         </div>
                         <div class="form-group">
-                            <label class="jooafont">ì´ë©ì¼ *</label>
-                            <!-- ìë ¥íì§ ìê³  íì ìì´ë(ì´ë©ì¼)ë¥¼ ë°ìì¤ë ê³³ -->
-                            <input type="email" name="email" placeholder="email" class="form-control" required="required">
+                            <label class="jooafont">이메일 *</label>
+                            <input type="email" name="email" readonly  class="form-control" required="required" value="${sessionScope.userLoginInfo.id}">
                         </div>
                         <div class="form-group">
-                            <label class="jooafont">í¸ëí°</label>
-                            <!-- ìë ¥íì§ ìê³  íì í¸ëí° ë²í¸ë¥¼ ë°ìì¤ë ê³³ -->
-                            <input type="number" placeholder="phone-number" class="form-control">
+                            <label class="jooafont">핸드폰</label>
+                            <input type="text" name="phone" readonly  class="form-control" required="required" value="${sessionScope.userLoginInfo.phone}">
                         </div>
                         <div class="form-group">
-                            <label class="jooafont">íì¬ ëª</label>
+                            <label class="jooafont">회사 명</label>
                             <input type="text" class="form-control">
                         </div>                        
                     </div>
                     <div class="col-sm-5">
                         <div class="form-group">
-                            <label class="jooafont">ì£¼ì  *</label>
+                            <label class="jooafont">주제 *</label>
                             <input type="text" name="subject" class="form-control" required="required">
                         </div>
                         <div class="form-group">
-                            <label class="jooafont">ë©ìì§ *</label>
+                            <label class="jooafont">메시지 *</label>
                             <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
                         </div>                        
                         <div class="form-group">
-                            <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">ì ì¡íê¸°</button>
+                            <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">전송하기</button>
                         </div>
                     </div>
                 </form> 
