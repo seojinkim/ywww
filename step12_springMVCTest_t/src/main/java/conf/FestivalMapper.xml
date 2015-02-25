@@ -16,6 +16,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="adress" property="adress" />
 		<result column="detail" property="detail" />
 		<result column="homepage" property="homepage" />
+		<result column="country" property="country" />
 	</resultMap>
 	
 	<select id="selectAll" resultMap="fResultMap">
@@ -23,7 +24,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<select id="selectOne" parameterType="int" resultMap="fResultMap">
-		select * from festival where festivalNum = #{num} 
+		select a.festivalNum, a.festivalName, a.city, a.summary, a.festivalStartDay, a.festivalEndDay, a.mapUrl, a.adress, a.detail, a.homepage, b.country 
+		 from festival a, city_country b where a.city = b.city and festivalNum = #{num} 
 	</select>
 
 </mapper>

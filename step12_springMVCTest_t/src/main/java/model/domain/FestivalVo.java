@@ -11,12 +11,13 @@ public class FestivalVo {
 	private String adress;
 	private String detail;
 	private String homepage;
+	private String country;
 	
 	public FestivalVo() {}
 
 	public FestivalVo(String festivalNum, String festivalName, String city,
 			String summary, String festivalStartDay, String festivalEndDay,
-			String mapUrl, String adress, String detail, String homepage) {
+			String mapUrl, String adress, String detail, String homepage, String country) {
 		super();
 		this.festivalNum = festivalNum;
 		this.festivalName = festivalName;
@@ -28,6 +29,7 @@ public class FestivalVo {
 		this.adress = adress;
 		this.detail = detail;
 		this.homepage = homepage;
+		this.country = country;
 	}
 
 	public String getFestivalNum() {
@@ -110,6 +112,13 @@ public class FestivalVo {
 		this.homepage = homepage;
 	}
 
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -133,6 +142,8 @@ public class FestivalVo {
 		builder.append(detail);
 		builder.append(", homepage=");
 		builder.append(homepage);
+		builder.append(", country=");
+		builder.append(country);
 		builder.append("]");
 		return builder.toString();
 	}
