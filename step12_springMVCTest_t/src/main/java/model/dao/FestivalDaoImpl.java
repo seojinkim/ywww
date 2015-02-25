@@ -41,6 +41,21 @@ public class FestivalDaoImpl implements FestivalDao{
 	}
 	
 	@Override
+	public List<FestivalVo> selectFestivalByLocation(String location) {
+		SqlSession session = null;
+		List<FestivalVo> list = null;
+		try {
+			session = DBUtil.getSqlSession();
+			System.out.println("sql바로전" +location);
+			list = session.selectList("festival.selectFestivalByLocation", location);
+			System.out.println("sql나옴 "+list);
+		} finally {
+			DBUtil.closeSqlSession(session);
+		}
+		return list;
+	}
+	
+	@Override
 	public FestivalVo festivalOne(int num) {
 		SqlSession session = null;
 		FestivalVo vo = null;

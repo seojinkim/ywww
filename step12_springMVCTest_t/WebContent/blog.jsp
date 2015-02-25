@@ -132,7 +132,7 @@
 					$("#listTable tr:gt(0)").remove();
 
 					$(data.list).each(
-							function(index, item) {
+							function(, item) {
 								table += "<tr><td>" + item.id + "</td><td>"
 										+ item.festivalNum + "</td><td>"
 										+ item.festivalName + "</td><td>";
@@ -220,7 +220,7 @@
                         <li><a class="jooafont" href="index.jsp">Home</a></li>
                         <li><a class="jooafont" href="about-us.jsp">About Us</a></li>
                         <li><a class="jooafont" href="portfolio.jsp">인포그래픽</a></li>
-                        <li class="active"><a class="jooafont" href="blog.jsp?pg=1">여행 소개</a></li> 
+                        <li class="active"><a class="jooafont" href="selectFestival.do">여행 소개</a></li> 
                         <li><a class="jooafont" href="contact-us.jsp">Contact</a></li>                        
                     </ul>
                 </div>
@@ -245,6 +245,7 @@
                             
                            		List<FestivalVo> list = (List<FestivalVo>)(session.getAttribute("festivalList"));
                         	
+                            	
 	                            allPage = (int)Math.ceil(list.size()/(double)ROWSIZE);
 	                    		
 	                    		if(endPage > allPage) {
@@ -262,7 +263,18 @@
                             	}
                             	
                             	FestivalVo tempFestival = null;
-                            	for(int i = (pageNum - 1) * 10; i < (pageNum * 10) - 1 ; i++)
+                            	if(list.size()>20){
+                                	for(int i = (pageNum - 1) * 10; i < (pageNum * 10) - 1; i++)
+                                	{
+                                		tempFestival = list.get(i);
+                                %>
+                               
+    	                            <p class="jooafont" class="lead">#<%= tempFestival.getFestivalName() %></p> 
+    	                            <a href="FestivalOne.do?num=<%= tempFestival.getFestivalNum() %>"><img class="img-responsive img-blog" src="festivalP/<%= tempFestival.getFestivalNum() %>/<%= tempFestival.getFestivalNum() %>_1.jpg" width="100%" alt="" /></a>
+                                <% 
+                                	}}
+                            	else if(list.size()>7){
+                            	for(int i = (pageNum - 1) * 9; i < list.size() ; i++)
                             	{
                             		tempFestival = list.get(i);
                             %>
@@ -270,6 +282,15 @@
 	                            <p class="jooafont" class="lead">#<%= tempFestival.getFestivalName() %></p> 
 	                            <a href="FestivalOne.do?num=<%= tempFestival.getFestivalNum() %>"><img class="img-responsive img-blog" src="festivalP/<%= tempFestival.getFestivalNum() %>/<%= tempFestival.getFestivalNum() %>_1.jpg" width="100%" alt="" /></a>
                             <% 
+                            	}}else{
+                            		for(int i = (pageNum - 1) * 10; i < list.size() ; i++)
+                            		{
+                            		tempFestival = list.get(i);
+                            %>
+	                            <p class="jooafont" class="lead">#<%= tempFestival.getFestivalName() %></p> 
+	                            <a href="FestivalOne.do?num=<%= tempFestival.getFestivalNum() %>"><img class="img-responsive img-blog" src="festivalP/<%= tempFestival.getFestivalNum() %>/<%= tempFestival.getFestivalNum() %>_1.jpg" width="100%" alt="" /></a>
+                            <% 
+                            	}
                             	}
                             %>
                             <%-- <c:forEach items="${sessionScope.festivalList}" var="list" begin="<%=Integer.parseInt(request.getParameter("pg")) %>" end="<%=Integer.parseInt(request.getParameter("pg")) %>">
@@ -388,8 +409,18 @@
                             		<br><br> -->
                             		
                             		<h4><br>Location Search</h4>
-                            		<input id="pac-input" class="controls" type="text" placeholder="Enter a location">
-                            		<button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
+                            		<!-- <form action="selectFestivalByKeyword.do"  name="selectFestivalByKeyword.do" method="get">
+                                    <input type="text" id="keyword" name = "keyword" class="controls" autocomplete="off" placeholder="Enter a keyword">
+                                    <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
+                                </form> -->
+                                
+                                <form action="selectFestivalByLocation.do"  name="selectFestivalByLocation.do" method="get">
+                                    <input type="text" id="pac-input" name = "location" class="controls" autocomplete="off" placeholder="Enter a keyword">
+                                    <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
+                                </form>
+                                
+                            		<!-- <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+                            		<button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button> -->
                             		<div id="map-canvas"></div>
                             		
 									

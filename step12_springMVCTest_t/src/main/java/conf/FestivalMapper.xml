@@ -32,5 +32,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select a.festivalNum, a.festivalName, a.city, a.summary, a.festivalStartDay, a.festivalEndDay, a.mapUrl, a.adress, a.detail, a.homepage, b.country 
 		from festival a, city_country b where a.city = b.city and festivalName like '%'||#{keyword}||'%'  order by festivalNum asc
 	</select>
+	
+	<select id="selectFestivalByLocation" parameterType="String" resultMap="fResultMap">
+		select a.festivalNum, a.festivalName, a.city, a.summary, a.festivalStartDay, a.festivalEndDay, a.mapUrl, a.adress, a.detail, a.homepage, b.country
+		from festival a, city_country b 
+		where a.city = b.city and (a.city like '%'||#{location}||'%'or b.country like '%'||#{location}||'%')
+		order by festivalNum asc
+	</select>
 
 </mapper>

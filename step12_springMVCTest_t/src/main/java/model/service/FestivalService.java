@@ -7,5 +7,6 @@ import model.domain.FestivalVo;
 public interface FestivalService {
 	List<FestivalVo> SelectFestival();
 	List<FestivalVo> SelectFestivalByKeyword(String keyword);
+	List<FestivalVo> SelectFestivalByLocation(String location);
 	FestivalVo FestivalOne(int num);
 }
