@@ -141,7 +141,7 @@
                         <!-- <li class="dropdown active">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li class="active"><a href="blog-item.html">Blog Single</a></li>
+                                <li class="active"><a href="blog-item.jsp">Blog Single</a></li>
                                 <li><a href="pricing.html">Pricing</a></li>
                                 <li><a href="404.html">404</a></li>
                                 <li><a href="shortcodes.html">Shortcodes</a></li>
@@ -173,7 +173,7 @@
                                     <div class="entry-meta">
                                         <span id="publish_date">07  NOV</span>
                                         <span><i class="fa fa-user"></i> <a href="#"> John Doe</a></span>
-                                        <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
+                                        <span><i class="fa fa-comment"></i> <a href="blog-item.jsp#comments">2 Comments</a></span>
                                         <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
                                     </div>
                                 </div>

@@ -144,7 +144,7 @@
                         <!-- <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="blog-item.html">Blog Single</a></li>
+                                <li><a href="blog-item.jsp">Blog Single</a></li>
                                 <li><a href="pricing.html">Pricing</a></li>
                                 <li><a href="404.html">404</a></li>
                                 <li><a href="shortcodes.html">Shortcodes</a></li>
@@ -171,11 +171,11 @@
                     <div class="blog-item">
                         <div class="row">
                             <div class="col-xs-12 col-sm-10 blog-content">
-                                <a href="blog-item.html"><img class="img-responsive img-blog" src="images/blog/blog1.png" width="100%" alt="" /></a>
-                                <a href="blog-item.html"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
-                                <a href="blog-item.html"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
-                                <a href="blog-item.html"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
-                                <a href="blog-item.html"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
+                                <a href="blog-item.jsp"><img class="img-responsive img-blog" src="images/blog/blog1.png" width="100%" alt="" /></a>
+                                <a href="blog-item.jsp"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
+                                <a href="blog-item.jsp"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
+                                <a href="blog-item.jsp"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
+                                <a href="blog-item.jsp"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
                             </div>
                         </div>    
                     </div><!--/.blog-item-->
