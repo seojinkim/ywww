@@ -50,7 +50,7 @@
       #pac-input {
         background-color: #fff;
         padding: 0 11px 0 13px;
-        width: 360px;
+        width: 320px;
         font-family: Roboto;
         font-size: 15px;
         font-weight: 300;
@@ -197,8 +197,8 @@
                         <div class="row">
                             <div class="col-sm-12">
                             	<h4 class="jooafont">Keyword Search</h4>
-                                    <input type="text" class="controls" autocomplete="off" placeholder="Enter a keyword">
-                                    <input type="image" src="images/search_icon.png" alt="Submit" width="30" height="25">
+                                    <input type="text" id="pac-input" class="controls" autocomplete="off" placeholder="Enter a keyword">
+                                    <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
                             	<h4 class="jooafont">Date</h4>	
                             	<form>
                             	<input type="text" id="txtDate" value="" onclick="fnPopUpCalendar(txtDate,txtDate,'yyyy/mm/dd')" class='text_box1'>
@@ -209,12 +209,11 @@
 	                            
 	                            <div class="EventSearchBox_checkbox">
 									<span class="EventSearchBox_CheckboxLabels" style="width: 160px; height: 22px;">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 										<input type="checkbox" id="gwt-uid-10" tabindex="0">
-										<label for="gwt-uid-10">I'm flexible on the dates</label>
-									</span>
-									<span class="EventSearchBox_CheckboxLabels" style="width: 160px; height: 22px;">
-										<input type="checkbox" id="gwt-uid-9" tabindex="0">
-										<label for="gwt-uid-9">Search all dates</label>
+										<label for="gwt-uid-10" >I'm flexible on the dates</label>
 									</span>
 								</div>
 	
@@ -279,7 +278,7 @@
                             		
                             		<h4 class="jooafont">Location Search</h4>
                             		<input id="pac-input" class="controls" type="text" placeholder="Enter a location">
-                            		<img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 41px; height: 27px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -533px -184px no-repeat;" border="0" class="gwt-Image">
+                            		<button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
                             		<div id="map-canvas"></div>
                             		
 									
