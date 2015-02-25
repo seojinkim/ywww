@@ -240,7 +240,22 @@
                             <div class="col-xs-12 col-sm-10 blog-content">
                             <%
                            		List<FestivalVo> list = (List<FestivalVo>)(session.getAttribute("festivalList"));
-                            	int pageNum = Integer.parseInt(request.getParameter("pg"));
+	                            allPage = (int)Math.ceil(list.size()/(double)ROWSIZE);
+	                    		
+	                    		if(endPage > allPage) {
+	                    			endPage = allPage;
+	                    		}
+	                    		
+                            	int pageNum = 1;
+                            	if(request.getParameter("pg") != null){
+                            		if(request.getParameter("pg").equals("0")){
+                            			pageNum = 1;
+                            		}
+                            		else{
+                            			pageNum = Integer.parseInt(request.getParameter("pg"));
+                            		}
+                            	}
+                            	
                             	FestivalVo tempFestival = null;
                             	for(int i = (pageNum - 1) * 10; i < (pageNum * 10) - 1 ; i++)
                             	{
