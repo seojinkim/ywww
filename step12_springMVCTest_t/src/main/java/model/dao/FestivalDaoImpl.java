@@ -31,7 +31,9 @@ public class FestivalDaoImpl implements FestivalDao{
 		List<FestivalVo> list = null;
 		try {
 			session = DBUtil.getSqlSession();
-			list = session.selectList("festival.selectFestivalByKeyword");
+			System.out.println("sql바로전" +keyword);
+			list = session.selectList("festival.selectFestivalByKeyword", keyword);
+			System.out.println("sql나옴 "+list);
 		} finally {
 			DBUtil.closeSqlSession(session);
 		}

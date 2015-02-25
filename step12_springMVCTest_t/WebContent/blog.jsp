@@ -1,9 +1,12 @@
 
 <%@page import="model.domain.FestivalVo"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=euc-kr"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+    request.setCharacterEncoding("euc-kr");
+%>
 <%
 	final int ROWSIZE = 6;
 	final int BLOCK = 5;
@@ -303,7 +306,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                             	<h4>Keyword Search</h4>
-                            	<form action="selectFestivalByKeyword.do"  name="selectFestivalByKeyword.do">
+                            	<form action="selectFestivalByKeyword.do"  name="selectFestivalByKeyword.do" method="get">
                                     <input type="text" id="keyword" name = "keyword" class="controls" autocomplete="off" placeholder="Enter a keyword">
                                     <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
                                 </form>

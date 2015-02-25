@@ -34,8 +34,9 @@ public class FestivalController {
 	
 	@RequestMapping(value="selectFestivalByKeyword", method = RequestMethod.GET)
 	public ModelAndView selectFestivalByKeyword(String keyword, HttpSession session, HttpServletRequest request){
+		System.out.println("컨트롤러 "+keyword);
 		List<FestivalVo> list =  fService.SelectFestivalByKeyword(keyword);
-		session.setAttribute("festivalListByKeyword", list);
+		session.setAttribute("festivalList", list);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("list", list);	
 		mv.setViewName("redirect:blog.jsp?pg=1");	//id=jsonView 객체를 찾아서 JsonView실행
