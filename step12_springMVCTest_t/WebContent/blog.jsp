@@ -116,7 +116,7 @@
 </head><!--/head-->
 
 
-	<script src="js/jquery-1.11.0.js"></script>
+	<!-- <script src="js/jquery-1.11.0.js"></script>
 <script type="text/javascript">
 	$(document)	.ready(function() {
 		function getData() {
@@ -145,7 +145,7 @@
 		}//end of getData()
 				getData();
 			});//end of ready()
-</script>
+</script> -->
 
 
 <body>
@@ -215,10 +215,10 @@
                     <ul class="nav navbar-nav">
                        <!-- Home, About us, 여행 Tip, 여행 소개, Contact -->
                         <li><a class="jooafont" href="index.jsp">Home</a></li>
-                        <li><a class="jooafont" href="about-us.html">About Us</a></li>
-                        <li><a class="jooafont" href="portfolio.html">인포그래픽</a></li>
+                        <li><a class="jooafont" href="about-us.jsp">About Us</a></li>
+                        <li><a class="jooafont" href="portfolio.jsp">인포그래픽</a></li>
                         <li class="active"><a class="jooafont" href="blog.jsp?pg=1">여행 소개</a></li> 
-                        <li><a class="jooafont" href="contact-us.html">Contact</a></li>                        
+                        <li><a class="jooafont" href="contact-us.jsp">Contact</a></li>                        
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -239,8 +239,25 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-10 blog-content">
                             <%
+                            
                            		List<FestivalVo> list = (List<FestivalVo>)(session.getAttribute("festivalList"));
-                            	int pageNum = Integer.parseInt(request.getParameter("pg"));
+                        	
+	                            allPage = (int)Math.ceil(list.size()/(double)ROWSIZE);
+	                    		
+	                    		if(endPage > allPage) {
+	                    			endPage = allPage;
+	                    		}
+	                    		
+                            	int pageNum = 1;
+                            	if(request.getParameter("pg") != null){
+                            		if(request.getParameter("pg").equals("0")){
+                            			pageNum = 1;
+                            		}
+                            		else{
+                            			pageNum = Integer.parseInt(request.getParameter("pg"));
+                            		}
+                            	}
+                            	
                             	FestivalVo tempFestival = null;
                             	for(int i = (pageNum - 1) * 10; i < (pageNum * 10) - 1 ; i++)
                             	{

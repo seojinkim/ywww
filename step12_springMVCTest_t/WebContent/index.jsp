@@ -97,10 +97,10 @@
                     <ul class="nav navbar-nav">
                        <!-- Home, About us, 여행 Tip, 여행 소개, Contact -->
                         <li class="active"><a class="jooafont" href="index.jsp">Home</a></li>
-                        <li><a class="jooafont" href="about-us.html">About Us</a></li>
-                        <li><a class="jooafont" href="portfolio.html">인포그래픽</a></li>
-                        <li><a class="jooafont" href="blog.jsp?pg=1">여행 소개</a></li> 
-                        <li><a class="jooafont" href="contact-us.html">Contact</a></li>                        
+                        <li><a class="jooafont" href="about-us.jsp">About Us</a></li>
+                        <li><a class="jooafont" href="portfolio.jsp">인포그래픽</a></li>
+                        <li><a class="jooafont" href="selectFestival.do">여행 소개</a></li> 
+                        <li><a class="jooafont" href="contact-us.jsp">Contact</a></li>                        
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -731,7 +731,7 @@
                </div>
                
                <div class="item">
-                  <img src="images/airpot_1.jpg" alt="" />
+                  <img src="images/airport_1.jpg" alt="" />
                </div>
                </div>
             <!--/.carousel-inner-->

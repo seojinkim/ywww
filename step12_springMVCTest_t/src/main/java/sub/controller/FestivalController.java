@@ -19,7 +19,7 @@ public class FestivalController {
 	@Resource(name="fService")
 	private FestivalService fService;
 	
-	@RequestMapping(value="selectFestival", method = RequestMethod.POST)
+	@RequestMapping(value="selectFestival", method = RequestMethod.GET)
 	public ModelAndView selectFestival(HttpSession session, HttpServletRequest request){
 		System.out.println("dd시작");
 		List<FestivalVo> list =  fService.SelectFestival();
@@ -28,7 +28,7 @@ public class FestivalController {
 		System.out.println("세션설정");
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("list", list);	
-		mv.setViewName("jsonView");	//id=jsonView 객체를 찾아서 JsonView실행
+		mv.setViewName("redirect:blog.jsp?pg=1");	//id=jsonView 객체를 찾아서 JsonView실행
 		return mv;
 	}
 	
