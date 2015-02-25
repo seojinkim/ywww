@@ -25,4 +25,8 @@ public class WishListServiceImpl implements WishListService{
 	public int DeleteWish(String id) {
 		return wDao.deleteWishList(id);
 	}
+	
+	public int insertWish(WishListVo wishlistVo){
+		return wDao.insertWishList(wishlistVo);
+	}
 }

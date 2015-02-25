@@ -134,7 +134,7 @@ public class UsersController {
     public ModelAndView loginProcess(UsersVo user, HttpSession session, HttpServletRequest request) {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("redirect:index.jsp");
- 
+        System.out.println(user);
         UsersVo loginUser = uService.usersLogin(user);
  
         if (loginUser != null) {

@@ -20,10 +20,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		delete from wishlist where id = #{id} 
 	</delete>
 	
-	<insert id="insertWish" parameterType="wVo">
-		insert into wishlist values(#{id}, #{festivalNum}, #{festivalName})
-	</insert>
-	
 	<!-- <select id="selectAll" resultMap="wResultMap">
 		select * from wishlist
 	</select> -->
@@ -31,5 +27,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectAll" resultMap="wResultMap">
 		select a.id, a.festivalNum, b.festivalName from wishlist a, festival b where a.festivalNum=b.festivalNum
 	</select>
+	
+	<insert id="insertWish" parameterType="wVo">
+		insert into wishlist values(#{id} , #{festivalNum} , #{festivalName})
+	</insert>
 	
 </mapper>

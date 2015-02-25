@@ -20,6 +20,11 @@ public class FestivalServiceImpl implements FestivalService{
 	}
 	
 	@Override
+	public List<FestivalVo> SelectFestivalByKeyword(String keyword) {
+		return fDao.selectFestivalByKeyword(keyword);
+	}
+	
+	@Override
 	public FestivalVo FestivalOne(int num) {
 		return fDao.festivalOne(num);
 	}

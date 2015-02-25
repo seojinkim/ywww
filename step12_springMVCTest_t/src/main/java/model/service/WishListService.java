@@ -8,4 +8,5 @@ import model.domain.WishListVo;
 public interface WishListService {
 	List<WishListVo> SelectWish();
 	int DeleteWish(String id);
+	int insertWish(WishListVo wishlistVo);
 }

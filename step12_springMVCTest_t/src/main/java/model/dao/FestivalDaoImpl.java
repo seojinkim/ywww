@@ -25,6 +25,18 @@ public class FestivalDaoImpl implements FestivalDao{
 		return list;
 	}
 	
+	@Override
+	public List<FestivalVo> selectFestivalByKeyword(String keyword) {
+		SqlSession session = null;
+		List<FestivalVo> list = null;
+		try {
+			session = DBUtil.getSqlSession();
+			list = session.selectList("festival.selectFestivalByKeyword");
+		} finally {
+			DBUtil.closeSqlSession(session);
+		}
+		return list;
+	}
 	
 	@Override
 	public FestivalVo festivalOne(int num) {

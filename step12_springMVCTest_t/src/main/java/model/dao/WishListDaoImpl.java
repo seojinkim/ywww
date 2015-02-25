@@ -26,6 +26,21 @@ public class WishListDaoImpl implements WishListDao{
 	}
 	
 	@Override
+	public int insertWishList(WishListVo vo){
+		SqlSession session = null;
+		boolean flag = false;
+		int result = 0;
+		try {
+			session = DBUtil.getSqlSession();
+			result = session.insert("wishlist.insertWish", vo);
+			flag = result > 0 ? true : false;
+		} finally {
+			DBUtil.closeSqlSession(flag, session);
+		}
+		return result;
+	}
+	
+	@Override
 	public int deleteWishList(String id) {
 		SqlSession session = null;
 		boolean flag = false;
@@ -39,4 +54,5 @@ public class WishListDaoImpl implements WishListDao{
 		}
 		return result;
 	}
+	
 }

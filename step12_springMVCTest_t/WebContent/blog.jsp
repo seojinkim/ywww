@@ -303,8 +303,10 @@
                         <div class="row">
                             <div class="col-sm-12">
                             	<h4>Keyword Search</h4>
-                                    <input type="text" id="pac-input" class="controls" autocomplete="off" placeholder="Enter a keyword">
+                            	<form action="selectFestivalByKeyword.do"  name="selectFestivalByKeyword.do">
+                                    <input type="text" id="keyword" name = "keyword" class="controls" autocomplete="off" placeholder="Enter a keyword">
                                     <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
+                                </form>
                             	<h4><br>Date</h4>	
                             	<form>
                             	<input type="text" id="txtDate" value="" onclick="fnPopUpCalendar(txtDate,txtDate,'yyyy/mm/dd')" class='text_box1'>

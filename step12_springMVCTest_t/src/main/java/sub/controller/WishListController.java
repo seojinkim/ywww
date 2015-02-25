@@ -27,6 +27,17 @@ public class WishListController {
 		return mv;
 	}
 	
+	@RequestMapping("/insertWish.do")
+	@ResponseBody
+	public String insert(WishListVo wishlistVo) {
+		String resultMsg = "no";
+		int result = wService.insertWish(wishlistVo);
+		if(result > 0 )  {
+			resultMsg = "ok";
+		}
+		return resultMsg ;
+	}
+	
 	@RequestMapping("/deleteWish.do")
 	@ResponseBody
 	public String deleteWish(String id) {
