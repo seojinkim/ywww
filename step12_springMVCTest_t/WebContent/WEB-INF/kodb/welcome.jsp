@@ -12,7 +12,7 @@
 	$(document)	.ready(function() {
 			$("#btn2").click(function() {
 				$.ajax({
-					url : "idCheck.do", //서버에 요청할 정보
+					url : "idCheck.do", //서버에 요청할 정보123
 					type : "post", //method방식
 					dataType : "text", //응답되는 데이터 타입
 					data : "id=" + $("#id").val(), //서버에 전송할 데이터
