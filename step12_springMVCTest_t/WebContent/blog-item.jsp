@@ -418,7 +418,7 @@
                      	<img src="images/audition.png"/>
                     </div>
                      	
-                   <aside class="col-md-4">
+                   <!-- <aside class="col-md-4"> -->
     				<div class="widget categories">
                         <div class="row">
                             <div class="col-sm-12">
@@ -513,7 +513,7 @@
                             </div>
                         </div>                     
                     </div><!--/.recent comments-->
-    			</aside>      
+    			<!-- </aside> -->      
 
             </div><!--/.row-->
 
