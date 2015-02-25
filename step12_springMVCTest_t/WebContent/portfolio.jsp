@@ -94,10 +94,10 @@
                     <ul class="nav navbar-nav">
                        <!-- Home, About us, 여행 Tip, 여행 소개, Contact -->
                         <li><a class="jooafont" href="index.jsp">Home</a></li>
-                        <li><a class="jooafont" href="about-us.html">About Us</a></li>
-                        <li class="active"><a class="jooafont" href="portfolio.html">인포그래픽</a></li>
+                        <li><a class="jooafont" href="about-us.jsp">About Us</a></li>
+                        <li class="active"><a class="jooafont" href="portfolio.jsp">인포그래픽</a></li>
                         <li><a class="jooafont" href="blog.jsp?pg=1">여행 소개</a></li> 
-                        <li><a class="jooafont" href="contact-us.html">Contact</a></li>                        
+                        <li><a class="jooafont" href="contact-us.jsp">Contact</a></li>                        
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -247,7 +247,7 @@
                                 <div class="recent-work-inner">
                                     <h3><a href="#">인천공항 직통열차 이용하기</a></h3>
                                     <p>도심공항터미널</p>
-                                    <a class="preview" href="images/portfolio/full/full_airport_4.html" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                    <a class="preview" href="images/portfolio/full/full_airport_4.jsp" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                                 </div> 
                             </div>
                         </div>
@@ -486,7 +486,7 @@
                               <a href="#">제주 올레?!</a>
                            </h3>
                            <p>도보여행 제주도!</p>
-                           <a class="preview" href="images/portfolio/full/full_domestic_7.html" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                           <a class="preview" href="images/portfolio/full/full_domestic_7.jsp" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                         </div>
                      </div>
                   </div>
