@@ -750,7 +750,8 @@ input.search-keyword{
 }
 
 #middle {
-  background: #f2f2f2;
+  background: #000 url(../images/services/bg_services.png);
+  background-size: cover;
 }
 
 .skill h2{

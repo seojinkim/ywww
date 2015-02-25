@@ -151,67 +151,66 @@
                 <li data-target="#main-slider" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
+				
+	                <div class="item active" style="background-image: url(images/main1_1.jpg)">
+	                    <div class="container">
+	                        <div class="row slide-margin">
+	                            <div class="col-sm-8">
+	                                <div class="carousel-content">
+	                                    <h1 class="jooafont" class="animation animated-item-1">꽃보다 할배, H4 드디어 그리스에 가다!</h1>
+	                                    <h2 class="jooafont" class="animation animated-item-2">미리 둘러보는 그리스 여행</h2>
+	                                   <a class="btn-slide animation animated-item-3" href="index2.html">Read More</a>
+	                                </div>
+	                            </div>
+	
+	                           <!--  <div class="col-sm-6 hidden-xs animation animated-item-4">
+	                                <div class="slider-img">
+	                                    <img src="images/slider/img1.png" class="img-responsive">
+	                                </div>
+	                            </div> -->
+	
+	                        </div>
+	                    </div>
+	                </div><!--/.item-->
+	                <div class="item" style="background-image: url(images/main1_31.jpg)">
+	                    <div class="container">
+	                        <div class="row slide-margin">
+	                            <div class="col-sm-6">
+	                                <div class="carousel-content">
+	                                    <h1 class="jooafont" class="animation animated-item-1">필리핀 맛집 TOP4</h1>
+	                                    <h2 class="jooafont" class="animation animated-item-2">Accusantium doloremque l, eaque ipsa...</h2>
+	                                    <a class="btn-slide animation animated-item-3" href="index1.html">Read More</a>
+	                                </div>
+	                            </div>
 
-                <div class="item active" style="background-image: url(images/main1_1.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-8">
-                                <div class="carousel-content">
-                                    <h1 class="jooafont" class="animation animated-item-1">꽃보다 할배, H4 드디어 그리스에 가다!</h1>
-                                    <h2 class="jooafont" class="animation animated-item-2">미리 둘러보는 그리스 여행</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img1.png" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--/.item-->
-
-                <div class="item" style="background-image: url(images/main1_31.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="jooafont" class="animation animated-item-1">필리핀 맛집 TOP4</h1>
-                                    <h2 class="jooafont" class="animation animated-item-2">Accusantium doloremque l, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                            <!-- <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
                                     <img src="images/slider/img2.png" class="img-responsive">
                                 </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--/.item-->
-
-                <div class="item" style="background-image: url(images/wo1.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-9">
-                                <div class="carousel-content">
-                                    <h1 class="jooafont" class="animation animated-item-1">여성에게 위험한 여행지! 3위는 페루 리마, 1위는 어디인가?</h1>
-                                    <h2 class="jooafont" class="animation animated-item-2">나홀로 세계 여행을 꿈꾸는 여성 주목!</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                            </div> -->
+				
+	                        </div>
+	                    </div>
+	                </div><!--/.item-->
+	                
+	                <div class="item" style="background-image: url(images/wo1.jpg)">
+	                    <div class="container">
+	                        <div class="row slide-margin">
+	                            <div class="col-sm-9">
+	                                <div class="carousel-content">
+	                                    <h1 class="jooafont" class="animation animated-item-1">여성에게 위험한 여행지! 3위는 페루 리마, 1위는 어디인가?</h1>
+	                                    <h2 class="jooafont" class="animation animated-item-2">나홀로 세계 여행을 꿈꾸는 여성 주목!</h2>
+	                                    <a class="btn-slide animation animated-item-3" href="index3.html">Read More</a>
+	                                </div>
+	                            </div>
+                           <!--  <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
                                     <img src="images/slider/img3.png" class="img-responsive">
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
+                            </div> -->
+                        	</div>
+                   	 	</div>
+                	</div><!--/.item-->
             </div><!--/.carousel-inner-->
         </div><!--/.carousel-->
         <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
@@ -222,120 +221,6 @@
         </a>
     </section><!--/#main-slider-->
    
-   <section id="recent-works1">
-        <div class="container">
-            <div class="center wow fadeInDown">
-                <h2 class="jooafont">여행 후기</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/main2_21_1.jpg" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a class="jooafont" href="#">이탈리아</a> </h3>
-                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/main2_12_1.jpg" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a class="jooafont" href="#">일본</a></h3>
-                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div> 
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/bo1_1.jpg" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a class="jooafont" href="#">보라카이</a></h3>
-                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/p1_1.jpg" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a class="jooafont" href="#">프랑스</a></h3>
-                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/p1_1.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-                
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/main2_31_1.jpg" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a class="jooafont" href="#">뉴욕</a></h3>
-                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/sang1.jpg" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a class="jooafont" href="#">상하이</a></h3>
-                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div> 
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/b1_1.jpg" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a class="jooafont" href="#">캐나다</a></h3>
-                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/h2.jpg" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a class="jooafont" href="#">홍콩</a></h3>
-                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-            </div><!--/.row-->
-        </div><!--/.container-->
-    </section><!--/#recent-works1-->
 
   <!--  <section id="feature" >
         <div class="container">
@@ -547,7 +432,7 @@
 	</section>
 	<!--/#recent-works-->
 
-   <section id="services" class="service-item">
+   <!-- <section id="services" class="service-item">
       <div class="container">
          <div class="center wow fadeInDown">
             <h2 class="jooafont">Themes for you</h2>
@@ -555,17 +440,17 @@
          </div>
          
          <div id="themes" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
+            Indicators
             <ol class="carousel-indicators">
                <li data-target="#themes" data-slide-to="0" class="active"></li>
                <li data-target="#themes" data-slide-to="1"></li>
                <li data-target="#themes" data-slide-to="2"></li>
             </ol>
-            <!-- Wrapper for slides -->
+            Wrapper for slides
             <div class="carousel-inner" role="listbox">
                <div class="item active">
                   <img src="images/theme1.jpg" alt="" />
-               </div><!--/.item-->
+               </div>/.item
                
                <div class="item">
                   <img src="images/theme1.jpg" alt="" />
@@ -573,7 +458,7 @@
                
                <div class="item">
                   <img src="images/theme1.jpg" alt="" />
-               </div>
+               </div> -->
 
                <!-- <div class="item" style="background-image: url(images/slider/bg2.jpg)">
                   <div class="container">
@@ -707,13 +592,17 @@
 
    <section id="middle">
       <div class="container">
-         <div class="center wow fadeInDown">
-            <h2 class="jooafont">인포그래픽</h2>
-            <p class="jooafont" class="lead">여행은 준비할 것이 참 많죠? <br> 
-               저희는 여러분의 고민을 해결하기 위해 여행 준비부터 여행 후까지 많은 정보를 제공하고 있습니다.
-            </p>
-         </div>
-         <div id="index_traveltip" class="carousel slide" data-ride="carousel">
+			<div class="center wow fadeInDown">
+				<h2 class="jooafont">
+					<font color="white">인포그래픽</font>
+				</h2>
+				<p class="jooafont" class="lead">
+					<font color="white"> 여행은 준비할 것이 참 많죠? <br> 저희는 여러분의 고민을 해결하기 위해 여행 준비부터 여행 후까지 많은 정보를 제공하고 있습니다.
+					</font>
+				</p>
+
+			</div>
+			<div id="index_traveltip" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                <li data-target="#index_traveltip" data-slide-to="0" class="active"></li>
@@ -873,7 +762,121 @@
             </div>/.row -->
       </div><!--/.container-->
     </section><!--/#middle-->
+	
+	<section id="recent-works1">
+        <div class="container">
+            <div class="center wow fadeInDown">
+                <h2 class="jooafont">여행 후기</h2>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
 
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/main2_21_1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">이탈리아</a> </h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/main2_12_1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">일본</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/bo1_1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">보라카이</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/p1_1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">프랑스</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/p1_1.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+                
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/main2_31_1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">뉴욕</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/sang1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">상하이</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/b1_1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">캐나다</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/h2.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">홍콩</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#recent-works1-->
 
 <!--/#bottom  -->
         
