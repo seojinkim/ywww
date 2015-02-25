@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="users">
+
+	<resultMap type="uVo" id="uResultMap">
+		<result column="id" property="id" />
+		<result column="pw" property="pw" />
+		<result column="name" property="name" />
+		<result column="phone" property="phone" />
+
+	</resultMap>
+
+	<select id="uIdCheck" parameterType="String" resultMap="uResultMap">
+		select * from users where id= #{id}
+	</select>
+	
+	<select id="uLogin" parameterType="uVo" resultMap="uResultMap">
+		select * from users where id=#{id} and pw=#{pw}
+	</select>
+
+	<insert id="uInsert" parameterType="uVo">
+		insert into users(id, pw, name, phone)
+		values(#{id} , #{pw} , #{name}, #{phone})
+	</insert>
+
+	<select id="uSelect" resultMap="uResultMap">
+		select * from users
+	</select>
+
+	<delete id="uDelete" parameterType="String">
+		delete users where id = #{id}
+	</delete>
+
+	<update id="uUpdate" parameterType="uVo">
+		update users
+		set id=#{id} , pw=#{pw} , name=#{name}, phone=#{phone}
+		where id = #{id}
+	</update>
+	
+</mapper>

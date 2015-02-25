@@ -14,7 +14,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
      <typeAlias type="model.domain.UsersVo" alias="uVo"/>
      <typeAlias type="model.domain.WishListVo" alias="wVo"/>
      <typeAlias type="model.domain.FestivalVo" alias="fVo"/>
-     <typeAlias type="model.domain.FestivalVo" alias="cVo"/>
+     <typeAlias type="model.domain.CommentsVo" alias="cVo"/>
    </typeAliases>
    
 	<environments default="development">
