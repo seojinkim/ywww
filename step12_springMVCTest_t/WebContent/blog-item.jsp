@@ -233,7 +233,9 @@
                                     <br>
                                     <p>${vo.detail}</p><hr>
                                     
+                                    <form method="get" action="/insertWish.do">
                                     <button type="submit" class="btn2 btn-primary2 btn-lg" required="required" id="btn">Wish</button>
+                                    </form>
                                     
                                     <script src="js/jquery-1.11.0.js"></script>
                            			<script type="text/javascript">
