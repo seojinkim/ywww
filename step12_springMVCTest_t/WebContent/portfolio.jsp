@@ -655,5 +655,513 @@
                            <h3>
                               <a href="#">뉴질랜드 여행_북섬</a>
                            </h3>
-                           <p>뉴질랜드 여행을 위한 MUST STOP BY 북섬</p>
-                           <a class="
+                          <p>뉴질랜드 여행을 위한 MUST STOP BY 북섬</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_9.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_10.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">세계 3대 트레킹 코스</a>
+                           </h3>
+                           <p>세계 3대 트레킹 코스! 뉴질랜드, 페루, 호도협</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_10.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_11.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">발리여행 주의사항</a>
+                           </h3>
+                           <p>즐거운 발리여행을 위해꼭 알아두자!</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_12.png" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">미국여행 팁주는 팁!</a>
+                           </h3>
+                           <p>미.국.여.행 TIP주는 TIP</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_12.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_13.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">페루 여행 이것만 알면 끝!</a>
+                           </h3>
+                           <p>이것만 알면 끝!</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_13.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_14.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">오아후탐험대</a>
+                           </h3>
+                           <p>관광지편</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_14.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_15.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">오아후탐험대</a>
+                           </h3>
+                           <p>맛집편</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_15.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_16.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">전세계 다이빙 포인트</a>
+                           </h3>
+                           <p>주요 다이빙 포인트 & 다이빙 유의사항</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_16.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_17.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">푸켓에서 만난 음식</a>
+                           </h3>
+                           <p>푸켓 음식 BEST6</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_17.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_18.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">하와이 렌트카 정보</a>
+                           </h3>
+                           <p>Hawaii Rent car Information</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_18.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_19.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">대만 택시투어</a>
+                           </h3>
+                           <p>이제 택시로 즐기자! 쉽고 편안하기 즐기는 대만여행 추천코스</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_19.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_20.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">태국의 아름다운 마을, 빠이</a>
+                           </h3>
+                           <p>예술가의 마을, 아기자기한 예쁜 마을로 초대합니다</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_20.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_22.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">특별기내식</a>
+                           </h3>
+                           <p>특별 기내식 이용방법</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_22.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_23.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">전세계 명물을 소개합니다!</a>
+                           </h3>
+                           <p>전세계 방방곡곡, 선물? 명물을 소개합니다!</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_23.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_24.png" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">Table manner</a>
+                           </h3>
+                           <p>멋진 식사를 위한 TABLE MANNER</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_24.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_25.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">쿠루쿠루와 떠나는 규슈 2</a>
+                           </h3>
+                           <p>규슈의 어느 멋진 하루</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_25.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_26.png" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">쿠루쿠루와 떠나는 규슈</a>
+                           </h3>
+                           <p>규슈의 어느 멋진 하루</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_26.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_27.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">태국여행 에니켓5</a>
+                           </h3>
+                           <p>즐거운 태국 여행을 위한 5가지 에티켓</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_27.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_28.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">뉴욕 워킹투어</a>
+                           </h3>
+                           <p>세상 어디에도 없는 뉴욕 맨하튼만의 워킹투어!</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_28.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_29.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">대만 도시정보</a>
+                           </h3>
+                           <p>대만에 대하여 알고싶나요?</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_29.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_30.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">라스베가스 200%즐기기</a>
+                           </h3>
+                           <p>세계 최대의 휴양도시! 우리의 밤은 당신의 낮보다 더 아름답다!</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_30.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_31.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">홍콩 빅버스 투어</a>
+                           </h3>
+                           <p>HONGKONG BIG BUS</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_31.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_32.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">팔라우 렌트카 정보</a>
+                           </h3>
+                           <p>Palau Rent car Information</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_32.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_33.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">언제 여행하기 좋을까?</a>
+                           </h3>
+                           <p>인기여행지 10곳의 추천 여행시기</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_33.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_34.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">도쿄 미술관 산책</a>
+                           </h3>
+                           <p>꿈꾸는 아티스트들을 위한 도시, 도쿄의 미술관</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_34.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_35.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">스위스 도시정보</a>
+                           </h3>
+                           <p>스위스에 대하여 알고싶나요?</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_35.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_36.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">싱가폴 도시정보</a>
+                           </h3>
+                           <p>싱가폴에 대하여 알고싶나요?</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_36.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_37.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">필리핀 도시정보</a>
+                           </h3>
+                           <p>필리핀에 대하여 알고싶나요?</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_37.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_38.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">태국 도시정보</a>
+                           </h3>
+                           <p>태국에 대하여 알고싶나요?</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_38.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               <div class="portfolio-item overseas col-xs-12 col-sm-4 col-md-3">
+                  <div class="recent-work-wrap">
+                     <img class="img-responsive" src="images/portfolio/thumbnails/thumb_overseas_39.jpg" alt="">
+                     <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>
+                              <a href="#">각 나라별 세일정보</a>
+                           </h3>
+                           <p>The World Sale Timetable</p>
+                           <a class="preview" href="images/portfolio/full/full_overseas_39.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                        </div>
+                     </div>
+                  </div>
+               </div><!--/.portfolio-item-->
+               
+                </div>
+            </div>
+        </div>
+    </section><!--/#portfolio-item-->
+    
+    <section id="bottom">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">We are hiring</a></li>
+                            <li><a href="#">Meet the team</a></li>
+                            <li><a href="#">Copyright</a></li>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Faq</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Refund policy</a></li>
+                            <li><a href="#">Ticket system</a></li>
+                            <li><a href="#">Billing system</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Developers</h3>
+                        <ul>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">SEO Marketing</a></li>
+                            <li><a href="#">Theme</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Email Marketing</a></li>
+                            <li><a href="#">Plugin Development</a></li>
+                            <li><a href="#">Article Writing</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Our Partners</h3>
+                        <ul>
+                            <li><a href="#">Adipisicing Elit</a></li>
+                            <li><a href="#">Eiusmod</a></li>
+                            <li><a href="#">Tempor</a></li>
+                            <li><a href="#">Veniam</a></li>
+                            <li><a href="#">Exercitation</a></li>
+                            <li><a href="#">Ullamco</a></li>
+                            <li><a href="#">Laboris</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Faq</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+</body>
+</html>
