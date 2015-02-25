@@ -60,6 +60,65 @@
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
 
+	<script src="js/jquery-1.11.0.js"></script>
+	<script type="text/javascript">
+	$(document)	.ready(function() {
+		/* 3. ê°ìë ëª¨ë  íì ì ë³´ ê²ì í íë©´ì ì¶ë ¥íë ë¡ì§ */
+		function getData() {
+			$.ajax({
+					url : "selectWish.do",
+					type : "post",
+					dataType : "json", //ê²°ê³¼ë°ì´í°íì
+					success : function(data) {
+						var table = "";
+						$("#listTable tr:gt(0)").remove();
+
+						$(data.list).each(
+								function(index, item) {
+									table += "<tr><td>" + item.id + "</td><td>"
+											+ item.festivalNum + "</td><td>"
+											+ item.festivalName + "</td><td>";
+									table += "<input type='button' value='Click Me' id='del' name='"+item.id+"'></td></tr>"
+								});
+						//íì´ë¸ì ì¶ê°
+						$("#listTable tr:eq(0)").after(table);
+					},
+					error : function(err) {//ì¤í¨íì ë
+						alert(err + " : fail");
+					}
+				}) //end of ajax
+			}//end of getData()
+
+				/* 4. ì­ì íê¸°(oní¨ìë ëì ì¼ë¡ ìì±ë ììì ì´ë²¤í¸ì ì©)
+				1. ë¬¸ë² : $(document).on("ì´ë²¤í¸ì¢ë¥", ì´ë²¤í¸ëì, í¨ì); 
+				2. ë¡ì§ : ëª¨ë  íì ì ë³´ ë³´ê¸° listìì ê° íìë³ "ì­ì " ë²í¼ í´ë¦­ì í´ë¹ íìì ë³´ë§ ì­ì íë ë¡ì§ 
+				3. êµ¬í : ì­ì  í ê°±ì ë íì ì ë³´ ë¦¬ì¤í¸ íë©´ì ì¬ì¤í */
+				$(document).on("click", "#del", function() {
+					$.ajax({
+						url : "deleteWish.do",
+						type : "post",
+						dataType : "text",
+						data : "id=" + $(this).attr("name"), //ìë²ì ì ì¡í  ë°ì´í°
+						success : function(data) {
+							if (data == "ok") {
+								alert("삭제 성공");
+								getData();
+							} else {
+								alert("삭제 실패")
+							}
+						},
+						error : function(err) {//ì¤í¨íìë
+							alert(err + " : wishList 삭제 실패")
+						}
+					})
+				});
+
+				//ë ì½ë ê°ì ¸ì¤ê¸°ë í¨ì í¸ì¶
+				getData();
+			});//end of ready()
+	</script>
+
+
     <script>
 	function initialize() {
 	  var mapOptions = {

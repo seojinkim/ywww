@@ -1,5 +1,9 @@
 package model.service;
 
-public interface FestivalService {
+import java.util.List;
 
+import model.domain.FestivalVo;
+
+public interface FestivalService {
+	List<FestivalVo> SelectFestival();
 }

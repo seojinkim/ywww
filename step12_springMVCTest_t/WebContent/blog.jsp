@@ -93,6 +93,39 @@
 
 </head><!--/head-->
 
+
+	<script src="js/jquery-1.11.0.js"></script>
+<script type="text/javascript">
+	$(document)	.ready(function() {
+		function getData() {
+			$.ajax({
+				url : "selectFestival.do",
+				type : "post",
+				dataType : "json", //ê²°ê³¼ë°ì´í°íì
+				success : function(data) {
+					var table = "";
+					$("#listTable tr:gt(0)").remove();
+
+					$(data.list).each(
+							function(index, item) {
+								table += "<tr><td>" + item.id + "</td><td>"
+										+ item.festivalNum + "</td><td>"
+										+ item.festivalName + "</td><td>";
+								table += "<input type='button' value='Click Me' id='del' name='"+item.id+"'></td></tr>"
+							});
+					//íì´ë¸ì ì¶ê°
+					$("#listTable tr:eq(0)").after(table);
+				},
+				error : function(err) {//ì¤í¨íì ë
+					alert(err + " : fail");
+				}
+			}) //end of ajax
+		}//end of getData()
+				getData();
+			});//end of ready()
+</script>
+
+
 <body>
 
     <header id="header">
@@ -162,7 +195,7 @@
     <section id="blog" class="container">
         <div class="center">
             <h2 class="jooafont">여행 소개</h2>
-            <p class="jooafont" class="lead">빤타스틱 페스티벌</p>
+            <p class="jooafont" class="lead">빤타스틱 페스티벌 </p>
         </div>
 
         <div class="blog">
@@ -171,11 +204,10 @@
                     <div class="blog-item">
                         <div class="row">
                             <div class="col-xs-12 col-sm-10 blog-content">
-                                <a href="blog-item.jsp"><img class="img-responsive img-blog" src="images/blog/blog1.png" width="100%" alt="" /></a>
-                                <a href="blog-item.jsp"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
-                                <a href="blog-item.jsp"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
-                                <a href="blog-item.jsp"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
-                                <a href="blog-item.jsp"><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
+                            <c:forEach items="${sessionScope.festivalList}" var="list">
+                            	<p class="jooafont" class="lead">#${list.festivalName}</p> 
+                                <a href="blog-item.jsp"><img class="img-responsive img-blog" src="festivalP/${list.festivalNum}/${list.festivalNum}_1.jpg" width="100%" alt="" /></a>
+                             </c:forEach> 
                             </div>
                         </div>    
                     </div><!--/.blog-item-->
