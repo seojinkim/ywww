@@ -182,6 +182,33 @@
                                     <p>경복궁 갈바엔 창경궁을 가라</p>
 
                                     <p>알겠냐?</p>
+                                    <button type="submit" class="btn2 btn-primary2 btn-lg" required="required" id="btn">Wish</button>
+                                    
+                                    <script>
+	                                    $(document)	.ready(function() {
+	                               		 	$("#btn").click(function() {
+												$.ajax({
+													url : "insert.do",
+													type : "post",
+													dataType : "text",
+													data : $("#inForm").serialize(),
+													success : function(data) {
+														if (data == "ok") {
+															alert("insert Success");
+															$("input[type=text]").val(""); //text박스 모두 지우기
+															getData(); //모든레코드 검색하는 함수 호출
+														} else {
+															alert("insert fail");
+														}
+													},
+													error : function(data) {
+														alert(data + ' : insert error');
+													}
+												}); //end of ajax
+											})//end of 가입로직
+										});//end of ready()
+                                    </script>
+                                    
                                 </div>
                             </div>
                         </div><!--/.blog-item-->
