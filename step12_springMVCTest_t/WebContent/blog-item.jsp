@@ -3,6 +3,8 @@
 	UsersVo vo = (UsersVo)request.getAttribute("vo");
 	session.setAttribute("vo",vo);
 %> --%>
+
+<!-- // -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -324,11 +326,11 @@
                                     <div class="col-sm-5">
                                         <div class="form-group">
                                             <label>Name *</label>
-                                            <input type="text" class="form-control" required="required">
+                                            <input type="text" readonly name="name" id="name" class="form-control" required="required" value="${sessionScope.userLoginInfo.name}">
                                         </div>
                                         <div class="form-group">
                                             <label>Email *</label>
-                                            <input type="email" class="form-control" required="required">
+                                            <input type="email" readonly name="email" id="email" class="form-control" required="required" value="${sessionScope.userLoginInfo.id}">
                                         </div>
                                     </div>
                                     <div class="col-sm-7">                        
