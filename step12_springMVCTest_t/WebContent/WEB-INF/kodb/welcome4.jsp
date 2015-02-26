@@ -1,8 +1,32 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%-- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Contact | YW3</title>
+    
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 <title>My Wish List</title>
 </head>
 <!-- core CSS -->
@@ -49,7 +73,7 @@
          $.ajax({
                url : "selectWish.do",
                type : "post",
-               dataType : "json",
+               dataType : "json",
                success : function(data) {
                   var table = "";
                   $("#listTable tr:gt(0)").remove();
@@ -94,7 +118,7 @@
 </script>
 
 <body>
-<header id="header">
+	<header id="header">
         <div class="top-bar">
             <div class="container">
                 <div class="row">
@@ -114,7 +138,7 @@
 										<li>
 											<i class="fa fa-user"></i> 
 											<font style="font: bold; font-size: large; color: white; ">${sessionScope.userLoginInfo.name}</font>
-											<font style="color: white;">님 반갑습니다.</font> 
+											<font style="color: white;">, Hello!</font> 
 											<a href="C.do">My Wish</a>
 										</li>
 										<li>
@@ -160,22 +184,15 @@
                        <!-- Home, About us, 여행 Tip, 여행 소개, Contact -->
                         <li><a class="jooafont" href="index.jsp">Home</a></li>
                         <li><a class="jooafont" href="about-us.jsp">About Us</a></li>
-                        <li><a class="jooafont" href="portfolio.jsp">인포그래픽</a></li>
-                        <li><a class="jooafont" href="selectFestival.do">여행 소개</a></li> 
+                        <li><a class="jooafont" href="portfolio.jsp">Info Graphic</a></li>
+                        <li><a class="jooafont" href="selectFestival.do">Introducing</a></li> 
                         <li><a class="jooafont" href="contact-us.jsp">Contact</a></li>                        
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
     </header><!--/header-->
-   <!-- <table id="listTable" cellspacing="0">
-      <tr bgcolor="#FOFOF7">
-         <th>id</th>
-         <th>festivalNum</th>
-         <input type="button" value="모든 wishList 보기" id="btn">
-      </tr>
-   </table> -->
-   
+       
             <div class="media-body post_reply_comments">
                     <h5>Wish List</h5>
                         <div class="col-sm-12">
@@ -201,7 +218,8 @@
            <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">Festival</a></span>
            <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
        </div> -->
-   <section id="bottom">
+       
+       <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -284,12 +302,6 @@
             </div>
         </div>
     </footer><!--/#footer-->
-
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/wow.min.js"></script>
+   
 </body>
 </html>

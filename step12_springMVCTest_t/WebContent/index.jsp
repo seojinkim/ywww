@@ -4,111 +4,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Home | YW3</title>
-   
-   <!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <!--[if lt IE 9]>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Home | YW3</title>
+
+<!-- core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-    <!-- 화면 아이콘 우리걸로 바꿔야 됨 -->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-</head><!--/head-->
+<!-- 화면 아이콘 우리걸로 바꿔야 됨 -->
+<link rel="shortcut icon" href="images/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<!--/head-->
 
 <body class="homepage">
-
-    <header id="header">
-        <div class="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-4">
-                       <!-- 로그인한 고객일 경우 고객 정보 뜨는 곳 -->
-<!--                         <div class="top-number"><p><i class="fa fa-user"></i> 로그인</p>
+	<header id="header">
+		<div class="top-bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-xs-4">
+						<!-- 로그인한 고객일 경우 고객 정보 뜨는 곳 -->
+						<!--                         <div class="top-number"><p><i class="fa fa-user"></i> 로그인</p>
                         </div> -->
-                    </div>
-                    <div class="col-sm-6 col-xs-8">
-                       <div class="social">
-                            <ul class="social-share jooafont">
-                               <!-- Sign up, Log in 버튼 위치하는 곳 -->
+					</div>
+					<div class="col-sm-6 col-xs-8">
+						<div class="social">
+							<ul class="social-share jooafont">
+								<!-- Sign up, Log in 버튼 위치하는 곳 -->
 								<!-- <div class="top-number"> -->
-									<!-- <li><i class="fa"></i> <a href="C.do">My Wish</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+								<!-- <li><i class="fa"></i> <a href="C.do">My Wish</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 								<c:choose>
 									<c:when test="${not empty sessionScope.userLoginInfo}">
-										<li>
-											<i class="fa fa-user"></i> 
-											<font style="font: bold; font-size: large; color: white; ">${sessionScope.userLoginInfo.name}</font>
-											<font style="color: white;">님 반갑습니다.</font> 
-											<a href="C.do">My Wish</a>
-										</li>
-										<li>
-											<a href="logoutProcess.do">Logout</a>
-										</li>
+										<li><i class="fa fa-user"></i> <font style="font: bold; font-size: large; color: white;">${sessionScope.userLoginInfo.name}</font> <font style="color: white;">님
+												반갑습니다.</font> <a href="C.do">My Wish</a></li>
+										<li><a href="logoutProcess.do">Logout</a></li>
 									</c:when>
 									<c:otherwise>
 										<li><a href="B.do">Login</a></li>
 									</c:otherwise>
 								</c:choose>
-								
+
 								<!-- </div> -->
 								<!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
-                                
-                            </ul>
-                            <div class="search">
-                                <form role="form">
-                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                                    <i class="fa fa-search"></i>
-                                </form>
-                           </div>
-                       </div>
-                    </div>
-                </div>
-            </div><!--/.container-->
-        </div><!--/.top-bar-->
 
-        <nav class="navbar navbar-inverse" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- YW3 홈페이 로고 -->
-                    <a class="navbar-brand" href="index.jsp"><img src="images/logo3.png" alt="logo"></a>
-                </div>
-            
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                       <!-- Home, About us, 여행 Tip, 여행 소개, Contact -->
-                        <li class="active"><a class="jooafont" href="index.jsp">Home</a></li>
-                        <li><a class="jooafont" href="about-us.jsp">About Us</a></li>
-                        <li><a class="jooafont" href="portfolio.jsp">인포그래픽</a></li>
-                        <li><a class="jooafont" href="selectFestival.do">여행 소개</a></li> 
-                        <li><a class="jooafont" href="contact-us.jsp">Contact</a></li>                         
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-      
-    </header><!--/header-->
+							</ul>
+							<div class="search">
+								<form role="form">
+									<input type="text" class="search-form" autocomplete="off" placeholder="Search"> <i class="fa fa-search"></i>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/.container-->
+		</div>
+		<!--/.top-bar-->
 
-   <!-- <section id="main-slider" class="no-margin">
+		<nav class="navbar navbar-inverse" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+					<!-- YW3 홈페이 로고 -->
+					<a class="navbar-brand" href="index.jsp"><img src="images/logo3.png" alt="logo"></a>
+				</div>
+
+				<div class="collapse navbar-collapse navbar-right">
+					<ul class="nav navbar-nav">
+						<!-- Home, About us, 여행 Tip, 여행 소개, Contact -->
+						<li class="active"><a class="jooafont" href="index.jsp">Home</a></li>
+						<li><a class="jooafont" href="about-us.jsp">About Us</a></li>
+						<li><a class="jooafont" href="portfolio.jsp">인포그래픽</a></li>
+						<li><a class="jooafont" href="selectFestival.do">여행 소개</a></li>
+						<li><a class="jooafont" href="contact-us.jsp">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--/.container-->
+		</nav>
+		<!--/nav-->
+
+	</header>
+	<!--/header-->
+
+	<!-- <section id="main-slider" class="no-margin">
    <div class="row">
       <div class="col-md-3">
       </div>
@@ -141,95 +136,98 @@
       /.carousel
    </section>
    /#main-slider -->
-   
- 
-   <section id="main-slider" class="no-margin">
-        <div class="carousel slide">
-            <ol class="carousel-indicators">
-                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#main-slider" data-slide-to="1"></li>
-                <li data-target="#main-slider" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-				
-	                <div class="item active" style="background-image: url(images/main1_1.jpg)">
-	                    <div class="container">
-	                        <div class="row slide-margin">
-	                            <div class="col-sm-8">
-	                                <div class="carousel-content">
-	                                    <h1 class="jooafont" class="animation animated-item-1">꽃보다 할배, H4 드디어 그리스에 가다!</h1>
-	                                    <h2 class="jooafont" class="animation animated-item-2">미리 둘러보는 그리스 여행</h2>
-	                                   <a class="btn-slide animation animated-item-3" href="index2.html">Read More</a>
-	                                </div>
-	                            </div>
-	
-	                           <!--  <div class="col-sm-6 hidden-xs animation animated-item-4">
+
+
+	<section id="main-slider" class="no-margin">
+		<div class="carousel slide">
+			<ol class="carousel-indicators">
+				<li data-target="#main-slider" data-slide-to="0" class="active"></li>
+				<li data-target="#main-slider" data-slide-to="1"></li>
+				<li data-target="#main-slider" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+
+				<div class="item active" style="background-image: url(images/main1_1.jpg)">
+					<div class="container">
+						<div class="row slide-margin">
+							<div class="col-sm-8">
+								<div class="carousel-content">
+									<h1 class="jooafont" class="animation animated-item-1">꽃보다 할배, H4 드디어 그리스에 가다!</h1>
+									<h2 class="jooafont" class="animation animated-item-2">미리 둘러보는 그리스 여행</h2>
+									<a class="btn-slide animation animated-item-3" href="index2.html">Read More</a>
+								</div>
+							</div>
+
+							<!--  <div class="col-sm-6 hidden-xs animation animated-item-4">
 	                                <div class="slider-img">
 	                                    <img src="images/slider/img1.png" class="img-responsive">
 	                                </div>
 	                            </div> -->
-	
-	                        </div>
-	                    </div>
-	                </div><!--/.item-->
-	                <div class="item" style="background-image: url(images/main1_31.jpg)">
-	                    <div class="container">
-	                        <div class="row slide-margin">
-	                            <div class="col-sm-6">
-	                                <div class="carousel-content">
-	                                    <h1 class="jooafont" class="animation animated-item-1">필리핀 맛집 TOP4</h1>
-	                                    <h2 class="jooafont" class="animation animated-item-2">Accusantium doloremque l, eaque ipsa...</h2>
-	                                    <a class="btn-slide animation animated-item-3" href="index1.html">Read More</a>
-	                                </div>
-	                            </div>
 
-                            <!-- <div class="col-sm-6 hidden-xs animation animated-item-4">
+						</div>
+					</div>
+				</div>
+				<!--/.item-->
+				<div class="item" style="background-image: url(images/main_bo.jpg)">
+					<div class="container">
+						<div class="row slide-margin">
+							<div class="col-sm-6">
+								<div class="carousel-content">
+									<h1 class="jooafont" class="animation animated-item-1">필리핀 맛집 TOP4</h1>
+									<h2 class="jooafont" class="animation animated-item-2">꼭 가야봐야할 맛집!!!</h2>
+									<a class="btn-slide animation animated-item-3" href="index1.html">Read More</a>
+								</div>
+							</div>
+
+							<!-- <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
                                     <img src="images/slider/img2.png" class="img-responsive">
                                 </div>
                             </div> -->
-				
-	                        </div>
-	                    </div>
-	                </div><!--/.item-->
-	                
-	                <div class="item" style="background-image: url(images/wo1.jpg)">
-	                    <div class="container">
-	                        <div class="row slide-margin">
-	                            <div class="col-sm-9">
-	                                <div class="carousel-content">
-	                                    <h1 class="jooafont" class="animation animated-item-1">여성에게 위험한 여행지! 3위는 페루 리마, 1위는 어디인가?</h1>
-	                                    <h2 class="jooafont" class="animation animated-item-2">나홀로 세계 여행을 꿈꾸는 여성 주목!</h2>
-	                                    <a class="btn-slide animation animated-item-3" href="index3.html">Read More</a>
-	                                </div>
-	                            </div>
-                           <!--  <div class="col-sm-6 hidden-xs animation animated-item-4">
+
+						</div>
+					</div>
+				</div>
+				<!--/.item-->
+
+				<div class="item" style="background-image: url(images/wo1.jpg)">
+					<div class="container">
+						<div class="row slide-margin">
+							<div class="col-sm-9">
+								<div class="carousel-content">
+									<h1 class="jooafont" class="animation animated-item-1">여성에게 위험한 여행지! <br>3위는 페루 리마, 1위는 어디인가?</h1>
+									<h2 class="jooafont" class="animation animated-item-2">나홀로 세계 여행을 꿈꾸는 여성 주목!</h2>
+									<a class="btn-slide animation animated-item-3" href="index3.html">Read More</a>
+								</div>
+							</div>
+							<!--  <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
                                     <img src="images/slider/img3.png" class="img-responsive">
                                 </div>
                             </div> -->
-                        	</div>
-                   	 	</div>
-                	</div><!--/.item-->
-            </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
-            <i class="fa fa-chevron-left"></i>
-        </a>
-        <a class="next hidden-xs" href="#main-slider" data-slide="next">
-            <i class="fa fa-chevron-right"></i>
-        </a>
-    </section><!--/#main-slider-->
-   
+						</div>
+					</div>
+				</div>
+				<!--/.item-->
+			</div>
+			<!--/.carousel-inner-->
+		</div>
+		<!--/.carousel-->
+		<a class="prev hidden-xs" href="#main-slider" data-slide="prev"> <i class="fa fa-chevron-left"></i>
+		</a> <a class="next hidden-xs" href="#main-slider" data-slide="next"> <i class="fa fa-chevron-right"></i>
+		</a>
+	</section>
+	<!--/#main-slider-->
 
-  <!--  <section id="feature" >
+
+	<!--  <section id="feature" >
         <div class="container">
            <div class="center wow fadeInDown">
                 <h2 class="jooafont">이곳은 어떠신가요?</h2>
                 <p class="jooafont" class="lead">이 곳은 어떠신가요? 회원님의 성향에 맞는 축제입니다.<br> 더 자세히 보고 싶으시면 클릭하셔서 상세정보를 봐주세요!</p>
             </div> -->
 
-        <!--     <div class="row">
+	<!--     <div class="row">
                 <div class="features">
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
@@ -280,7 +278,7 @@
                     </div>/.col-md-4
                 </div>/.services
             </div>/.row     -->
-        <!-- </div>/.container
+	<!-- </div>/.container
     </section>/#feature -->
 
 	<section id="recent-works">
@@ -301,27 +299,37 @@
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
-						<img src="images/05001_11_1.jpg" alt="" />
-					</div><!--/.item-->
+						<a href="FestivalOne.do?num=05002">
+							<img src="images/05001_11_1.jpg" alt="" /> <!-- Las Fallas -->
+						</a>
+					</div>
+					<!--/.item-->
 
 					<div class="item">
-						<img src="images/05002_23_1.jpg" alt="" />
-					</div><!--/.item-->
+						<a href="FestivalOne.do?num=05003">
+							<img src="images/05002_23_1.jpg" alt="" /><!-- San Ferim -->
+						</a>
+					</div>
+					<!--/.item-->
 
 					<div class="item">
-						<img src="images/05003_11_1.jpg" alt="" />
-					</div><!--/.item-->
-				</div><!--/.carousel-inner-->
+						<a href="FestivalOne.do?num=05001">
+							<img src="images/05003_11_1.jpg" alt="" /><!-- La Tomatina -->
+						</a>
+					</div>
+					<!--/.item-->
+				</div>
+				<!--/.carousel-inner-->
 
-				<a class="left carousel-control" href="#index_golist" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<a class="left carousel-control" href="#index_golist" role="button" data-slide="prev"> 
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> 
 					<span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#index_golist" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				</a> <a class="right carousel-control" href="#index_golist" role="button" data-slide="next"> 
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
 					<span class="sr-only">Next</span>
 				</a>
-			</div><!--/.carousel-->
+			</div>
+			<!--/.carousel-->
 			<!--            <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
@@ -432,166 +440,9 @@
 	</section>
 	<!--/#recent-works-->
 
-   <!-- <section id="services" class="service-item">
-      <div class="container">
-         <div class="center wow fadeInDown">
-            <h2 class="jooafont">Themes for you</h2>
-            <p class="jooafont" class="lead">Here is XXX theme spot for you. Do you like it?</p>
-         </div>
-         
-         <div id="themes" class="carousel slide" data-ride="carousel">
-            Indicators
-            <ol class="carousel-indicators">
-               <li data-target="#themes" data-slide-to="0" class="active"></li>
-               <li data-target="#themes" data-slide-to="1"></li>
-               <li data-target="#themes" data-slide-to="2"></li>
-            </ol>
-            Wrapper for slides
-            <div class="carousel-inner" role="listbox">
-               <div class="item active">
-                  <img src="images/theme1.jpg" alt="" />
-               </div>/.item
-               
-               <div class="item">
-                  <img src="images/theme1.jpg" alt="" />
-               </div>
-               
-               <div class="item">
-                  <img src="images/theme1.jpg" alt="" />
-               </div> -->
 
-               <!-- <div class="item" style="background-image: url(images/slider/bg2.jpg)">
-                  <div class="container">
-                     <div class="row slide-margin">
-                        <div class="col-sm-6">
-                           <div class="carousel-content">
-                              <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                              <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                              <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                           </div>
-                        </div>
-
-                        <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img2.png" class="img-responsive">
-                                </div>
-                            </div>
-
-                     </div>
-                  </div>
-               </div>/.item -->
-
-               <!-- <div class="item" style="background-image: url(images/slider/bg3.jpg)">
-                  <div class="container">
-                     <div class="row slide-margin">
-                        <div class="col-sm-6">
-                           <div class="carousel-content">
-                              <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                              <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                              <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                           </div>
-                        </div>
-                        <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img3.png" class="img-responsive">
-                                </div>
-                            </div>
-                     </div>
-                  </div>
-               </div>
-               /.item -->
-            </div>
-            <!--/.carousel-inner-->
-            <a class="left carousel-control" href="#themes" data-slide="prev">
-               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                 <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#themes" data-slide="next"> 
-               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
-               <span class="sr-only">Next</span>
-            </a>
-         </div><!--/.carousel-->
-         
-         <!--            <div class="row">
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services1.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services2.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services3.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>  
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services4.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services5.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services6.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>                                                
-            </div>/.row -->
-      </div><!--/.container-->
-      
-   </section><!--/#services-->
-
-   <section id="middle">
-      <div class="container">
+	<section id="middle">
+		<div class="container">
 			<div class="center wow fadeInDown">
 				<h2 class="jooafont">
 					<font color="white">인포그래픽</font>
@@ -603,37 +454,38 @@
 
 			</div>
 			<div id="index_traveltip" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-               <li data-target="#index_traveltip" data-slide-to="0" class="active"></li>
-               <li data-target="#index_traveltip" data-slide-to="1"></li>
-               <li data-target="#index_traveltip" data-slide-to="2"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-               <div class="item active">
-                  <img src="images/immigration_2.jpg" alt="" />
-               </div><!--/.item-->
-               
-               <div class="item">
-                  <img src="images/visa_5.jpg" alt="" />
-               </div>
-               
-               <div class="item">
-                  <img src="images/airport_1.jpg" alt="" />
-               </div>
-               </div>
-            <!--/.carousel-inner-->
-            <a class="left carousel-control" href="#index_traveltip" data-slide="prev">
-               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                 <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#index_traveltip" data-slide="next"> 
-               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
-               <span class="sr-only">Next</span>
-            </a>
-         </div><!--/.carousel-->
-         <!--    <div class="row">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#index_traveltip" data-slide-to="0" class="active"></li>
+					<li data-target="#index_traveltip" data-slide-to="1"></li>
+					<li data-target="#index_traveltip" data-slide-to="2"></li>
+				</ol>
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<a href="portfolio.jsp"> <img src="images/immigration_2.jpg" alt="" />
+						</a>
+					</div>
+					<!--/.item-->
+
+					<div class="item">
+						<a href="portfolio.jsp"> <img src="images/visa_5.jpg" alt="" />
+						</a>
+					</div>
+
+					<div class="item">
+						<a href="portfolio.jsp"> <img src="images/airport_1.jpg" alt="" />
+						</a>
+					</div>
+				</div>
+				<!--/.carousel-inner-->
+				<a class="left carousel-control" href="#index_traveltip" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span>
+				</a> <a class="right carousel-control" href="#index_traveltip" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span
+					class="sr-only">Next</span>
+				</a>
+			</div>
+			<!--/.carousel-->
+			<!--    <div class="row">
                 <div class="col-sm-6 wow fadeInDown">
                     <div class="skill">
                         <h2>여행 Tip</h2>
@@ -760,14 +612,16 @@
                 </div>
 
             </div>/.row -->
-      </div><!--/.container-->
-    </section><!--/#middle-->
-	
+		</div>
+		<!--/.container-->
+	</section>
+	<!--/#middle-->
+
 	<section id="recent-works1">
         <div class="container">
             <div class="center wow fadeInDown">
                 <h2 class="jooafont">여행 후기</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <p class="jooafont" class="lead">궁금한 것이 있다면 주목!!<br class="jooafont">생생한 최신 여행 후기를 들을 수 있습니다</p>
             </div>
 
             <div class="row">
@@ -778,7 +632,7 @@
                             <div class="recent-work-inner">
                                 <h3><a class="jooafont" href="#">이탈리아</a> </h3>
                                 <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="images/t11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -789,9 +643,9 @@
                         <img class="img-responsive" src="images/main2_12_1.jpg" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a class="jooafont" href="#">일본</a></h3>
+                                <h3><a class="jooafont" href="#">오키나와</a></h3>
                                 <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="images/o11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -804,7 +658,7 @@
                             <div class="recent-work-inner">
                                 <h3><a class="jooafont" href="#">보라카이</a></h3>
                                 <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="images/bo11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -815,9 +669,9 @@
                         <img class="img-responsive" src="images/p1_1.jpg" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a class="jooafont" href="#">프랑스</a></h3>
+                                <h3><a class="jooafont" href="#">파리</a></h3>
                                 <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/p1_1.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="images/p11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -830,7 +684,7 @@
                             <div class="recent-work-inner">
                                 <h3><a class="jooafont" href="#">뉴욕</a></h3>
                                 <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="images/n11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -843,7 +697,7 @@
                             <div class="recent-work-inner">
                                 <h3><a class="jooafont" href="#">상하이</a></h3>
                                 <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="images/sang11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -854,9 +708,9 @@
                         <img class="img-responsive" src="images/b1_1.jpg" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a class="jooafont" href="#">캐나다</a></h3>
+                                <h3><a class="jooafont" href="#">벤쿠버</a></h3>
                                 <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="images/b11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -869,7 +723,7 @@
                             <div class="recent-work-inner">
                                 <h3><a class="jooafont" href="#">홍콩</a></h3>
                                 <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="images/h11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -878,11 +732,10 @@
         </div><!--/.container-->
     </section><!--/#recent-works1-->
 
-<!--/#bottom  -->
-        
-        <section id="bottom">
-		<div class="container wow fadeInDown" data-wow-duration="1000ms"
-			data-wow-delay="600ms">
+	<!--/#bottom  -->
+
+	<section id="bottom">
+		<div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
 			<div class="row">
 				<div class="col-md-3 col-sm-6">
 					<div class="widget">
@@ -955,9 +808,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
-					&copy; 2015 <a target="_blank" href="http://shapebootstrap.net/"
-						title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>.
-					All Rights Reserved.
+					&copy; 2015 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
 				</div>
 				<div class="col-sm-6">
 					<ul class="pull-right">
@@ -975,8 +826,8 @@
 
 	<script src="js/jquery.js"></script>
 	<script type="text/javascript">
-        $('.carousel').carousel()
-    </script>
+		$('.carousel').carousel()
+	</script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.prettyPhoto.js"></script>
 	<script src="js/jquery.isotope.min.js"></script>
