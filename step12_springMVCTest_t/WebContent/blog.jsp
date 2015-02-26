@@ -1,8 +1,12 @@
+
 <%@page import="model.domain.FestivalVo"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=euc-kr"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+    request.setCharacterEncoding("euc-kr");
+%>
 <%
    final int ROWSIZE = 6;
    final int BLOCK = 5;
@@ -128,7 +132,7 @@
                $("#listTable tr:gt(0)").remove();
 
                $(data.list).each(
-                     function(index, item) {
+                     function(, item) {
                         table += "<tr><td>" + item.id + "</td><td>"
                               + item.festivalNum + "</td><td>"
                               + item.festivalName + "</td><td>";
@@ -148,7 +152,7 @@
 
 
 <body>
-<!-- /// -->
+
     <header id="header">
         <div class="top-bar">
             <div class="container">
@@ -216,7 +220,7 @@
                         <li><a class="jooafont" href="index.jsp">Home</a></li>
                         <li><a class="jooafont" href="about-us.jsp">About Us</a></li>
                         <li><a class="jooafont" href="portfolio.jsp">인포그래픽</a></li>
-                        <li class="active"><a href="blog.jsp?pg=1">여행 소개</a></li> 
+                        <li class="active"><a class="jooafont" href="selectFestival.do">여행 소개</a></li> 
                         <li><a class="jooafont" href="contact-us.jsp">Contact</a></li>                        
                     </ul>
                 </div>
@@ -241,6 +245,7 @@
                             
                                  List<FestivalVo> list = (List<FestivalVo>)(session.getAttribute("festivalList"));
                            
+                               
                                allPage = (int)Math.ceil(list.size()/(double)ROWSIZE);
                              
                              if(endPage > allPage) {
@@ -258,7 +263,18 @@
                                }
                                
                                FestivalVo tempFestival = null;
-                               for(int i = (pageNum - 1) * 10; i < (pageNum * 10) - 1 ; i++)
+                               if(list.size()>20){
+                                   for(int i = (pageNum - 1) * 10; i < (pageNum * 10) - 1; i++)
+                                   {
+                                      tempFestival = list.get(i);
+                                %>
+                               
+                                   <p class="jooafont" class="lead">#<%= tempFestival.getFestivalName() %></p> 
+                                   <a href="FestivalOne.do?num=<%= tempFestival.getFestivalNum() %>"><img class="img-responsive img-blog" src="festivalP/<%= tempFestival.getFestivalNum() %>/<%= tempFestival.getFestivalNum() %>_1.jpg" width="100%" alt="" /></a>
+                                <% 
+                                   }}
+                               else if(list.size()>7){
+                               for(int i = (pageNum - 1) * 9; i < list.size() ; i++)
                                {
                                   tempFestival = list.get(i);
                             %>
@@ -266,6 +282,15 @@
                                <p class="jooafont" class="lead">#<%= tempFestival.getFestivalName() %></p> 
                                <a href="FestivalOne.do?num=<%= tempFestival.getFestivalNum() %>"><img class="img-responsive img-blog" src="festivalP/<%= tempFestival.getFestivalNum() %>/<%= tempFestival.getFestivalNum() %>_1.jpg" width="100%" alt="" /></a>
                             <% 
+                               }}else{
+                                  for(int i = (pageNum - 1) * 10; i < list.size() ; i++)
+                                  {
+                                  tempFestival = list.get(i);
+                            %>
+                               <p class="jooafont" class="lead">#<%= tempFestival.getFestivalName() %></p> 
+                               <a href="FestivalOne.do?num=<%= tempFestival.getFestivalNum() %>"><img class="img-responsive img-blog" src="festivalP/<%= tempFestival.getFestivalNum() %>/<%= tempFestival.getFestivalNum() %>_1.jpg" width="100%" alt="" /></a>
+                            <% 
+                               }
                                }
                             %>
                             <%-- <c:forEach items="${sessionScope.festivalList}" var="list" begin="<%=Integer.parseInt(request.getParameter("pg")) %>" end="<%=Integer.parseInt(request.getParameter("pg")) %>">
@@ -302,76 +327,65 @@
                         <div class="row">
                             <div class="col-sm-12">
                                <h4>Keyword Search</h4>
-                               <form action="selectFestivalByKeyword.do"  name="selectFestivalByKeyword.do">
-                                    <input id="pac-input" class="controls" type="text" placeholder="Enter a keyword">
+                               <form action="selectFestivalByKeyword.do"  name="selectFestivalByKeyword.do" method="get">
+                                    <input type="text" id="keyword"  name = "keyword" class="controls" autocomplete="off" placeholder="Enter a keyword">
                                     <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
                                 </form>
                                <h4><br>Date</h4>   
-                        <form action="selectFestivalByDate.do"  name="selectFestivalByDate.do">
-                               <input type="text" id="txtDate" value="" onclick="fnPopUpCalendar(txtDate,txtDate,'yyyy/mm/dd')" class='text_box1'>
-                               <a> ~ </a>
-                               <input type="text" id="txtDate2" value="" onclick="fnPopUpCalendar(txtDate2,txtDate2,'yyyy/mm/dd')" class='text_box1'>
-                               <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
+                               <form action = "selectFestivalByDate.do" name = "selectFestivalByDate.do" method="GET">
+                                  <input type="text" id="festivalStartDay" value="" onclick="fnPopUpCalendar(festivalStartDay,festivalStartDay,'yyyy/mm/dd')" class='text_box1'>
+                                  <a> ~ </a>
+                                  <input type="text" id="festivalEndDay" value="" onclick="fnPopUpCalendar(festivalEndDay,festivalEndDay,'yyyy/mm/dd')" class='text_box1'>
+                                  <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
                         </form>
                                
-                               
-                               <div class="EventSearchBox_checkbox">
-                           <span class="EventSearchBox_CheckboxLabels" style="width: 160px; height: 22px;">
-                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <input type="checkbox" id="gwt-uid-10" tabindex="0">
-                              <label for="gwt-uid-10" >I'm flexible on the dates</label>
-                           </span>
-                        </div>
-   
                                   <h4>Categories</h4>
                                   <ul class="tag-cloud">
                                      <div class="EventSearchBox_categories">
                                  <div style="position: relative; overflow: hidden; width: 500px; height: 150px;">
                                     <div style="position: absolute; overflow: hidden; width: 130px; height: 45px; left: 0px; top: 0px;">
                                     <img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 39px; height: 39px; position: absolute; left: 5px; top: 5px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -440px -369px no-repeat;" border="0" class="gwt-Image">
-                                    <li><a class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 45px; top: 0px; width: 60px; cursor: pointer;">Art</a></li>
+                                    <li><a id="Art" onclick="location.href='selectFestivalByTheme.do?themeName=art' " class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 45px; top: 0px; width: 60px; cursor: pointer;">Art</a></li>
                                     </div>
                                     
                                     <div style="position: absolute; overflow: hidden; width: 130px; height: 45px; left: 100px; top: 0px;">
                                     <img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 39px; height: 39px; position: absolute; left: 5px; top: 5px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -323px -291px no-repeat;" border="0" class="gwt-Image">
-                                    <li><a class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 50px; top: 0px; width: 70px; cursor: pointer;">Sport</a></li>
+                                    <li><a id="Sport" onclick="location.href='selectFestivalByTheme.do?themeName=sport' " class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 50px; top: 0px; width: 70px; cursor: pointer;">Sport</a></li>
                                     </div>
                                     
                                     <div style="position: absolute; overflow: hidden; width: 140px; height: 45px; left: 220px; top: 0px;">
                                     <img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 39px; height: 39px; position: absolute; left: 5px; top: 5px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -401px -369px no-repeat;" border="0" class="gwt-Image">
-                                    <li><a class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 45px; top: 0px; width: 90px; cursor: pointer;">Celebrations</a></li>
+                                    <li><a id="Celebrations" onclick="location.href='selectFestivalByTheme.do?themeName=celebrations' "  class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 45px; top: 0px; width: 90px; cursor: pointer;">Celebrations</a></li>
                                     </div>
                                     
                                     <div style="position: absolute; overflow: hidden; width: 130px; height: 45px; left: 0px; top: 50px;">
                                     <img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 39px; height: 39px; position: absolute; left: 5px; top: 5px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -506px -291px no-repeat;" border="0" class="gwt-Image">
-                                    <li><a class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 45px; top: 0px; width: 60px; cursor: pointer;">Music</a></li>
+                                    <li><a id="Music" onclick="location.href='selectFestivalByTheme.do?themeName=music' "  class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 45px; top: 0px; width: 60px; cursor: pointer;">Music</a></li>
                                     </div>
                                     
                                     <div style="position: absolute; overflow: hidden; width: 130px; height: 45px; left: 100px; top: 52px;">
                                        <img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 39px; height: 39px; position: absolute; left: 5px; top: 5px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -574px -184px no-repeat;" border="0" class="gwt-Image">
-                                       <li><a class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 50px; top: 0px; width: 70px; cursor: pointer;">Nature</a></li>
+                                       <li><a id="Nature" onclick="location.href='selectFestivalByTheme.do?themeName=nature' "  class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 50px; top: 0px; width: 70px; cursor: pointer;">Nature</a></li>
                                     </div>
 
                                     <div style="position: absolute; overflow: hidden; width: 140px; height: 45px; left: 220px; top: 52px;">
                                        <img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 39px; height: 39px; position: absolute; left: 5px; top: 5px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -323px -330px no-repeat;" border="0" class="gwt-Image">
-                                    <li><a class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 45px; top: 0px; width: 90px; cursor: pointer;">Shopping</a></li>
+                                    <li><a id="Shopping" onclick="location.href='selectFestivalByTheme.do?themeName=shopping' " class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 45px; top: 0px; width: 90px; cursor: pointer;">Shopping</a></li>
                                     </div>
                                     
                                     <div style="position: absolute; overflow: hidden; width: 130px; height: 45px; left: 0px; top: 100px;">
                                        <img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 39px; height: 39px; position: absolute; left: 5px; top: 5px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -362px -369px no-repeat;" border="0" class="gwt-Image">
-                                       <li><a class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 45px; top: 0px; width: 60px; cursor: pointer;">Family</a></li>
+                                       <li><a id="Family" onclick="location.href='selectFestivalByTheme.do?themeName=family' " class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 45px; top: 0px; width: 60px; cursor: pointer;">Family</a></li>
                                     </div>
                                     
                                     <div style="position: absolute; overflow: hidden; width: 130px; height: 45px; left: 100px; top: 100px;">
                                        <img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 37px; height: 37px; display: none; position: absolute; left: 7px; top: 6px; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -479px -369px no-repeat;" border="0" class="gwt-Image"><img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 39px; height: 39px; position: absolute; left: 5px; top: 5px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -323px -369px no-repeat;" border="0" class="gwt-Image">
-                                       <li><a class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 50px; top: 0px; width: 70px; cursor: pointer;">Unusual</a></li>
+                                       <li><a id="Unusual" onclick="location.href='selectFestivalByTheme.do?themeName=unusual' " class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 50px; top: 0px; width: 70px; cursor: pointer;">Unusual</a></li>
                                     </div>
                                     
                                     <div style="position: absolute; overflow: hidden; width: 140px; height: 45px; left: 220px; top: 100px;">
                                        <img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 37px; height: 37px; display: none; position: absolute; left: 7px; top: 6px; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -479px -369px no-repeat;" border="0" class="gwt-Image"><img src="http://joobili.com/Joobili/JoobiliGWT/clear.cache.gif" style="width: 39px; height: 39px; position: absolute; left: 5px; top: 5px; cursor: pointer; background: url(http://joobili.com/Joobili/JoobiliGWT/F08E521F12735725DBF1F1C2A3432D1D.cache.png) -545px -291px no-repeat;" border="0" class="gwt-Image">
-                                       <li><a class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 45px; top: 0px; width: 92px; cursor: pointer;">Food & Drink</a></li>
+                                       <li><a id="Food & Drink" onclick="location.href='selectFestivalByTheme.do?themeName=food' " class="btn btn-xs btn-primary" href="#" style="position: absolute; left: 45px; top: 0px; width: 92px; cursor: pointer;">Food & Drink</a></li>
                                     </div>
                                     
                                  </div>
@@ -385,8 +399,18 @@
                                   <br><br> -->
                                   
                                   <h4><br>Location Search</h4>
-                                  <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
-                                  <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
+                                  <!-- <form action="selectFestivalByKeyword.do"  name="selectFestivalByKeyword.do" method="get">
+                                    <input type="text" id="keyword" name = "keyword" class="controls" autocomplete="off" placeholder="Enter a keyword">
+                                    <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
+                                </form> -->
+                                
+                                <form action="selectFestivalByLocation.do"  name="selectFestivalByLocation.do" method="get">
+                                    <input type="text" id="pac-input" name = "location" class="controls" autocomplete="off" placeholder="Enter a keyword">
+                                    <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
+                                </form>
+                                
+                                  <!-- <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+                                  <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button> -->
                                   <div id="map-canvas"></div>
                                   
                            
@@ -494,7 +518,6 @@
    <script src="js/intlTelInput.js"></script>
    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true_or_false"></script>
    <script>
-      $("#mobile-number").intlTelInput();
    </script>
 </body>
 </html>

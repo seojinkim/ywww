@@ -43,6 +43,21 @@ public class FestivalController {
 		return mv;
 	}
 	
+	@RequestMapping(value="selectFestivalByDate", method = RequestMethod.GET)
+	public ModelAndView selectFestivalByDate(String festivalStartDay, String festivalEndDay, HttpSession session, HttpServletRequest request){
+		String txtDate=request.getParameter("festivalStartDay");
+		String txtDate2=request.getParameter("festivalEndDay");
+		System.out.println(festivalEndDay);
+		System.out.println(txtDate);
+		System.out.println("컨트롤러Date "+txtDate);
+		List<FestivalVo> list =  fService.SelectFestivalByDate(txtDate, txtDate2);
+		session.setAttribute("festivalList", list);
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("list", list);	
+		mv.setViewName("redirect:blog.jsp?pg=1");	//id=jsonView 객체를 찾아서 JsonView실행
+		return mv;
+	}
+	
 	@RequestMapping(value="selectFestivalByLocation", method = RequestMethod.GET)
 	public ModelAndView selectFestivalByLocation(String location, HttpSession session, HttpServletRequest request){
 		System.out.println("컨트롤러 "+location);
