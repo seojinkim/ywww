@@ -124,14 +124,14 @@
                  </ol>
 
                <div class="carousel-inner">
-                  <div class="item active">
+                  <!-- <div class="item active">
                      <div data-wow-duration="1000ms" data-wow-delay="600ms">
                      <a href="#introduce">
                         <img src="images/aaaa1.png" class="img-responsive" alt="">
                      </a>
                      </div>
-                  </div>
-                  <div class="item">
+                  </div> -->
+                  <div class="item active">
                      <a href="#reason">
                         <img src="images/1111_1.jpg" class="img-responsive" alt="">
                      </a>
@@ -144,13 +144,13 @@
                   </div> -->
                </div>
                
-               <a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
+               <!-- <a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
                   <i class="fa fa-angle-left"></i> 
                </a>
                
                <a class=" right carousel-control hidden-xs"href="#carousel-slider" data-slide="next">
                   <i class="fa fa-angle-right"></i> 
-               </a>
+               </a> -->
             </div> <!--/#carousel-slider-->
          </div><!--/#about-slider-->
          
