@@ -35,11 +35,6 @@ public class FestivalServiceImpl implements FestivalService{
 	}
 	
 	@Override
-	public List<FestivalVo> SelectFestivalByDate(String txtDate, String txtDate2) {
-		return fDao.selectFestivalByDate(txtDate, txtDate2);
-	}
-	
-	@Override
 	public FestivalVo FestivalOne(int num) {
 		return fDao.festivalOne(num);
 	}
