@@ -34,6 +34,12 @@ create table festival(
 	homepage varchar2(2000)
 );
 
+create table comments(
+	name varchar2(20) primary key not null,
+	id varchar2(50) not null,
+	message varchar2(50) not null,
+	festivalNum varchar2(20) not null,
+
 create table city_country(
 	city varchar2(50) primary key not null,
 	country varchar2(50) not null
