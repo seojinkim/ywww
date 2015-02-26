@@ -142,32 +142,14 @@
                     <div class="col-sm-6 col-xs-4">
                         <div class="top-number"><p><i class="fa fa-user"></i> Please Sign in / Welcome [NAME]</p></div>
                     </div>
-                     <div class="col-sm-6 col-xs-8">
+                    <div class="col-sm-6 col-xs-8">
                        <div class="social">
-                            <ul class="social-share jooafont">
-                               <!-- Sign up, Log in 버튼 위치하는 곳 -->
-								<!-- <div class="top-number"> -->
-									<!-- <li><i class="fa"></i> <a href="C.do">My Wish</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-								<c:choose>
-									<c:when test="${not empty sessionScope.userLoginInfo}">
-										<li>
-											<i class="fa fa-user"></i> 
-											<font style="font: bold; font-size: large; color: white; ">${sessionScope.userLoginInfo.name}</font>
-											<font style="color: white;">님 반갑습니다.</font> 
-											<a href="C.do">My Wish</a>
-										</li>
-										<li>
-											<a href="logoutProcess.do">Logout</a>
-										</li>
-									</c:when>
-									<c:otherwise>
-										<li><a href="B.do">Login</a></li>
-									</c:otherwise>
-								</c:choose>
-								
-								<!-- </div> -->
-								<!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
-                                
+                            <ul class="social-share">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
                             </ul>
                             <div class="search">
                                 <form role="form">
@@ -251,12 +233,10 @@
                                     <br>
                                     <p>${vo.detail}</p><hr>
                                     
-                                    <form method="get" action="insertWish.do?id=${sessionScope.userLoginInfo.name}&festivalNum=${vo.festivalNum}&festivalName=${vo.festivalName}">
                                     <button type="submit" class="btn2 btn-primary2 btn-lg" required="required" id="btn">Wish</button>
-                                    </form>
                                     
                                     <script src="js/jquery-1.11.0.js"></script>
-                           			<script type="text/javascript">
+                           <script type="text/javascript">
                                        $(document)   .ready(function() {
                                             $("#btn").click(function() {
                                     $.ajax({
@@ -290,9 +270,9 @@
                                 <a href="#"><img src="images/blog/girl.png" class="img-circle" alt="" /></a>
                             </div>
                             <div class="media-body post_reply_comments">
-                                <h3>경복궁</h3>
+                                <h3>mymy</h3>
                                 <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                                <p>글 내려라</p>
+                                <p>이 축제 정말 재밌어 보이네요. 꼭 가고싶어요!!</p>
                                 <a href="#">Reply</a>
                             </div>
                         </div> 
@@ -301,9 +281,9 @@
                                 <a href="#"><img src="images/blog/boy2.png" class="img-circle" alt="" /></a>
                             </div>
                             <div class="media-body post_reply_comments">
-                                <h3>창경궁</h3>
+                                <h3>omg</h3>
                                 <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                                <p>난 이 글 좋은데?</p>
+                                <p>오 괜찮은데요? 다양한 정보 감사드립니다^^</p>
                                 <a href="#">Reply</a>
                             </div>
                         </div> 
@@ -312,9 +292,9 @@
                                 <a href="#"><img src="images/blog/boy3.png" class="img-circle" alt="" /></a>
                             </div>
                             <div class="media-body post_reply_comments">
-                                <h3>경복궁</h3>
+                                <h3>happyworld</h3>
                                 <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                                <p>싸우자</p>
+                                <p>굿뜨굿뜨 내가 바로 원하던 것...</p>
                                 <a href="#">Reply</a>
                             </div>
                         </div> 
@@ -324,24 +304,20 @@
                             <div class="status alert alert-success" style="display: none"></div>
                             <div class="message_heading">
                                 <h4>Comment를 남기세요</h4>
-                                <p>Make sure you enter the(*)required information where indicate.HTML code is not allowed</p>
+                                <p>Thank you for sharing your ideas! :)</p>
                             </div> 
-      -${sessionScope.userLoginInfo.name}-
-                            <form id="main-contact-form" class="contact-form" name="contact-form" method="get" action="<%=request.getContextPath()%>/insertComments.do">
+      
+                            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
                                 <div class="row">
                                     <div class="col-sm-5">
                                         <div class="form-group">
                                             <label>Name *</label>
-                                            <input type="text" id="name" name="name" readonly class="form-control" required="required" value="${sessionScope.userLoginInfo.name}">
+                                            <input type="text" class="form-control" required="required">
                                         </div>
                                         <div class="form-group">
                                             <label>Email *</label>
-                                            <input type="email" id="email" name="email" readonly class="form-control" required="required" value="${sessionScope.userLoginInfo.id}">
+                                            <input type="email" class="form-control" required="required">
                                         </div>
-                                        <!-- <div class="form-group">
-                                            <label>URL</label>
-                                            <input type="url" class="form-control">
-                                        </div>   -->                  
                                     </div>
                                     <div class="col-sm-7">                        
                                         <div class="form-group">
@@ -349,7 +325,7 @@
                                             <textarea name="message" id="message" required="required" class="form-control" rows="4"></textarea>
                                         </div>                        
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-lg" required="required" >Submit Message</button>
+                                            <button type="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
                                         </div>
                                     </div>
                                 </div>
@@ -438,13 +414,12 @@
                      	<img src="images/audition.png"/>
                     </div>
                      	
-                   <!-- <aside class="col-md-4"> -->
-    				<div class="widget categories">
+                   <div class="widget categories">
                         <div class="row">
                             <div class="col-sm-12">
                             	<h4>Keyword Search</h4>
-                            	<form action="selectFestivalByKeyword.do"  name="selectFestivalByKeyword.do" method="get">
-                                    <input type="text" id="keyword" name = "keyword" class="controls" autocomplete="off" placeholder="Enter a keyword">
+                            	<form action="selectFestivalByKeyword.do"  name="selectFestivalByKeyword.do">
+                                    <input id="pac-input" class="controls" type="text" placeholder="Enter a keyword">
                                     <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
                                 </form>
                             	<h4><br>Date</h4>	
@@ -528,12 +503,13 @@
                             		<input id="pac-input" class="controls" type="text" placeholder="Enter a location">
                             		<button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
                             		<div id="map-canvas"></div>
-                            		
-									
                             </div>
                         </div>                     
-                    </div><!--/.recent comments-->
-    			<!-- </aside> -->      
+                    </div>
+    				
+    				
+
+                </aside>     
 
             </div><!--/.row-->
 
@@ -635,5 +611,8 @@
     <script type = "text/javascript" src="js/calendar.js"></script>
     <script src="js/jquery-1.11.0.js"></script>
 	<script src="js/intlTelInput.js"></script>
+	<script>
+		$("#mobile-number").intlTelInput();
+	</script>
 </body>
 </html>
