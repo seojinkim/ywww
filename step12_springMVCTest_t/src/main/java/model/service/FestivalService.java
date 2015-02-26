@@ -9,5 +9,6 @@ public interface FestivalService {
 	List<FestivalVo> SelectFestivalByKeyword(String keyword);
 	List<FestivalVo> SelectFestivalByLocation(String location);
 	List<FestivalVo> SelectFestivalByTheme(String themeName);
+	List<FestivalVo> SelectFestivalByDate(String txtDate, String txtDate2);
 	FestivalVo FestivalOne(int num);
 }

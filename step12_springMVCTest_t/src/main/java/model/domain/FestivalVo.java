@@ -15,6 +15,16 @@ public class FestivalVo {
 	
 	public FestivalVo() {}
 
+	
+	
+	public FestivalVo(String festivalStartDay, String festivalEndDay) {
+		super();
+		this.festivalStartDay = festivalStartDay;
+		this.festivalEndDay = festivalEndDay;
+	}
+
+
+
 	public FestivalVo(String festivalNum, String festivalName, String city,
 			String summary, String festivalStartDay, String festivalEndDay,
 			String mapUrl, String adress, String detail, String homepage, String country) {

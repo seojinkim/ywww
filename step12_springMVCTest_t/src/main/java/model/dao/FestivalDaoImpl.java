@@ -64,6 +64,21 @@ public class FestivalDaoImpl implements FestivalDao{
 		return list;
 	}
 	
+	
+	@Override
+	public List<FestivalVo> selectFestivalByDate(String txtDate, String txtDate2) {
+		SqlSession session = null;
+		List<FestivalVo> list = null;
+		FestivalVo vo = new FestivalVo(txtDate,txtDate2);
+		try {
+			session = DBUtil.getSqlSession();
+			list = session.selectList("festival.selectFestivalByDate", vo);
+		} finally {
+			DBUtil.closeSqlSession(session);
+		}
+		return list;
+	}
+	
 	@Override
 	public FestivalVo festivalOne(int num) {
 		SqlSession session = null;
