@@ -618,140 +618,119 @@
 	<!--/#middle-->
 
 	<section id="recent-works1">
-		<div class="container">
-			<div class="center wow fadeInDown">
-				<h2 class="jooafont">여행 후기</h2>
-				<p class="lead">
-					저희는 축제 정보와 회원들의 축제 후기를 공유하는 서비스를 제공합니다. <br> 많은 회원들의 생생한 후기!! 지금 바로 확인해 보세요!!
-				</p>
-			</div>
+        <div class="container">
+            <div class="center wow fadeInDown">
+                <h2 class="jooafont">여행 후기</h2>
+                <p class="jooafont" class="lead">궁금한 것이 있다면 주목!!<br class="jooafont">생생한 최신 여행 후기를 들을 수 있습니다</p>
+            </div>
 
-			<div class="row">
-				<div class="col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="images/main2_21_1.jpg" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3>
-									<a class="jooafont" href="#">이탈리아</a>
-								</h3>
-								<p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div>
-						</div>
-					</div>
-				</div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/main2_21_1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">이탈리아</a> </h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/t11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
 
-				<div class="col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="images/main2_12_1.jpg" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3>
-									<a class="jooafont" href="#">일본</a>
-								</h3>
-								<p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div>
-						</div>
-					</div>
-				</div>
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/main2_12_1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">오키나와</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/o11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
 
-				<div class="col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="images/bo1_1.jpg" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3>
-									<a class="jooafont" href="#">보라카이</a>
-								</h3>
-								<p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div>
-						</div>
-					</div>
-				</div>
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/bo1_1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">보라카이</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/bo11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
 
-				<div class="col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="images/p1_1.jpg" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3>
-									<a class="jooafont" href="#">프랑스</a>
-								</h3>
-								<p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="images/p1_1.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div>
-						</div>
-					</div>
-				</div>
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/p1_1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">파리</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/p11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+                
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/main2_31_1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">뉴욕</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/n11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
 
-				<div class="col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="images/main2_31_1.jpg" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3>
-									<a class="jooafont" href="#">뉴욕</a>
-								</h3>
-								<p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div>
-						</div>
-					</div>
-				</div>
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/sang1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">상하이</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/sang11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
 
-				<div class="col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="images/sang1.jpg" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3>
-									<a class="jooafont" href="#">상하이</a>
-								</h3>
-								<p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div>
-						</div>
-					</div>
-				</div>
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/b1_1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">벤쿠버</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/b11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
 
-				<div class="col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="images/b1_1.jpg" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3>
-									<a class="jooafont" href="#">캐나다</a>
-								</h3>
-								<p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="images/h2.jpg" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3>
-									<a class="jooafont" href="#">홍콩</a>
-								</h3>
-								<p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/.row-->
-		</div>
-		<!--/.container-->
-	</section>
-	<!--/#recent-works1-->
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/h2.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a class="jooafont" href="#">홍콩</a></h3>
+                                <p class="jooafont">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="images/h11.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#recent-works1-->
 
 	<!--/#bottom  -->
 
