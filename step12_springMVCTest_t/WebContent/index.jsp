@@ -168,13 +168,13 @@
 					</div>
 				</div>
 				<!--/.item-->
-				<div class="item" style="background-image: url(images/main1_31.jpg)">
+				<div class="item" style="background-image: url(images/main_bo.jpg)">
 					<div class="container">
 						<div class="row slide-margin">
 							<div class="col-sm-6">
 								<div class="carousel-content">
 									<h1 class="jooafont" class="animation animated-item-1">필리핀 맛집 TOP4</h1>
-									<h2 class="jooafont" class="animation animated-item-2">Accusantium doloremque l, eaque ipsa...</h2>
+									<h2 class="jooafont" class="animation animated-item-2">꼭 가야봐야할 맛집!!!</h2>
 									<a class="btn-slide animation animated-item-3" href="index1.html">Read More</a>
 								</div>
 							</div>
@@ -195,7 +195,7 @@
 						<div class="row slide-margin">
 							<div class="col-sm-9">
 								<div class="carousel-content">
-									<h1 class="jooafont" class="animation animated-item-1">여성에게 위험한 여행지! 3위는 페루 리마, 1위는 어디인가?</h1>
+									<h1 class="jooafont" class="animation animated-item-1">여성에게 위험한 여행지! <br>3위는 페루 리마, 1위는 어디인가?</h1>
 									<h2 class="jooafont" class="animation animated-item-2">나홀로 세계 여행을 꿈꾸는 여성 주목!</h2>
 									<a class="btn-slide animation animated-item-3" href="index3.html">Read More</a>
 								</div>
