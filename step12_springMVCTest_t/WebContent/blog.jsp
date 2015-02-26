@@ -328,7 +328,7 @@
                             <div class="col-sm-12">
                             	<h4>Keyword Search</h4>
                             	<form action="selectFestivalByKeyword.do"  name="selectFestivalByKeyword.do" method="get">
-                                    <input type="text" id="keyword" name = "keyword" class="controls" autocomplete="off" placeholder="Enter a keyword">
+                                    <input type="text" id="keyword"  name = "keyword" class="controls" autocomplete="off" placeholder="Enter a keyword">
                                     <button type="submit" class="btn3 btn-primary3 btn-lg" required="required" id="btn">go</button>
                                 </form>
                             	<h4><br>Date</h4>	
